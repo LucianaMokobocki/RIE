@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RIE • Rehabilitación Integral Estética</title>
+    <link rel="stylesheet" href="dis.css" />
+    
+</head>
+
+
+<body>
+
+    <header>
+        <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <img src="rieFoto.jpg.png" alt="Logo RIE" class="logo" />
+
+            </div>
+            <div style="display: flex; align-items: center; gap: 1rem;">
+                <a href="https://wa.me/59891664488" target="_blank"> <img src="TEL.png" alt="WhatsApp"
+                        style="width: 45px; height: 45px; margin-left: 15px;">
+                </a>
+
+                <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank"
+                    class="contacto-link">
+                    <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
+                </a>
+
+            </div>
+        </div>
+        <nav>
+            <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); scrollToCelia()">Ver más info de la
+                Dra. Celia</a>
+            <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+            <a href="#" onclick="mostrarSeccion('protesis-oculares'); mostrarSubseccion('tratamiento-ocular')">Prótesis
+                Oculares</a>
+            <a href="#" onclick="mostrarSeccion('odontologia')">Odontología</a>
+            <a href="#" onclick="mostrarSeccion('equipo')">Equipo</a>
+            <a href="#" onclick="mostrarSeccion('nosotros')">Nosotros</a>
+            <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+        </nav>
+    </header>
+
+    <section id="inicio" class="hero contenido">
+        <h2 id="animado-texto"></h2>
+
+
+        <p>Un espacio moderno donde la estética y la salud se encuentran</p>
+
+        <div id="rie-container">
+            <div class="letra" id="r">
+                <span class="palabra" id="rehab">Rehabilitación</span>
+                <img src="r.png" class="final-img" style="display: none;" alt="R">
+            </div>
+            <div class="letra" id="i">
+                <span class="palabra" id="integ">Integral</span>
+                <img src="i.png" class="final-img" style="display: none;" alt="I">
+            </div>
+            <div class="letra" id="e">
+                <span class="palabra" id="estet">Estética</span>
+                <img src="e.png" class="final-img" style="display: none;" alt="E">
+            </div>
+        </div>
+
+        <img src="pincelada.png" id="pincelada" alt="Pincelada" style="width: 200px; opacity: 0; margin-top: 5px;">
+
+    </section>
+
+
+
+    <!-- ODONTOLOGIA) -->
+    <section id="odontologia" class="contenido oculto">
+
+
+        <section id="odontologia-info" style="padding: 2rem; background-color: #f9f9fb;" class="contenido-extra">
+            <h2 class="section-title"
+                style="font-size: 2rem; color: #478da1; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">
+                Odontología
+            </h2>
+            <div style="margin-top: 1rem; margin-bottom: 2rem;">
+                <nav style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#info" style="text-decoration: none; color: #92afb8; font-weight: bold;">Información</a>
+                    <a href="#antesYdespues" style="text-decoration: none; color: #92afb8; font-weight: bold;">Antes y
+                        Después</a>
+                </nav>
+            </div>
+
+
+            <div id="info" class="subseccion"
+                style="margin-top: 2rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: #64b8c3; font-size: 1.5rem; margin-top: 2rem;">Rehabilitación integral estética</h3>
+
+                <p style="line-height: 1.7;">
+                    Al llegar un paciente nuevo al consultorio se lo ve en forma <strong>integral</strong>.
+                    El primer día se realiza una <strong>historia clínica</strong> con todos sus datos, se le indican
+                    los estudios radiográficos necesarios
+                    y se escuchan los <strong>deseos estéticos</strong> del paciente.
+                </p>
+                <p style="line-height: 1.7;">
+                    Planteamos todos los posibles planes de tratamientos, ya que para un mismo problema hay distintas
+                    soluciones con diferentes ventajas y desventajas.
+                </p>
+
+                <h3 style="color: #64b8c3; font-size: 1.5rem; margin-top: 2rem;">Prioridad: La Salud</h3>
+                <p style="line-height: 1.7;">
+                    La primer etapa, independiente al plan de tratamiento, será <strong>devolverle la salud</strong>
+                    perdida al paciente, no sin antes <strong>enseñarle</strong>
+                    todas las técnicas de higiene dental para su caso individual.
+                </p>
+                <p style="line-height: 1.7;">
+                    De esta manera seremos <strong>socios</strong>: una vez dado de alta, el paciente se compromete a
+                    realizar lo aprendido en el consultorio,
+                    y cada seis meses es nuestro compromiso recordarle su control.
+                    Esta es la única forma de mantener su <strong>salud bucal de por vida</strong>.
+                </p>
+
+                <h3 style="color: #64b8c3; font-size: 1.5rem; margin-top: 2rem;">Estética</h3>
+                <p style="line-height: 1.7;">
+                    Hombres y mujeres quieren verse y sentirse cada vez más jóvenes.
+                    Es indiscutible que la <strong>apariencia personal</strong> está tomando mucha importancia.
+                    Las redes sociales y las selfies ya son algo de todos los días.
+                </p>
+                <p style="line-height: 1.7;">
+                    Los dientes, al igual que los demás órganos del cuerpo, <strong>sufren modificaciones</strong> con
+                    el paso del tiempo:
+                    puede cambiar su forma, su color y textura.
+                </p>
+                <p style="line-height: 1.7;">
+                    Hoy por hoy existen <strong>excelentes materiales</strong> y <strong>nuevas técnicas</strong> que
+                    generan cambios fantásticos.
+                    Los pacientes lo valoran mucho. <em>Según ellos, les cambia la vida.</em>
+                </p>
+            </div>
+        </section>
+
+        <div class="galeria" id="antesYdespues" class="subseccion">
+            <h3 style="color: #64b8c3; font-size: 1.5rem; margin-top: 2rem;"> Antes y Después</h3>
+            <div class="comparador">
+                <div class="img-wrapper" id="wrapper-dientes">
+                    <img src="d.dientes.png" class="img-top" alt="Después">
+                    <div class="img-slider" id="slider-dientes">
+                        <span class="flechas">⇆</span>
+                    </div>
+                    <img src="a.dientes.png" class="img-bottom" alt="Antes">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--EQUIPO -->
+    <section id="equipo" class="contenido oculto">
+
+        <h2 class="section-title">Nuestro Equipo</h2>
+        <div class="equipo">
+
+            <div class="persona">
+                <div class="foto-container">
+                    <img src="celia.png" alt="Dra. Celia Luksenburg" class="foto-equipo" />
+                    <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irACelia()">Ver más info
+                        de la
+                        Dra. Celia</a>
+                </div>
+                <h4>Dra. Celia Luksenburg</h4>
+                <p>Especialista en rehabilitación estética</p>
+            </div>
+
+
+
+
+            <div class="persona">
+                <div class="foto-container">
+                    <img src="thelma.png" alt="Dra. Thelma Grunfeld" class="foto-equipo" />
+                    <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irAThelma()">Ver más info
+                        de
+                        la Dra. Thelma</a>
+                </div>
+                <h4>Dra. Thelma Grunfeld</h4>
+                <p>Ortodoncista especializada en tratamientos avanzados</p>
+            </div>
+
+            <div class="persona">
+                <div class="foto-container">
+                    <img src="maica.png" alt="Asistente Maica" class="foto-equipo" />
+                    <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irAMaica()">Ver más info
+                        de la
+                        Dra. Maica</a>
+                </div>
+                <h4>Maica</h4>
+                <p>Asistente técnica en procedimientos odontológicos</p>
+            </div>
+
+        </div>
+    </section>
+
+    </section>
+
+    <!-- NOSOTROS -->
+
+    <section id="nosotros" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+
+
+
+        <h2 class="section-title"
+            style="font-size: 2rem; color: #478da1; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">Sobre
+            Nosotros</h2>
+        <p style="font-size: 1.1rem; line-height: 1.6;">RIE es un centro dedicado a mejorar la calidad de vida de las
+            personas mediante tratamientos estéticos y funcionales. Creemos en un abordaje integral, humano y
+            personalizado.</p>
+
+        <div id="celia-bio"
+            style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <h3 style="color: #64b8c3; font-size: 1.7rem; margin-bottom: 1rem;">Dra. Celia Luksenburg</h3>
+            <p style="font-weight: bold; font-size: 1.2rem; color: #333;">Trayectoria</p>
+            <p style="line-height: 1.7;">Desde un principio tuvo muy clara su vocación. En 1992 ingresó en la Facultad
+                de Odontología de la UDELAR, la cual disfrutó profundamente. Desde que se recibió y hasta el día de hoy,
+                nunca perdió el contacto con la misma.<br>
+                En 1993 ingresó al taller de pintura de Fernando López Lage, pudiendo aunar de esta forma sus dos
+                pasiones: la <strong>odontología</strong> y el <strong>arte</strong>.</p>
+
+            <p style="line-height: 1.7;">En cuanto al arte, realizó varias exposiciones, intervino en concursos, sacó el
+                primer premio en el concurso del SMU, recibió varias menciones especiales y fue seleccionada para una
+                Bienal en Buenos Aires.</p>
+
+            <p style="line-height: 1.7;">En un momento, decidió dejar de crear en un solo plano y comenzar a crear en
+                tres dimensiones. Trabajó con maniquíes, los pintaba y los exponía; otros los daba vuelta y con
+                plastilina les creaba una nueva cara. Hasta que llegó un día clave en su carrera profesional. En una
+                conferencia de la Dra. Isabel Jankielewicz sobre <strong>Prótesis Buco Maxilo Facial</strong>, se sintió
+                totalmente identificada. Al finalizar, la Dra. Isabel dijo: “esta disciplina está basada en tres
+                pilares: <strong>AMOR, ARTE Y CIENCIA</strong>”. Fue en aquel momento que descubrió que ese era su
+                camino. Era la tercera dimensión que ella estaba buscando.</p>
+
+            <p style="line-height: 1.7;">A partir de 2005 comenzó a ampliar conocimientos en el Servicio de Prótesis
+                Buco Maxilo Facial de la Facultad de Odontología de la Universidad de la República, atendiendo pacientes
+                mutilados faciales. Tarea que ha desarrollado ininterrumpidamente hasta hoy, con el mismo entusiasmo de
+                siempre.</p>
+
+            <p style="line-height: 1.7;">Nunca se detiene, tanto en Odontología tradicional como en Prótesis Buco Maxilo
+                Facial, por lo que continuamente asiste a distintos cursos, jornadas y congresos.</p>
+
+            <p style="font-weight: bold; font-size: 1.2rem; color: #333; margin-top: 2rem;">Cursos, Jornadas, Congresos,
+                Conferencias y Presentaciones</p>
+            <ul style="line-height: 1.7; padding-left: 1.2rem;">
+                <li>2005 - Curso de Implantes Osteointegrados (Escuela de Graduados UDELAR)</li>
+                <li>2006 - Curso de Cirugía para el Odontólogo General (Universidad Católica)</li>
+                <li>2007 - Jornadas de Prótesis Buco Maxilo Facial e Implantes Intra y Extraorales</li>
+                <li>2008 - Presentación: “Prótesis Buco Maxilo Facial, Calidad de Vida” (SMI)</li>
+                <li>2011 - Presentación: “Prótesis Ocular… Un Caso Conmovedor” (SMI)</li>
+                <li>2013 - Congreso Latinoamericano (La Habana) — Se integra a la Sociedad Latinoamericana de PBMF</li>
+                <li>2014 - Conferencista y póster: Técnicas de Impresión Alternativas (Córdoba)</li>
+                <li>2015 - Curso de Prótesis Dentales Implanto Soportadas</li>
+                <li>2015 - Anaplastology Association Conference (Río de Janeiro)</li>
+                <li>2016 - Congreso de Rehabilitación de la Cara (Santiago de Chile)</li>
+                <li>2016 - Curso de Estética y Oclusión (Argentina)</li>
+                <li>2016 - Presentación: “Prótesis Ocular… ¿Tarea del Odontólogo?”</li>
+                <li>2017 - Curso de Estética y Carillas Dentales</li>
+                <li>2017 - Aprobado Grado Dos en PBMF, UDELAR</li>
+                <li>2019 - Gana cargo de Grado Dos en PBMF, UDELAR</li>
+                <li>2019 - Presentación de protocolo en S.U.I.O sobre higiene de prótesis ocular</li>
+            </ul>
+
+            <p style="margin-top: 2rem; line-height: 1.7;"><strong>"Hoy</strong>, sigo haciendo lo que amo. Me gusta la
+                transformación, la creación. En Odontología, más que nada en el área de Rehabilitación Estética, y en
+                Prótesis Buco Maxilo Facial, especialmente en Prótesis Oculares. Es allí donde puedo volcar y
+                desarrollar toda mi parte artística, sin nunca dejar de lado los otros dos pilares: la
+                <strong>CIENCIA</strong> y el <strong>AMOR</strong>. Por esto y más, siempre estoy y estaré muy
+                agradecida."
+            </p>
+        </div>
+
+        <div id="thelma"
+            style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <h3 style="color: #64b8c3; font-size: 1.7rem; margin-bottom: 1rem;">Dra. Thelma Grunfeld</h3>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                La Dra. Thelma Grunfeld es ortodoncista especializada en tratamientos avanzados, con una mirada
+                estética, funcional y personalizada.
+                Con años de experiencia y formación continua, trabaja con un enfoque integral que permite transformar
+                sonrisas respetando la armonía facial.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                Su trato cercano y compromiso con cada paciente hacen de ella una profesional destacada en el área de
+                ortodoncia y estética dental.
+            </p>
+        </div>
+
+        <!-- MAICA -->
+        <div id="maica"
+            style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <h3 style="color: #64b8c3; font-size: 1.7rem; margin-bottom: 1rem;">Maica</h3>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                Maica es la asistente técnica del equipo, apasionada por la atención personalizada y los detalles que
+                marcan la diferencia.
+                Su calidez humana y precisión profesional son clave para brindar una experiencia cómoda, eficiente y
+                confiable en cada tratamiento.
+            </p>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                Es parte esencial de RIE, acompañando a los pacientes en cada paso con dedicación y empatía.
+            </p>
+        </div>
+    </section>
+
+
+
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="contenido oculto">
+        <h4> Mail</h4>
+
+        <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank"
+            style="color: #7c5c9c;  text-decoration: underline;" class="contacto-link">
+            consultoriodentalrie@gmail.com
+        </a>
+        <br>
+        <h4>Telefono </h4>
+        <a href="https://wa.me/59891664488" target="_blank" style="color: #7c5c9c;  text-decoration: underline;">
+            +598 91 664 488
+        </a>
+        <br>
+        <br>
+        <h4>Ubicación</h4>
+        <div class="info-item">
+
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.167210331529!2d-56.16329098461604!3d-34.910650681005716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95aab1f7e4dfe56f%3A0x302ac693b098963a!2sBulevar%20Espa%C3%B1a%202665%2C%2011300%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1ses!2suy!4v1717944341343!5m2!1ses!2suy"
+                width="300" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+
+    </section>
+
+
+    <!-- PROTESIS -->
+
+    <section id="protesis-oculares" class="contenido oculto" style="padding: 2rem; background-color: #f8fafc;">
+        <h2 style="color: #61b6c1; font-size: 2rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">Prótesis
+            Oculares</h2>
+
+        <div style="margin-top: 1rem; margin-bottom: 2rem;">
+            <nav style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                <a href="#elaboracion" onclick="scrollAjustadoA('elaboracion')"
+                    style="text-decoration: none; color: #92afb8; font-weight: bold;">Elaboración</a>
+                <a href="#etapas" onclick="scrollAjustadoA('etapas')" style="text-decoration: none; color: #92afb8;
+                    font-weight: bold;">Etapas</a>
+                <a href="#antes-despues" onclick="scrollAjustadoA('antes-despues')"
+                    style="text-decoration: none; color: #92afb8; font-weight: bold;">Antes y
+                    Después</a>
+            </nav>
+        </div>
+
+
+        <p style="line-height: 1.6; font-size: 1.1rem; margin-top: 1rem;">
+            Muchas personas que han sufrido la pérdida de un ojo desconocen que pueden mejorar su apariencia, confort y
+            calidad de vida con el uso de una <strong>prótesis ocular</strong>.
+        </p>
+
+        <p style="line-height: 1.6; font-size: 1.1rem;">
+            Las causas pueden ser <strong>congénitas</strong> o <strong>adquiridas</strong>. Dentro de estas últimas se
+            incluyen etiologías <em>traumáticas, oncológicas, infecciosas</em> u otras.
+        </p>
+
+
+        <div id="elaboracion" class="subseccion"
+            style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+            <h3 style="color: #97d6de; font-size: 1.5rem; margin-bottom: 0.5rem;">Elaboración a Medida</h3>
+            <p style="line-height: 1.7;">
+                La elaboración de una prótesis ocular es una tarea tanto profesional como artesanal, ya que <strong>cada
+                    una es única</strong>. Requiere máxima atención y precisión para lograr resultados óptimos.
+                Utilizamos materiales con los más altos estándares de calidad disponibles.
+            </p>
+            <p style="line-height: 1.7;">
+                Las técnicas y los materiales son claves para alcanzar una estética realista. Nuestro objetivo es lograr
+                una <strong>apariencia natural y armónica</strong>.
+            </p>
+            <p style="line-height: 1.7;">
+                Nos enfocamos no solo en la estética, sino también en brindar <strong>acompañamiento emocional</strong>
+                durante el proceso.
+            </p>
+        </div>
+
+        <div id="etapas" class="subseccion"
+            style="margin-top: 2.5rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); ">
+            <h3 style="color: #97d6de; font-size: 1.5rem; margin-bottom: 0.5rem;">Tratamiento – Etapas</h3>
+            <p style="line-height: 1.7;">
+                El primer paso es la <strong>toma de impresión de la cavidad</strong> ocular para definir la forma
+                exacta de la prótesis. Esto garantiza una adaptación precisa, mayor confort y mejor movimiento cuando es
+                posible.
+            </p>
+            <p style="line-height: 1.7;">
+                Luego, se determina cuidadosamente el <strong>color de la esclera</strong> (parte blanca del ojo), el
+                <strong>iris</strong> y los detalles como venas, diámetro y profundidad. Todo esto se realiza con
+                técnicas artísticas en presencia del paciente, utilizando acuarelas para una reproducción fidedigna del
+                ojo sano.
+            </p>
+            <p style="line-height: 1.7;">
+                Dedicamos el tiempo necesario para explicar cada paso y acompañar al paciente en el proceso. También
+                brindamos orientación sobre <strong>cuidados e higiene</strong> de la prótesis.
+            </p>
+        </div>
+
+        <h3 id="antes-despues" style="color: #97d6de; font-size: 1.5rem;"> Antes y Después</h3>
+        <div class="comparador" class="subseccion">
+            <div class="img-wrapper" id="wrapper-ojo">
+                <img src="ojo.desp.png" class="img-top" alt="Después">
+                <div class="img-slider" id="slider-ojo">
+                    <span class="flechas">⇆</span>
+                </div>
+                <img src="ojo.antes.png" class="img-bottom" alt="Antes">
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="info-grid">
+            <div class="info-item">
+                <img src="ubiP.png" alt="Ubicación" class="icon-img icon-ubi"">
+                <p>Bulevar España 2665 apto. 903 Montevideo</p>
+            </div>
+            <div class=" info-item">
+                <img src="horaP.png" alt="Horario" class="icon-img">
+                <p>Lunes a Viernes de 9:00 a 18:00</p>
+            </div>
+            <div class="info-item">
+                <img src="contactoP.png" alt="Email" class="icon-img">
+                <p>contacto@rie.uy</p>
+                <p>+598 099 123 456</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- FUNCIONES -->
+    <script>
+        function animarInicio() {
+            const r = document.getElementById("r");
+            const i = document.getElementById("i");
+            const e = document.getElementById("e");
+            const rehab = document.getElementById("rehab");
+            const integ = document.getElementById("integ");
+            const estet = document.getElementById("estet");
+            const pincelada = document.getElementById("pincelada");
+
+            rehab.classList.add("anim-r");
+            r.style.opacity = 1;
+            setTimeout(() => {
+                rehab.style.display = "none";
+                r.querySelector("img").style.display = "inline";
+
+                integ.classList.add("anim-i");
+                i.style.opacity = 1;
+                setTimeout(() => {
+                    integ.style.display = "none";
+                    i.querySelector("img").style.display = "inline";
+
+                    estet.classList.add("anim-e");
+                    e.style.opacity = 1;
+                    setTimeout(() => {
+                        estet.style.display = "none";
+                        e.querySelector("img").style.display = "inline";
+
+                        setTimeout(() => {
+                            pincelada.style.transition = "opacity 1.5s ease-in-out";
+                            pincelada.style.opacity = 1;
+                        }, 500);
+                    }, 2000);
+                }, 2000);
+            }, 2000);
+        }
+
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll("section");
+            secciones.forEach(sec => sec.classList.add("oculto"));
+
+            const target = document.getElementById(id);
+            if (target) {
+                target.classList.remove("oculto");
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                // 🔥 Fuerza a reiniciar animación si es inicio
+                if (id === "inicio") {
+                    resetearInicio(); // 👈 nuevo
+                    setTimeout(animarInicio, 10); // reejecuta la animación con delay
+                }
+            }
+        }
+
+        function scrollAjustadoA(idElemento) {
+            const elemento = document.getElementById(idElemento);
+            if (elemento) {
+                const offset = -150; // Podés ajustar este número
+                const posicion = elemento.getBoundingClientRect().top + window.scrollY + offset;
+
+                window.scrollTo({
+                    top: posicion,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+
+
+
+
+        function activarComparador(wrapperId, sliderId) {
+            const wrapper = document.getElementById(wrapperId);
+            const slider = document.getElementById(sliderId);
+            const imgTop = wrapper.querySelector(".img-top");
+
+            if (!wrapper || !slider || !imgTop) return;
+
+            function moverSlider(posX) {
+                const rect = wrapper.getBoundingClientRect();
+                let pos = posX - rect.left;
+                pos = Math.max(0, Math.min(pos, rect.width));
+                const porcentaje = (pos / rect.width) * 100;
+                slider.style.left = `${porcentaje}%`;
+                imgTop.style.clipPath = `inset(0 ${100 - porcentaje}% 0 0)`;
+            }
+
+            wrapper.addEventListener("mousemove", e => moverSlider(e.clientX));
+            wrapper.addEventListener("touchmove", e => {
+                if (e.touches.length > 0) moverSlider(e.touches[0].clientX);
+            });
+        }
+
+        window.addEventListener("DOMContentLoaded", () => {
+            const secciones = document.querySelectorAll("section");
+            secciones.forEach(sec => {
+                if (sec.id !== "inicio") {
+                    sec.classList.add("oculto");
+                }
+            });
+
+            activarComparador("wrapper-dientes", "slider-dientes");
+            activarComparador("wrapper-ojo", "slider-ojo");
+
+            animarInicio(); // ✅ Esto hace que se ejecute apenas entrás
+        });
+    </script>
+
+    <script>
+        function irACelia() {
+            setTimeout(() => {
+                const celiaAnchor = document.getElementById("celia-bio");
+                if (celiaAnchor) {
+                    celiaAnchor.scrollIntoView({ behavior: "smooth" });
+                }
+            }, 300);
+        }
+    </script>
+
+    <script>
+        function irAThelma() {
+            setTimeout(() => {
+                const thelma = document.getElementById("thelma");
+                if (thelma) {
+                    thelma.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 300);
+        }
+    </script>
+
+    <script>
+        function irAMaica() {
+            setTimeout(() => {
+                const thelma = document.getElementById("maica");
+                if (thelma) {
+                    thelma.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 300);
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
