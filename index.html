@@ -6,17 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RIE • Rehabilitación Integral Estética</title>
     <link rel="stylesheet" href="dis.css" />
-    
+
 </head>
 
 
 <body>
-
     <header>
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <img src="rieFoto.jpg.png" alt="Logo RIE" class="logo" />
-
             </div>
             <div style="display: flex; align-items: center; gap: 1rem;">
                 <a href="https://wa.me/59891664488" target="_blank"> <img src="TEL.png" alt="WhatsApp"
@@ -43,12 +41,15 @@
         </nav>
     </header>
 
+<section id="inicio1" class="oculto">
+     <div class="slider-rie">
+            <img src="foto1.png" alt="Imagen 1" class="slide active">
+            <img src="foto2.png" alt="Imagen 2" class="slide">
+            <img src="foto3.png" alt="Imagen 3" class="slide">
+        </div>
+</section>
     <section id="inicio" class="hero contenido">
         <h2 id="animado-texto"></h2>
-
-
-        <p>Un espacio moderno donde la estética y la salud se encuentran</p>
-
         <div id="rie-container">
             <div class="letra" id="r">
                 <span class="palabra" id="rehab">Rehabilitación</span>
@@ -67,6 +68,7 @@
         <img src="pincelada.png" id="pincelada" alt="Pincelada" style="width: 200px; opacity: 0; margin-top: 5px;">
 
     </section>
+
 
 
 
@@ -426,7 +428,7 @@
             <div class="info-item">
                 <img src="contactoP.png" alt="Email" class="icon-img">
                 <p>contacto@rie.uy</p>
-                <p>+598 92 305 890</p>
+                <p>+598 27121820</p>
             </div>
         </div>
     </footer>
@@ -470,22 +472,31 @@
             }, 2000);
         }
 
-        function mostrarSeccion(id) {
-            const secciones = document.querySelectorAll("section");
-            secciones.forEach(sec => sec.classList.add("oculto"));
+       function mostrarSeccion(id) {
+    const secciones = document.querySelectorAll("section");
+    secciones.forEach(sec => sec.classList.add("oculto"));
 
-            const target = document.getElementById(id);
-            if (target) {
-                target.classList.remove("oculto");
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+    const target = document.getElementById(id);
+    if (target) {
+        target.classList.remove("oculto");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
 
-                // 🔥 Fuerza a reiniciar animación si es inicio
-                if (id === "inicio") {
-                    resetearInicio(); // 👈 nuevo
-                    setTimeout(animarInicio, 10); // reejecuta la animación con delay
-                }
-            }
+        // Mostrar el slider solo si estás en inicio
+        const slider = document.getElementById("inicio1");
+        if (id === "inicio" && slider) {
+            slider.classList.remove("oculto");
+        } else if (slider) {
+            slider.classList.add("oculto");
         }
+
+        // Animación de inicio
+        if (id === "inicio") {
+            resetearInicio();
+            setTimeout(animarInicio, 10);
+        }
+    }
+}
+
 
         function scrollAjustadoA(idElemento) {
             const elemento = document.getElementById(idElemento);
@@ -538,6 +549,7 @@
             activarComparador("wrapper-ojo", "slider-ojo");
 
             animarInicio(); // ✅ Esto hace que se ejecute apenas entrás
+       
         });
     </script>
 
@@ -574,7 +586,51 @@
         }
     </script>
 
+    <script>
+     
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slider-rie .slide');
 
+
+    function mostrarSlide() {
+        slides.forEach((img, i) => {
+            img.classList.remove('active');
+        });
+        slides[currentSlide].classList.add('active');
+        currentSlide = (currentSlide + 1) % slides.length;
+    }
+
+
+    // 👇 Mostrar la primera imagen apenas se cargue
+    document.addEventListener("DOMContentLoaded", () => {
+        mostrarSlide(); // Mostrar la primera imagen YA
+        setInterval(mostrarSlide, 2500); // Luego cada 2.5 segundos
+    });
+
+
+
+    </script>
+    
+    <script>
+        function iniciarSliderInicio() {
+            const imagenes = document.querySelectorAll("#slider-inicio .slider-img");
+            let actual = 0;
+
+            setInterval(() => {
+                imagenes[actual].classList.remove("activo");
+                actual = (actual + 1) % imagenes.length;
+                imagenes[actual].classList.add("activo");
+            });
+        }
+        
+window.addEventListener("DOMContentLoaded", () => {
+  mostrarSeccion("inicio"); // Mostrar inicio al entrar
+  iniciarSlider(); // Iniciar el slider automático
+});
+
+    </script>
+
+    
 
 
 </body>
