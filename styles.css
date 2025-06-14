@@ -1,0 +1,135 @@
+/* Paleta elegante: blanco, negro, gris, dorado */
+body {
+    background: #fff;
+    color: #222;
+    font-family: 'Lora', 'Serif', 'Georgia', serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+header, footer {
+    background: #111;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    letter-spacing: 2px;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Playfair Display', 'Serif', serif;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #bfa14a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+a:hover {
+    color: #222;
+}
+
+button, .btn {
+    background: #bfa14a;
+    color: #fff;
+    border: none;
+    border-radius: 30px;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-family: 'Montserrat', 'Sans-serif';
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+button:hover, .btn:hover {
+    background: #222;
+    color: #bfa14a;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+.card {
+    background: #faf9f6;
+    border-radius: 18px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.2s;
+}
+.card:hover {
+    box-shadow: 0 4px 32px rgba(0,0,0,0.12);
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+input, textarea, select {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    font-family: 'Montserrat', 'Sans-serif';
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    background: #eee;
+}
+::-webkit-scrollbar-thumb {
+    background: #bfa14a;
+    border-radius: 8px;
+}
+
+/* Comparador de imágenes */
+.comparador {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: #f8fafc;
+}
+.img-wrapper {
+    position: relative;
+    width: 180px;
+    height: 120px;
+}
+.img-top {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    clip-path: inset(0 50% 0 0);
+    transition: clip-path 0.2s;
+}
+.img-bottom {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+.img-slider {
+    position: absolute;
+    top: 0; left: 50%;
+    height: 100%;
+    width: 4px;
+    background: #64b8c3;
+    cursor: ew-resize;
+    z-index: 2;
+    transition: background 0.2s;
+}
+.flechas {
+    position: absolute;
+    top: 50%; left: -12px;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: #64b8c3;
+}
