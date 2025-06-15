@@ -1,5 +1,8 @@
 document.getElementById('btn-otros-casos-ojo').onclick = function () {
     document.getElementById('modal-otros-casos-ojo').style.display = 'flex';
+    for (let i = 1; i <= 6; i++) {
+        activarComparador(`wrapper-ojo-caso${i}`, `slider-ojo-caso${i}`);
+    }
 };
 
 document.getElementById('btn-otros-casos-dientes').onclick = function () {
@@ -31,12 +34,7 @@ function activarComparador(wrapperId, sliderId) {
     });
 }
 
-// Activar comparadores de ojo cuando se abre el modal
-document.getElementById('btn-otros-casos-ojo').addEventListener('click', function () {
-    for (let i = 1; i <= 6; i++) {
-        activarComparador(`wrapper-ojo-caso${i}`, `slider-ojo-caso${i}`);
-    }
-});
+
 
 // Activar comparadores principales al cargar
 window.addEventListener("DOMContentLoaded", () => {
@@ -163,3 +161,5 @@ function animarInicio() {
 function resetearInicio() {
     // Implementa aquí el reseteo de la animación si lo necesitas
 }
+
+

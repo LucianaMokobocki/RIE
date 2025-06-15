@@ -38,7 +38,7 @@ header {
 
 .intro-container h3 {
   font-size: 2rem;
-  color: #007c91;
+  color: #789ce2;
 }
 
 .intro-container p {
@@ -53,6 +53,7 @@ header {
   gap: 2rem;
   flex-wrap: wrap;
   padding: 2rem 1rem;
+  color: #789ce2;
 }
 
 .card-icono {
@@ -70,7 +71,7 @@ header {
 }
 
 .card-icono h4 {
-  color: #007c91;
+  color: #789ce2;
   margin-bottom: 0.5rem;
 }
 
@@ -80,11 +81,11 @@ header {
 }
 
 .testimonio-inicio {
-  background: #e0f4f7;
+  background: #6792c3;
   padding: 2rem;
   margin: 3rem auto;
   max-width: 700px;
-  border-left: 5px solid #64b8c3;
+  border-left: 5px solid #99c2f2;
   font-style: italic;
 }
 
@@ -97,7 +98,7 @@ header {
   margin-top: 1rem;
   font-weight: bold;
   text-align: right;
-  color: #007c91;
+  color: #99c2f2;
 }
 
 .carrusel-fotos {
@@ -112,13 +113,13 @@ header {
 nav a {
   margin-left: 20px;
   text-decoration: none;
-  color: #007c91;
+  color: #99c2f2;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 nav a:hover {
-  color: #004d59;
+  color: #007c91;
 }
 
 
@@ -151,27 +152,27 @@ nav a:hover {
   font-weight: 900;
   font-size: 2.2rem;
   letter-spacing: 1px;
-  color: #64b8c3;
+  color: #789ce2;
   text-shadow: 0 2px 8px rgba(100,184,195,0.10);
   display: inline-block;
   margin-bottom: 8px;
   transition: color 0.3s;
 }
 
-#rie-container .palabra#rehab { color: #3d6975; }
-#rie-container .palabra#integ { color: #478da1; }
-#rie-container .palabra#estet { color: #64b8c3; }
+#rie-container .palabra#rehab { color: #789ce2; }
+#rie-container .palabra#integ { color: #789ce2; }
+#rie-container .palabra#estet { color: #789ce2; }
 /* ------------------ HERO ------------------ */
 .hero {
   text-align: center;
   padding: 0px;
-  background: linear-gradient(to right, #a5dbe3, #f5fcfd);
+  background: linear-gradient(to right, #e8edf6, #f5fcfd);
   width: 100%;
 }
 
 .hero h1 {
   font-size: 3.5rem;
-  color: #007c91;
+  color: #789ce2;
 }
 
 .hero h2 {
@@ -197,7 +198,7 @@ section {
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 20px;
-  color: #007c91;
+  color: #789ce2;
   animation: fadeIn 1s ease-in-out;
 }
 
@@ -219,7 +220,7 @@ section {
 .tratamiento h3,
 .galeria h3 {
   margin-bottom: 10px;
-  color: #005a64;
+  color: #789ce2;
 }
 
 /* ------------------ GALERIA ------------------ */
@@ -256,7 +257,7 @@ section {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  background-color: rgba(0, 124, 145, 0.8);
+  background-color: #789ce2;
   color: white;
   padding: 5px 10px;
   border-radius: 20px;
@@ -284,7 +285,7 @@ section {
 
 .persona h4 {
   margin: 10px 0 5px;
-  color: #007c91;
+  color: #789ce2;
 }
 
 .persona p {
@@ -317,7 +318,7 @@ section {
 footer {
   text-align: center;
   padding: 30px;
-  background-color: #e0f6f9;
+  background-color: #8ea8de;
   color: #333;
   font-size: 0.95rem;
 }
@@ -403,19 +404,45 @@ footer .info {
   animation-fill-mode: forwards;
 }
 
-.anim-r {
-  animation: palabraInLeft 2s forwards;
+#intro-tipeo {
+  text-align: center;
+  margin-top: 60px;
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
+  color: #98BFFA;
 }
-.anim-i {
-  animation: palabraInTop 2s forwards;
+
+#palabra-tipeada {
+  display: inline-block;
 }
-.anim-e {
-  animation: palabraInRight 2s forwards;
+
+#cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color: #98BFFA;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+#rie-letras {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.letra-final {
+  color: #98BFFA;
+  margin: 0 10px;
+  display: inline-block;
 }
 
 .final-img {
-  width: 60px;
-  height: 60px;
+  width: 120px;
+  height: 120px;
+  margin: -100;
   opacity: 0;
   animation: fadeInLetra 0.5s forwards;
 }
@@ -425,7 +452,7 @@ footer .info {
   width: 300px;
   height: auto;
   overflow: hidden;
-  margin: -10px auto 0;
+  margin: -1111px auto 0;
 }
 
 #pincelada {
@@ -461,7 +488,8 @@ footer .info {
 
 .telefono-link {
   text-decoration: none;
-  color: #007c91;
+  color: #789ce2;
+;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -479,7 +507,7 @@ footer .info {
 }
 
 .contacto-link:hover {
-  color: #007c91;
+  color: #789ce2;
 }
 
 /* ------------------ RESPONSIVE ------------------ */
@@ -516,7 +544,7 @@ footer .info {
   text-align: center;
   font-size: 2.4rem;
   margin-bottom: 30px;
-  color: #007c91;
+  color: #789ce2;
 }
 
 #protesis-oculares .subseccion {
@@ -531,7 +559,7 @@ footer .info {
 
 
 #protesis-oculares .subseccion h3 {
-  color: #005a64;
+  color: #789ce2;
   margin-bottom: 10px;
 }
 
@@ -559,7 +587,7 @@ footer .info {
   text-align: center;
   font-size: 0.9rem;
   margin-top: 5px;
-  color: #007c91;
+  color: #789ce2;
 }
 
 
@@ -590,6 +618,9 @@ footer .info {
 .img-wrapper {
   position: relative;
   width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;  
 }
 
 .img-bottom,
@@ -613,7 +644,7 @@ footer .info {
   transform: translateX(-2px);
   width: 4px;
   height: 100%;
-  background-color: #00bcd4;
+  background-color: #789ce2;
   cursor: ew-resize;
   z-index: 3;
   border-radius: 2px;
@@ -631,7 +662,7 @@ footer .info {
 .flechas {
   font-size: 36px;
   font-weight: bold;
-  color: #007c91;
+  color: #789ce2;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -653,21 +684,21 @@ nav a {
   padding: 8px 22px;
   margin-left: 16px;
   border-radius: 30px;
-  color: #007c91;
+  color: #789ce2;
   font-weight: 600;
   text-decoration: none;
   transition: background 0.3s, color 0.3s, border 0.3s;
   background: transparent;
   display: inline-block;
-  border: 2px solid #64b8c3; /* burbuja solo borde */
+  border: 2px solid #789ce2; /* burbuja solo borde */
   box-shadow: none;
 }
 
 nav a.active,
 nav a:hover {
-  background: linear-gradient(90deg, #a5dbe3 0%, #64b8c3 100%);
+  background: linear-gradient(90deg, #a5dbe3 0%, #789ce2 100%);
   color: #fff;
-  border: 2px solid #64b8c3;
+  border: 2px solid #789ce2;
   box-shadow: 0 2px 8px rgba(100,184,195,0.10);
   text-decoration: none;
 }
@@ -703,7 +734,7 @@ nav a:hover {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.6);
-  color: #008b94;
+  color: #789ce2;
   font-weight: bold;
   font-size: 16px;
   text-align: center;
@@ -719,4 +750,55 @@ nav a:hover {
 .foto-container:hover .overlay-info {
   display: flex;
   cursor: pointer;
+}
+
+/* Modal de otros casos de prótesis oculares más ancho y fotos alargadas */
+.comparador-modal {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto 2rem auto;
+  height: 320px;
+}
+
+.img-wrapper-modal {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 900px) {
+  .comparador-modal {
+    height: 200px;
+  }
+}
+#rie-tipeo {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-family: 'Montserrat', 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 0.0em;
+  color: #789ce2;
+  margin-bottom: 0.0rem;
+}
+
+.rie-letra {
+  display: flex;
+  align-items: flex-end; /* <-- Esto alinea la palabra con la base de la letra */
+  position: relative;
+  min-width: 0.0rem;
+  line-height: 1;
+}
+
+.rie-letra span {
+  font-weight: 700;
+  font-size: 2.1rem;
+  letter-spacing: 0.0em;
+  margin-left: 0.0em;
+  vertical-align: baseline; /* <-- Esto ayuda a alinear aún mejor */
+  color: #789ce2;
+  transition: color 0.3s;
+  line-height: 1;
+    margin-bottom: 0.05em; /* <-- SUBE la palabra respecto a la letra */
+
 }
