@@ -28,7 +28,7 @@
             </div>
         </div>
         <nav>
-            <a href="#" class="overlay-info" class="active" onclick="mostrarSeccion('nosotros'); scrollToCelia()">Ver
+            <a href="#" class="overlay-info active" onclick="mostrarSeccion('nosotros'); scrollToCelia()">Ver
                 más info de la Dra. Celia</a>
             <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
             <a href="#" onclick="mostrarSeccion('protesis-oculares')">Prótesis Oculares</a>
@@ -37,8 +37,6 @@
             <a href="#" onclick="mostrarSeccion('nosotros')">Nosotros</a>
             <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
         </nav>
-
-
     </header>
 
     <section id="inicio" class="hero contenido">
@@ -50,7 +48,8 @@
             <img src="foto3.png" class="carrusel-img" alt="Foto 3">
         </div>
 
-        <!-- ✨ Animación: justo acá queda pillazooo  <h2 id="animado-texto"></h2>
+        <!-- ✨ Animación: justo acá queda pillazooo  
+        <h2 id="animado-texto"></h2>
         <div id="rie-container">
             <div class="letra" id="r">
                 <span class="palabra" id="rehab">Rehabilitación</span>
@@ -66,17 +65,13 @@
             </div>
         </div>
         <img src="pincelada.png" id="pincelada" alt="Pincelada" style="width: 200px; opacity: 0; margin-top: 5px;">
--->
+        -->
 
         <div id="rie-tipeo" style="display: flex; justify-content: center; gap: 2.5rem; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem;">
           <span class="rie-letra" id="letra-r">R<span id="palabra-r"></span></span>
           <span class="rie-letra" id="letra-i">I<span id="palabra-i"></span></span>
           <span class="rie-letra" id="letra-e">E<span id="palabra-e"></span></span>
         </div>
-
-
-
-
 
         <!-- Presentación destacada -->
         <div class="intro-container">
@@ -115,8 +110,7 @@
 
 
     <!-- ODONTOLOGIA -->
-    <section id="odontologia" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;"
-        class="contenido-extra">
+    <section id="odontologia" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
         <h2 class="section-title"
             style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">
             Odontología
@@ -175,8 +169,7 @@
             </p>
         </div>
 
-        <div class="galeria" id="antesYdespues" class="subseccion">
-            <h3 style="color: #789ce2; font-size: 1.5rem; margin-top: 2rem;"> Antes y Después</h3>
+<div class="galeria subseccion" id="antesYdespues">            <h3 style="color: #789ce2; font-size: 1.5rem; margin-top: 2rem;"> Antes y Después</h3>
             <div class="comparador">
                 <div class="img-wrapper" id="wrapper-dientes">
                     <img src="d.dientes.png" class="img-top" alt="Después">
@@ -301,7 +294,6 @@
             </div>
         </div>
 
-
         <script>
             document.getElementById('btn-otros-casos-dientes').onclick = function () {
                 document.getElementById('modal-otros-casos-dientes').style.display = 'flex';
@@ -329,9 +321,6 @@
                 <h4>Dra. Celia Luksenburg</h4>
                 <p>Especialista en rehabilitación estética</p>
             </div>
-
-
-
 
             <div class="persona">
                 <div class="foto-container">
@@ -490,8 +479,7 @@
     </section>
 
     <!-- PROTESIS OCULARES -->
-    <section id="protesis-oculares" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;"
-        class="contenido-extra">
+    <section id="protesis-oculares" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
         <h2 style="color: #789ce2; font-size: 2rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">Prótesis
             Oculares</h2>
 
@@ -507,8 +495,8 @@
 
 
 
-        <p style="line-height: 1.6; font-size: 1.1rem, margin-top: 1rem;">
-            Muchas personas que han sufrido la pérdida de un ojo desconocen que pueden mejorar su apariencia, confort y
+<p style="line-height: 1.6; font-size: 1.1rem; margin-top: 1rem;">
+                Muchas personas que han sufrido la pérdida de un ojo desconocen que pueden mejorar su apariencia, confort y
             calidad de vida con el uso de una <strong>prótesis ocular</strong>.
         </p>
 
@@ -672,9 +660,7 @@
             wrapper.addEventListener("touchmove", e => {
                 if (e.touches.length > 0) moverSlider(e.touches[0].clientX);
             });
-
-
-
+        }
     </script>
 
     <!-- FUNCIONES -->
@@ -745,10 +731,6 @@
             }
         }
 
-
-
-
-
         function activarComparador(wrapperId, sliderId) {
             const wrapper = document.getElementById(wrapperId);
             const slider = document.getElementById(sliderId);
@@ -787,7 +769,6 @@
     </script>
 
     <script>
-
         const links = document.querySelectorAll("nav a");
         links.forEach(link => {
             link.addEventListener("click", function () {
@@ -795,7 +776,6 @@
                 this.classList.add("active");
             });
         });
-
 
         function irACelia() {
             setTimeout(() => {
@@ -840,9 +820,6 @@
         }, 3000); // Cambia cada 3 segundos
     </script>
 
-
-
-
     <!-- FOOTER -->
     <footer>
         <div class="info-grid">
@@ -863,87 +840,49 @@
     </footer>
 
     <script>
-            const palabras = ["Rehabilitación", "Integral", "Estética"];
-            const letras = ["letra-r", "letra-i", "letra-e"];
-            const palabraSpan = document.getElementById("palabra-tipeada");
-
-            let palabraIndex = 0;
-            let letraIndex = 0;
-            let texto = "";
-            let i = 0;
-
-            function escribir() {
-                if (i < palabras[palabraIndex].length) {
-                    texto += palabras[palabraIndex][i];
-                    palabraSpan.textContent = texto;
-                    i++;
-                    setTimeout(escribir, 100);
-                } else {
-                    // Dejar la letra final en el mismo lugar de la palabra tipeada
-                    const letraFinal = palabras[palabraIndex][0]; // Primera letra de la palabra
-                    document.getElementById(letras[palabraIndex]).textContent = letraFinal;
-
-                    // Borra la palabra tipeada para que no quede "Estética" al final
-                    setTimeout(() => {
-                        palabraSpan.textContent = "";
-                        palabraIndex++;
-                        i = 0;
-                        texto = "";
-                        if (palabraIndex < palabras.length) {
-                            escribir();
-                        } else {
-                            document.getElementById("cursor").style.display = "none";
-                        }
-                    }, 800);
-                }
-            }
-
-            window.addEventListener("load", escribir);
-    </script>
-    <script>
         function animarRIEloop() {
-    const palabras = [
-        { id: "palabra-r", texto: "ehabilitación" },
-        { id: "palabra-i", texto: "ntegral" },
-        { id: "palabra-e", texto: "stética" }
-    ];
-    let idx = 0;
+            const palabras = [
+                { id: "palabra-r", texto: "ehabilitación" },
+                { id: "palabra-i", texto: "ntegral" },
+                { id: "palabra-e", texto: "stética" }
+            ];
+            let idx = 0;
 
-    function limpiar() {
-        palabras.forEach(p => document.getElementById(p.id).textContent = "");
-    }
-
-    function escribirPalabra() {
-        if (idx >= palabras.length) {
-            // Espera 1 segundo, borra palabras y repite
-            setTimeout(() => {
-                limpiar();
-                idx = 0;
-                setTimeout(escribirPalabra, 700);
-            }, 1000);
-            return;
-        }
-        const { id, texto } = palabras[idx];
-        let i = 0;
-        const span = document.getElementById(id);
-        span.textContent = "";
-        function escribirLetra() {
-            if (i < texto.length) {
-                span.textContent += texto[i];
-                i++;
-                setTimeout(escribirLetra, 80);
-            } else {
-                idx++;
-                setTimeout(escribirPalabra, 350);
+            function limpiar() {
+                palabras.forEach(p => document.getElementById(p.id).textContent = "");
             }
-        }
-        escribirLetra();
-    }
-    limpiar();
-    escribirPalabra();
-}
 
-window.addEventListener("DOMContentLoaded", animarRIEloop);
+            function escribirPalabra() {
+                if (idx >= palabras.length) {
+                    // Espera 1 segundo, borra palabras y repite
+                    setTimeout(() => {
+                        limpiar();
+                        idx = 0;
+                        setTimeout(escribirPalabra, 700);
+                    }, 1000);
+                    return;
+                }
+                const { id, texto } = palabras[idx];
+                let i = 0;
+                const span = document.getElementById(id);
+                span.textContent = "";
+                function escribirLetra() {
+                    if (i < texto.length) {
+                        span.textContent += texto[i];
+                        i++;
+                        setTimeout(escribirLetra, 80);
+                    } else {
+                        idx++;
+                        setTimeout(escribirPalabra, 350);
+                    }
+                }
+                escribirLetra();
+            }
+            limpiar();
+            escribirPalabra();
+        }
+
+        window.addEventListener("DOMContentLoaded", animarRIEloop);
     </script>
 </body>
 
