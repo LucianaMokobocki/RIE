@@ -778,7 +778,7 @@ nav a:hover {
   font-size: 3.2rem;
   font-weight: 900;
   letter-spacing: 0.0em;
-  color: #e2789d;
+  color: #789ce2;
   margin-bottom: 0.0rem;
 }
 
@@ -799,8 +799,7 @@ nav a:hover {
   color: #789ce2;
   transition: color 0.3s;
   line-height: 1;
-
-
+  
     margin-bottom: 0.05em; /* <-- SUBE la palabra respecto a la letra */
 
 }
