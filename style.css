@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #f5fcfd;
@@ -15,6 +16,7 @@ body {
   overflow-x: hidden;
   margin: 0;
 }
+
 
 header {
   background-color: white;
@@ -36,16 +38,19 @@ header {
   padding: 1rem;
 }
 
+
 .intro-container h3 {
   font-size: 2rem;
   color: #789ce2;
 }
+
 
 .intro-container p {
   font-size: 1.1rem;
   color: #444;
   margin-top: 0.5rem;
 }
+
 
 .destacados-inicio {
   display: flex;
@@ -56,6 +61,7 @@ header {
   color: #789ce2;
 }
 
+
 .card-icono {
   background: #f5fafa;
   border-radius: 10px;
@@ -65,23 +71,27 @@ header {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
+
 .card-icono img {
   width: 60px;
   margin-bottom: 1rem;
 }
+
 
 .card-icono h4 {
   color: #789ce2;
   margin-bottom: 0.5rem;
 }
 
+
 .card-icono p {
   font-size: 0.95rem;
   color: #555;
 }
 
+
 .testimonio-inicio {
-  background: #6792c3;
+  background: #d9e9af;
   padding: 2rem;
   margin: 3rem auto;
   max-width: 700px;
@@ -89,10 +99,12 @@ header {
   font-style: italic;
 }
 
+
 .testimonio-inicio blockquote {
   font-size: 1.1rem;
   margin: 0;
 }
+
 
 .firma-testimonio {
   margin-top: 1rem;
@@ -101,14 +113,18 @@ header {
   color: #99c2f2;
 }
 
+
 .carrusel-fotos {
   margin-bottom: 2rem; /* o podés probar con 3rem si querés más espacio */
 }
 
 
+
+
 .logo {
   max-height: 100px;
 }
+
 
 nav a {
   margin-left: 20px;
@@ -118,9 +134,12 @@ nav a {
   transition: color 0.3s ease;
 }
 
+
 nav a:hover {
   color: #007c91;
 }
+
+
 
 
 /* Secciones principales igual ancho y centrado */
@@ -135,6 +154,8 @@ nav a:hover {
 }
 
 
+
+
 /* Imagen grande igual en ambas secciones */
 .foto-seccion-grande {
   width: 100%;
@@ -146,6 +167,7 @@ nav a:hover {
   border-radius: 18px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
 }
+
 
 #rie-container .palabra {
   font-family: 'garmondbold', 'Georgia', serif;
@@ -159,6 +181,7 @@ nav a:hover {
   transition: color 0.3s;
 }
 
+
 #rie-container .palabra#rehab { color: #789ce2; }
 #rie-container .palabra#integ { color: #789ce2; }
 #rie-container .palabra#estet { color: #789ce2; }
@@ -170,10 +193,12 @@ nav a:hover {
   width: 100%;
 }
 
+
 .hero h1 {
   font-size: 3.5rem;
   color: #789ce2;
 }
+
 
 .hero h2 {
   font-size: 1.8rem;
@@ -182,10 +207,12 @@ nav a:hover {
   font-weight: normal;
 }
 
+
 .hero p {
   font-size: 1.2rem;
   color: #666;
 }
+
 
 /* ------------------ SECCIONES GENERALES ------------------ */
 section {
@@ -194,6 +221,7 @@ section {
   margin: 0;
 }
 
+
 .section-title {
   text-align: center;
   font-size: 2.2rem;
@@ -201,6 +229,7 @@ section {
   color: #789ce2;
   animation: fadeIn 1s ease-in-out;
 }
+
 
 /* ------------------ BLOQUES DE TEXTO ------------------ */
 .protesis-intro,
@@ -217,11 +246,13 @@ section {
   animation: fadeInUp 0.7s ease-in-out;
 }
 
+
 .tratamiento h3,
 .galeria h3 {
   margin-bottom: 10px;
   color: #789ce2;
 }
+
 
 /* ------------------ GALERIA ------------------ */
 .imagenes-comparacion {
@@ -232,6 +263,7 @@ section {
   margin-top: 20px;
 }
 
+
 .img-container {
   position: relative;
   width: 300px;
@@ -241,9 +273,11 @@ section {
   transition: transform 0.4s ease;
 }
 
+
 .img-container:hover {
   transform: scale(1.05);
 }
+
 
 .img-container img {
   width: 100%;
@@ -252,6 +286,7 @@ section {
   filter: brightness(1) contrast(1.1);
   transition: filter 0.3s ease;
 }
+
 
 .etiqueta {
   position: absolute;
@@ -264,6 +299,7 @@ section {
   font-size: 0.9rem;
 }
 
+
 /* ------------------ EQUIPO ------------------ */
 .equipo {
   display: flex;
@@ -272,10 +308,12 @@ section {
   gap: 30px;
 }
 
+
 .persona {
   text-align: center;
   max-width: 250px;
 }
+
 
 .persona img {
   width: 100%;
@@ -283,15 +321,18 @@ section {
   margin-bottom: 10px;
 }
 
+
 .persona h4 {
   margin: 10px 0 5px;
   color: #789ce2;
 }
 
+
 .persona p {
   font-size: 0.95rem;
   color: #666;
 }
+
 
 .carrusel-fotos {
   width: 100%;
@@ -314,6 +355,8 @@ section {
 }
 
 
+
+
 /* ------------------ FOOTER ------------------ */
 footer {
   text-align: center;
@@ -323,9 +366,11 @@ footer {
   font-size: 0.95rem;
 }
 
+
 footer p {
   margin: 5px 0;
 }
+
 
 footer .info {
   margin-top: 15px;
@@ -333,16 +378,19 @@ footer .info {
   color: #555;
 }
 
+
 /* ------------------ ANIMACIONES ------------------ */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
+
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
 }
+
 
 @keyframes palabraInLeft {
   0% { transform: translateX(-150%); opacity: 0; }
@@ -350,11 +398,13 @@ footer .info {
   100% { transform: translateX(0); opacity: 0; }
 }
 
+
 @keyframes palabraInTop {
   0% { transform: translateY(-150%); opacity: 0; }
   50% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(0); opacity: 0; }
 }
+
 
 @keyframes palabraInRight {
   0% { transform: translateX(150%); opacity: 0; }
@@ -362,10 +412,12 @@ footer .info {
   100% { transform: translateX(0); opacity: 0; }
 }
 
+
 @keyframes fadeInLetra {
   from { opacity: 0; }
   to { opacity: 1; }
 }
+
 
 @keyframes revealMask {
   from {
@@ -375,6 +427,7 @@ footer .info {
     clip-path: inset(0 0% 0 0);
   }
 }
+
 
 /* ------------------ RIE LOGO ANIMADO ------------------ */
 #rie-container {
@@ -388,6 +441,7 @@ footer .info {
   margin-bottom: 0;
 }
 
+
 .letra {
   position: relative;
   display: flex;
@@ -395,6 +449,7 @@ footer .info {
   align-items: center;
   opacity: 0;
 }
+
 
 .palabra {
   font-size: 1.5rem;
@@ -404,6 +459,7 @@ footer .info {
   animation-fill-mode: forwards;
 }
 
+
 #intro-tipeo {
   text-align: center;
   margin-top: 60px;
@@ -412,9 +468,11 @@ footer .info {
   color: #98BFFA;
 }
 
+
 #palabra-tipeada {
   display: inline-block;
 }
+
 
 #cursor {
   display: inline-block;
@@ -422,10 +480,12 @@ footer .info {
   color: #98BFFA;
 }
 
+
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
 }
+
 
 #rie-letras {
   margin-top: 20px;
@@ -433,11 +493,13 @@ footer .info {
   font-weight: bold;
 }
 
+
 .letra-final {
   color: #98BFFA;
   margin: 0 10px;
   display: inline-block;
 }
+
 
 .final-img {
   width: 120px;
@@ -447,6 +509,7 @@ footer .info {
   animation: fadeInLetra 0.5s forwards;
 }
 
+
 #pincelada-container {
   position: relative;
   width: 300px;
@@ -454,6 +517,7 @@ footer .info {
   overflow: hidden;
   margin: -1111px auto 0;
 }
+
 
 #pincelada {
   width: 300px;
@@ -463,6 +527,7 @@ footer .info {
   margin-top: -40px;
   margin-bottom: 10px;
 }
+
 
 /* ------------------ INFO ICONOS ------------------ */
 .info-grid {
@@ -474,10 +539,12 @@ footer .info {
   flex-wrap: wrap;
 }
 
+
 .info-item {
   text-align: center;
   max-width: 150px;
 }
+
 
 .icon-img {
   width: 60px;
@@ -485,6 +552,7 @@ footer .info {
   object-fit: contain;
   background: none;
 }
+
 
 .telefono-link {
   text-decoration: none;
@@ -496,6 +564,7 @@ footer .info {
   gap: 8px;
 }
 
+
 .contacto-link {
   text-decoration: none;
   color: #333;
@@ -506,9 +575,11 @@ footer .info {
   margin-bottom: 8px;
 }
 
+
 .contacto-link:hover {
   color: #789ce2;
 }
+
 
 /* ------------------ RESPONSIVE ------------------ */
 @media (max-width: 768px) {
@@ -517,14 +588,46 @@ footer .info {
     margin: 10px 0;
   }
 
+
   .imagenes-comparacion {
     flex-direction: column;
     align-items: center;
   }
 
+
   .equipo {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+
+/* Responsive para el logo animado RIE - versión mejorada */
+@media (max-width: 600px) {
+  #rie-container,
+  #rie-tipeo {
+    flex-direction: column !important;
+    gap: 6px !important;
+    font-size: 1.2rem !important;
+    margin-top: 18px !important;
+    align-items: center !important;
+  }
+  .letra,
+  .rie-letra {
+    font-size: 1rem !important;
+    margin-bottom: 0 !important;
+    min-width: 0 !important;
+  }
+  #rie-container .palabra,
+  #rie-tipeo .palabra,
+  .rie-letra span {
+    font-size: 0.95rem !important;
+    margin-bottom: 2px !important;
+    max-width: 92vw !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    text-align: center !important;
+    letter-spacing: 0 !important;
   }
 }
 
@@ -540,6 +643,7 @@ footer .info {
   animation: fadeInUp 0.7s ease-in-out;
 }
 
+
 #protesis-oculares h2 {
   text-align: center;
   font-size: 2.4rem;
@@ -547,9 +651,11 @@ footer .info {
   color: #789ce2;
 }
 
+
 #protesis-oculares .subseccion {
   margin-top: 20px;
 }
+
 
 .icon-ubi {
   width: 70px;
@@ -558,16 +664,20 @@ footer .info {
 }
 
 
+
+
 #protesis-oculares .subseccion h3 {
   color: #789ce2;
   margin-bottom: 10px;
 }
+
 
 #protesis-oculares .subseccion p {
   line-height: 1.6;
   color: #444;
   font-size: 1rem;
 }
+
 
 #protesis-oculares .antes-despues {
   display: flex;
@@ -577,11 +687,13 @@ footer .info {
   margin-top: 20px;
 }
 
+
 #protesis-oculares .antes-despues img {
   width: 250px;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
+
 
 #protesis-oculares .antes-despues .etiqueta {
   text-align: center;
@@ -591,6 +703,8 @@ footer .info {
 }
 
 
+
+
 /*----- secciones -----*/
 .contenido {
   display: block;
@@ -598,10 +712,13 @@ footer .info {
   transition: opacity 0.5s ease-in-out;
 }
 
+
 .contenido.oculto {
   display: none;
   opacity: 0;
 }
+
+
 
 
 /*---- antes y despues protesis ----- */
@@ -615,6 +732,7 @@ footer .info {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
 }
 
+
 .img-wrapper {
   position: relative;
   width: 100%;
@@ -623,11 +741,13 @@ footer .info {
   display: flex;  
 }
 
+
 .img-bottom,
 .img-top {
   width: 100%;
   display: block;
 }
+
 
 .img-top {
   position: absolute;
@@ -636,6 +756,7 @@ footer .info {
   clip-path: inset(0 50% 0 0);
   z-index: 2;
 }
+
 
 .img-slider {
   position: absolute;
@@ -655,9 +776,12 @@ footer .info {
 }
 
 
+
+
 .img-slider.sin-texto::before {
   display: none;
 }
+
 
 .flechas {
   font-size: 36px;
@@ -672,11 +796,14 @@ footer .info {
   animation: pulsoFlecha 1.2s ease-in-out infinite;
 }
 
+
 @keyframes pulsoFlecha {
   0% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
   50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
   100% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
 }
+
+
 
 
 nav a {
@@ -693,6 +820,7 @@ nav a {
   border: 2px solid #789ce2; /* burbuja solo borde */
   box-shadow: none;
 }
+
 
 nav a.active,
 nav a:hover {
@@ -718,6 +846,7 @@ nav a:hover {
   border-radius: 50% 50% / 55% 55%; /* forma de huevo parada */
 }
 
+
 .foto-equipo {
   width: 100%;
   height: 100%;
@@ -725,6 +854,7 @@ nav a:hover {
   display: block;
   border-radius: 50% 50% / 55% 55%;
 }
+
 
 /* Overlay mágico */
 .overlay-info {
@@ -747,23 +877,55 @@ nav a:hover {
   padding: 20px;
 }
 
+
 .foto-container:hover .overlay-info {
   display: flex;
   cursor: pointer;
 }
 
+
 /* Modal de otros casos de prótesis oculares más ancho y fotos alargadas */
-.comparador-modal {
-  width: 100%;
-  max-width: 95%;
-  margin: 0 auto 2rem auto;
-  height: 320px;
+#modal-otros-casos-dientes > div,
+#modal-otros-casos-ojos > div {
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem 0;         /* Solo arriba y abajo */
+    border-radius: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
-.img-wrapper-modal {
+
+.comparador-modal {
   width: 100%;
-  height: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  height: 220px;             /* Igual que la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+
+.img-wrapper-modal {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+
+.img-wrapper-modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #fff;
+}
+
 
 @media (max-width: 900px) {
   .comparador-modal {
@@ -782,6 +944,7 @@ nav a:hover {
   margin-bottom: 0.0rem;
 }
 
+
 .rie-letra {
   display: flex;
   align-items: flex-end; /* <-- Esto alinea la palabra con la base de la letra */
@@ -789,6 +952,7 @@ nav a:hover {
   min-width: 0.0rem;
   line-height: 1;
 }
+
 
 .rie-letra span {
   font-weight: 700;
@@ -799,7 +963,109 @@ nav a:hover {
   color: #789ce2 ;
   transition: color 0.3s;
   line-height: 1;
-  
+ 
     margin-bottom: 0.05em; /* <-- SUBE la palabra respecto a la letra */
 
+
 }
+
+
+/* Menú desktop visible solo en pantallas grandes */
+.menu-desktop {
+    display: flex;
+    gap: 1rem;
+}
+.menu-mobile {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+
+#menu-mobile-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+#menu-mobile-label {
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    background: #eaf1fb;
+    color: #789ce2;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid #789ce2;
+    box-shadow: 0 2px 8px rgba(120,156,226,0.07);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+
+#menu-mobile-arrow {
+    transition: transform 0.3s;
+}
+
+
+.menu-mobile.open #menu-mobile-arrow {
+    transform: rotate(-90deg);
+}
+
+
+#menu-mobile-dropdown {
+    position: absolute;
+    top: 3.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    padding: 0.5rem 1rem;
+    z-index: 999;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menu-mobile-dropdown a {
+    color: #789ce2;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+#menu-mobile-dropdown a:hover {
+    background: #eaf1fb;
+    border-radius: 4px;
+}
+
+
+/* Responsive: solo muestra el menú mobile en pantallas chicas */
+@media (max-width: 900px) {
+    .menu-desktop {
+        display: none !important;
+    }
+    .menu-mobile {
+        display: flex !important;
+    }
+}
+
+
+.rie-mobile { display: none; }
+.rie-desktop { display: flex; }
+
+
+@media (max-width: 600px) {
+  .rie-desktop { display: none !important; }
+  .rie-mobile { display: flex !important; }
+}
+
+
+

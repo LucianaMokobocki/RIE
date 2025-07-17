@@ -5,12 +5,7 @@ document.getElementById('btn-otros-casos-ojo').onclick = function () {
     }
 };
 
-document.getElementById('btn-otros-casos-dientes').onclick = function () {
-    document.getElementById('modal-otros-casos-dientes').style.display = 'flex';
-    for (let i = 1; i <= 6; i++) {
-        activarComparador(`wrapper-dientes-caso${i}`, `slider-dientes-caso${i}`);
-    }
-};
+
 
 function activarComparador(wrapperId, sliderId) {
     const wrapper = document.getElementById(wrapperId);

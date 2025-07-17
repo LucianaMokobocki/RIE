@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
 
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" cont<!DOCTYPE html>
+<html lang="es">
+
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,7 +15,9 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 
+
 <body>
+
 
     <header>
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
@@ -25,11 +34,31 @@
                     class="contacto-link">
                     <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
                 </a>
+                <!-- Menú responsive para móvil -->
+                <div class="menu-mobile">
+                    <button id="menu-mobile-toggle" aria-label="Abrir menú"
+                        style="background: none; border: none; padding: 0; display: flex; align-items: center; cursor: pointer;">
+                        <span id="menu-mobile-label" class="menu-mobile-label">
+                            Inicio
+                            <svg id="menu-mobile-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" style="margin-left:8px;transition:transform 0.3s;">
+                                <polyline points="8,10 11,13 14,10" fill="none" stroke="#789ce2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div id="menu-mobile-dropdown" style="display:none;">
+                        <a href="#" onclick="setMenuLabel('Inicio'); cerrarMenuMobile(); mostrarSeccion('inicio'); return false;">Inicio</a>
+                        <a href="#" onclick="mostrarSeccion('protesis-oculares'); setMenuLabel('Prótesis Oculares'); cerrarMenuMobile()">Prótesis Oculares</a>
+                        <a href="#" onclick="mostrarSeccion('odontologia'); setMenuLabel('Odontología'); cerrarMenuMobile()">Odontología</a>
+                        <a href="#" onclick="mostrarSeccion('equipo'); setMenuLabel('Equipo'); cerrarMenuMobile()">Equipo</a>
+                        <a href="#" onclick="mostrarSeccion('nosotros'); setMenuLabel('Nosotros'); cerrarMenuMobile()">Nosotros</a>
+                        <a href="#" onclick="mostrarSeccion('contacto'); setMenuLabel('Contacto'); cerrarMenuMobile()">Contacto</a>
+                    </div>
+                </div>
             </div>
         </div>
-        <nav>
-            <a href="#" class="overlay-info active" onclick="mostrarSeccion('nosotros'); scrollToCelia()">Ver
-                más info de la Dra. Celia</a>
+        <nav class="menu-desktop">
+            <!-- Menú tradicional, igual que ahora -->
+            <a href="#" class="overlay-info active" onclick="mostrarSeccion('nosotros'); scrollToCelia()">Ver más info de la Dra. Celia</a>
             <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
             <a href="#" onclick="mostrarSeccion('protesis-oculares')">Prótesis Oculares</a>
             <a href="#" onclick="mostrarSeccion('odontologia')">Odontología</a>
@@ -39,7 +68,9 @@
         </nav>
     </header>
 
+
     <section id="inicio" class="hero contenido">
+
 
         <!-- Carrusel de fotos automático -->
         <div class="carrusel-fotos" style="margin-bottom: 2rem;">
@@ -48,36 +79,28 @@
             <img src="foto3.png" class="carrusel-img" alt="Foto 3">
         </div>
 
-        <!-- ✨ Animación: justo acá queda pillazooo  
-        <h2 id="animado-texto"></h2>
-        <div id="rie-container">
-            <div class="letra" id="r">
-                <span class="palabra" id="rehab">Rehabilitación</span>
-               <img src="r.png" class="final-img" style="display: none;" width="100" height="100" alt="R">
-            </div>
-            <div class="letra" id="i">
-                <span class="palabra" id="integ">Integral</span>
-                <img src="i.png" class="final-img" style="display: none;" alt="I">
-            </div>
-            <div class="letra" id="e">
-                <span class="palabra" id="estet">Estética</span>
-                <img src="e.png" class="final-img" style="display: none;" alt="E">
-            </div>
-        </div>
-        <img src="pincelada.png" id="pincelada" alt="Pincelada" style="width: 200px; opacity: 0; margin-top: 5px;">
-        -->
 
-        <div id="rie-tipeo" style="display: flex; justify-content: center; gap: 2.5rem; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem;">
+       
+
+
+        <div id="rie-tipeo" class="rie-desktop" style="display: flex; justify-content: center; gap: 2.5rem; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem;">
           <span class="rie-letra" id="letra-r">R<span id="palabra-r"></span></span>
           <span class="rie-letra" id="letra-i">I<span id="palabra-i"></span></span>
           <span class="rie-letra" id="letra-e">E<span id="palabra-e"></span></span>
         </div>
 
+
+        <!-- Logo estático para móvil -->
+<div id="rie-estatico" class="rie-mobile" style="display:none; flex-direction:column; align-items:center; margin-top:30px;">
+    <!--<span style="font-size:2.8rem; font-weight:900; color:#789ce2; letter-spacing:2px;">RIE</span>  -->
+    <span style="font-size:1.2rem; color:#789ce2; margin-top:8px; text-align:center;">Rehabilitación Integral Estética</span>
+</div>
         <!-- Presentación destacada -->
         <div class="intro-container">
-            <h3>Bienvenidos a RIE</h3>
+            <!--  <h3>Bienvenidos a RIE</h3> -->
             <p>Un espacio donde la estética, la salud y la humanidad se encuentran para transformar vidas.</p>
         </div>
+
 
         <!-- Sección destacada con íconos -->
         <div class="destacados-inicio">
@@ -98,6 +121,7 @@
             </div>
         </div>
 
+
         <!-- Testimonio -->
         <div class="testimonio-inicio">
             <blockquote>
@@ -106,7 +130,10 @@
             <p class="firma-testimonio">— Paciente de prótesis ocular</p>
         </div>
 
+
     </section>
+
+
 
 
     <!-- ODONTOLOGIA -->
@@ -123,9 +150,11 @@
         </div>
         <img src="odo.png" alt="Odontología" class="foto-seccion-grande">
 
+
         <div id="info" class="subseccion"
             style="margin-top: 2rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
             <h3 style="color: #789ce2; font-size: 1.5rem; margin-top: 2rem;">Rehabilitación integral estética</h3>
+
 
             <p style="line-height: 1.7;">
                 Al llegar un paciente nuevo al consultorio se lo ve en forma <strong>integral</strong>.
@@ -137,6 +166,7 @@
                 Planteamos todos los posibles planes de tratamientos, ya que para un mismo problema hay distintas
                 soluciones con diferentes ventajas y desventajas.
             </p>
+
 
             <h3 style="color: #789ce2; font-size: 1.5rem; margin-top: 2rem;">Prioridad: La Salud</h3>
             <p style="line-height: 1.7;">
@@ -150,6 +180,7 @@
                 y cada seis meses es nuestro compromiso recordarle su control.
                 Esta es la única forma de mantener su <strong>salud bucal de por vida</strong>.
             </p>
+
 
             <h3 style="color: #789ce2; font-size: 1.5rem; margin-top: 2rem;">Estética</h3>
             <p style="line-height: 1.7;">
@@ -169,6 +200,7 @@
             </p>
         </div>
 
+
 <div class="galeria subseccion" id="antesYdespues">            <h3 style="color: #789ce2; font-size: 1.5rem; margin-top: 2rem;"> Antes y Después</h3>
             <div class="comparador">
                 <div class="img-wrapper" id="wrapper-dientes">
@@ -186,113 +218,74 @@
             </button>
             <!-- Modal de otros casos -->
             <div id="modal-otros-casos-dientes"
-                style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+                 onclick="if(event.target === this) this.style.display='none'"
+                 style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
                 <div
-                    style="background:white; padding:2rem; border-radius:10px; max-width:98vw; max-height:98vh; overflow:auto; position:relative;">
+                    style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
                     <button onclick="document.getElementById('modal-otros-casos-dientes').style.display='none'"
                         style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">×</button>
                     <h4 style="color:#789ce2;">Otros casos de Prótesis Dentales</h4>
                     <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                        <!-- Fila 1 -->
-                        <div style="display: flex; gap: 2rem; justify-content: center;">
-                            <div class="comparador" style="width:300px;">
-                                <div class="img-wrapper" id="wrapper-diente-caso1"
-                                    style="position:relative; width:300px; height:160px;">
-                                    <img src="d.dientes.png" class="img-top" alt="Después"
-                                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                    <div class="img-slider" id="slider-diente-caso1"
-                                        style="position:absolute;top:0;left:50%;height:100%;width:4px;background:#789ce2;cursor:ew-resize;z-index:2;transition:background 0.2s;">
-                                        <span class="flechas"
-                                            style="position:absolute;top:50%;left:-12px;transform:translateY(-50%);font-size:1.2rem;color:#789ce2;">⇆</span>
-                                    </div>
-                                    <img src="a.dientes.png" class="img-bottom" alt="Antes"
-                                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <!-- Un comparador por fila, tamaño grande y alargado -->
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso1">
+                                <img src="d.dientes.png" class="img-top" alt="Después">
+                                <div class="img-slider" id="slider-diente-caso1">
+                                    <span class="flechas">⇆</span>
                                 </div>
-                            </div>
-                            <div class="comparador" style="width:300px;">
-                                <div class="img-wrapper" id="wrapper-diente-caso2"
-                                    style="position:relative; width:300px; height:160px;">
-                                    <img src="d.dientes.png" class="img-top" alt="Después"
-                                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                    <div class="img-slider" id="slider-diente-caso2"
-                                        style="position:absolute;top:0;left:50%;height:100%;width:4px;background:#789ce2;cursor:ew-resize;z-index:2;transition:background 0.2s;">
-                                        <span class="flechas"
-                                            style="position:absolute;top:50%;left:-12px;transform:translateY(-50%);font-size:1.2rem;color:#789ce2;">⇆</span>
-                                    </div>
-                                    <img src="a.dientes.png" class="img-bottom" alt="Antes"
-                                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                </div>
+                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
                             </div>
                         </div>
-                    </div>
-                    <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-
-                        <!-- Fila 2 -->
-                        <div style="display: flex; gap: 2rem; justify-content: center;">
-                            <div class="comparador" style="width:300px;">
-                                <div class="img-wrapper" id="wrapper-diente-caso3"
-                                    style="position:relative; width:300px; height:160px;">
-                                    <img src="d.dientes.png" class="img-top" alt="Después"
-                                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                    <div class="img-slider" id="slider-diente-caso3"
-                                        style="position:absolute;top:0;left:50%;height:100%;width:4px;background:#789ce2;cursor:ew-resize;z-index:2;transition:background 0.2s;">
-                                        <span class="flechas"
-                                            style="position:absolute;top:50%;left:-12px;transform:translateY(-50%);font-size:1.2rem;color:#789ce2;">⇆</span>
-                                    </div>
-                                    <img src="a.dientes.png" class="img-bottom" alt="Antes"
-                                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso2">
+                                <img src="d.dientes.png" class="img-top" alt="Después">
+                                <div class="img-slider" id="slider-diente-caso2">
+                                    <span class="flechas">⇆</span>
                                 </div>
-                            </div>
-                            <div class="comparador" style="width:300px;">
-                                <div class="img-wrapper" id="wrapper-diente-caso4"
-                                    style="position:relative; width:300px; height:160px;">
-                                    <img src="d.dientes.png" class="img-top" alt="Después"
-                                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                    <div class="img-slider" id="slider-diente-caso4"
-                                        style="position:absolute;top:0;left:50%;height:100%;width:4px;background:#789ce2;cursor:ew-resize;z-index:2;transition:background 0.2s;">
-                                        <span class="flechas"
-                                            style="position:absolute;top:50%;left:-12px;transform:translateY(-50%);font-size:1.2rem;color:#789ce2;">⇆</span>
-                                    </div>
-                                    <img src="a.dientes.png" class="img-bottom" alt="Antes"
-                                        style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                </div>
+                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
                             </div>
                         </div>
-                    </div>
-                    <!-- Fila 3 -->
-                    <div style="display: flex; gap: 2rem; justify-content: center;">
-                        <div class="comparador" style="width:300px;">
-                            <div class="img-wrapper" id="wrapper-diente-caso5"
-                                style="position:relative; width:300px; height:160px;">
-                                <img src="d.dientes.png" class="img-top" alt="Después"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                <div class="img-slider" id="slider-diente-caso5"
-                                    style="position:absolute;top:0;left:50%;height:100%;width:4px;background:#789ce2;cursor:ew-resize;z-index:2;transition:background 0.2s;">
-                                    <span class="flechas"
-                                        style="position:absolute;top:50%;left:-12px;transform:translateY(-50%);font-size:1.2rem;color:#789ce2;">⇆</span>
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso3">
+                                <img src="d.dientes.png" class="img-top" alt="Después">
+                                <div class="img-slider" id="slider-diente-caso3">
+                                    <span class="flechas">⇆</span>
                                 </div>
-                                <img src="a.dientes.png" class="img-bottom" alt="Antes"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
                             </div>
                         </div>
-                        <div class="comparador" style="width:300px;">
-                            <div class="img-wrapper" id="wrapper-diente-caso6"
-                                style="position:relative; width:300px; height:160px;">
-                                <img src="d.dientes.png" class="img-top" alt="Después"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;">
-                                <div class="img-slider" id="slider-diente-caso6"
-                                    style="position:absolute;top:0;left:50%;height:100%;width:4px;background:#789ce2;cursor:ew-resize;z-index:2;transition:background 0.2s;">
-                                    <span class="flechas"
-                                        style="position:absolute;top:50%;left:-12px;transform:translateY(-50%);font-size:1.2rem;color:#789ce2;">⇆</span>
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso4">
+                                <img src="d.dientes.png" class="img-top" alt="Después">
+                                <div class="img-slider" id="slider-diente-caso4">
+                                    <span class="flechas">⇆</span>
                                 </div>
-                                <img src="a.dientes.png" class="img-bottom" alt="Antes"
-                                    style="position:absolute;top:0;left:0;width:100%;height:100%;">
+                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
+                            </div>
+                        </div>
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso5">
+                                <img src="d.dientes.png" class="img-top" alt="Después">
+                                <div class="img-slider" id="slider-diente-caso5">
+                                    <span class="flechas">⇆</span>
+                                </div>
+                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
+                            </div>
+                        </div>
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso6">
+                                <img src="d.dientes.png" class="img-top" alt="Después">
+                                <div class="img-slider" id="slider-diente-caso6">
+                                    <span class="flechas">⇆</span>
+                                </div>
+                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
 
         <script>
             document.getElementById('btn-otros-casos-dientes').onclick = function () {
@@ -305,11 +298,15 @@
     </section>
 
 
+
+
     <!-- EQUIPO -->
     <section id="equipo" class="contenido oculto">
 
+
         <h2 class="section-title">Nuestro Equipo</h2>
         <div class="equipo">
+
 
             <div class="persona">
                 <div class="foto-container">
@@ -322,6 +319,7 @@
                 <p>Especialista en rehabilitación estética</p>
             </div>
 
+
             <div class="persona">
                 <div class="foto-container">
                     <img src="thelma.png" alt="Dra. Thelma Grunfeld" class="foto-equipo" />
@@ -332,6 +330,7 @@
                 <h4>Dra. Thelma Grunfeld</h4>
                 <p>Ortodoncista especializada en tratamientos avanzados</p>
             </div>
+
 
             <div class="persona">
                 <div class="foto-container">
@@ -344,12 +343,18 @@
                 <p>Asistente técnica en procedimientos odontológicos</p>
             </div>
 
+
         </div>
     </section>
 
+
     <!-- NOSOTROS -->
 
+
     <section id="nosotros" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+
+
+
 
 
 
@@ -359,6 +364,7 @@
         <p style="font-size: 1.1rem; line-height: 1.6;">RIE es un centro dedicado a mejorar la calidad de vida de las
             personas mediante tratamientos estéticos y funcionales. Creemos en un abordaje integral, humano y
             personalizado.</p>
+
 
         <div id="celia-bio"
             style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -370,9 +376,11 @@
                 En 1993 ingresó al taller de pintura de Fernando López Lage, pudiendo aunar de esta forma sus dos
                 pasiones: la <strong>odontología</strong> y el <strong>arte</strong>.</p>
 
+
             <p style="line-height: 1.7;">En cuanto al arte, realizó varias exposiciones, intervino en concursos, sacó el
                 primer premio en el concurso del SMU, recibió varias menciones especiales y fue seleccionada para una
                 Bienal en Buenos Aires.</p>
+
 
             <p style="line-height: 1.7;">En un momento, decidió dejar de crear en un solo plano y comenzar a crear en
                 tres dimensiones. Trabajó con maniquíes, los pintaba y los exponía; otros los daba vuelta y con
@@ -382,13 +390,16 @@
                 pilares: <strong>AMOR, ARTE Y CIENCIA</strong>”. Fue en aquel momento que descubrió que ese era su
                 camino. Era la tercera dimensión que ella estaba buscando.</p>
 
+
             <p style="line-height: 1.7;">A partir de 2005 comenzó a ampliar conocimientos en el Servicio de Prótesis
                 Buco Maxilo Facial de la Facultad de Odontología de la Universidad de la República, atendiendo pacientes
                 mutilados faciales. Tarea que ha desarrollado ininterrumpidamente hasta hoy, con el mismo entusiasmo de
                 siempre.</p>
 
+
             <p style="line-height: 1.7;">Nunca se detiene, tanto en Odontología tradicional como en Prótesis Buco Maxilo
                 Facial, por lo que continuamente asiste a distintos cursos, jornadas y congresos.</p>
+
 
             <p style="font-weight: bold; font-size: 1.2rem; color: #333; margin-top: 2rem;">Cursos, Jornadas, Congresos,
                 Conferencias y Presentaciones</p>
@@ -411,6 +422,7 @@
                 <li>2019 - Presentación de protocolo en S.U.I.O sobre higiene de prótesis ocular</li>
             </ul>
 
+
             <p style="margin-top: 2rem; line-height: 1.7;"><strong>"Hoy</strong>, sigo haciendo lo que amo. Me gusta la
                 transformación, la creación. En Odontología, más que nada en el área de Rehabilitación Estética, y en
                 Prótesis Buco Maxilo Facial, especialmente en Prótesis Oculares. Es allí donde puedo volcar y
@@ -419,6 +431,7 @@
                 agradecida."
             </p>
         </div>
+
 
         <div id="thelma"
             style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -434,6 +447,7 @@
                 ortodoncia y estética dental.
             </p>
         </div>
+
 
         <!-- MAICA -->
         <div id="maica"
@@ -451,9 +465,11 @@
         </div>
     </section>
 
+
     <!-- CONTACTO -->
     <section id="contacto" class="contenido oculto">
         <h4> Mail</h4>
+
 
         <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank"
             style="color: #7c5c9c;  text-decoration: underline;" class="contacto-link">
@@ -469,6 +485,7 @@
         <h4>Ubicación</h4>
         <div class="info-item">
 
+
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.167210331529!2d-56.16329098461604!3d-34.910650681005716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95aab1f7e4dfe56f%3A0x302ac693b098963a!2sBulevar%20Espa%C3%B1a%202665%2C%2011300%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1ses!2suy!4v1717944341343!5m2!1ses!2suy"
                 width="300" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
@@ -476,12 +493,15 @@
             </iframe>
         </div>
 
+
     </section>
+
 
     <!-- PROTESIS OCULARES -->
     <section id="protesis-oculares" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
         <h2 style="color: #789ce2; font-size: 2rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">Prótesis
             Oculares</h2>
+
 
         <div style="margin-top: 1rem; margin-bottom: 2rem;">
             <nav style="display: flex; gap: 1rem; flex-wrap: wrap;">
@@ -489,9 +509,13 @@
                 <a href="#" onclick="scrollAjustadoA('etapas'); return false;">Etapas</a>
                 <a href="#" onclick="scrollAjustadoA('antes-despues'); return false;">Antes y Después</a>
 
+
             </nav>
         </div>
         <img src="pro.png" alt="Prótesis Oculares" class="foto-seccion-grande">
+
+
+
 
 
 
@@ -500,10 +524,13 @@
             calidad de vida con el uso de una <strong>prótesis ocular</strong>.
         </p>
 
+
         <p style="line-height: 1.6; font-size: 1.1rem;">
             Las causas pueden ser <strong>congénitas</strong> o <strong>adquiridas</strong>. Dentro de estas últimas se
             incluyen etiologías <em>traumáticas, oncológicas, infecciosas</em> u otras.
         </p>
+
+
 
 
         <div id="elaboracion" class="subseccion"
@@ -523,6 +550,7 @@
                 durante el proceso.
             </p>
         </div>
+
 
         <div id="etapas" class="subseccion"
             style="margin-top: 2.5rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
@@ -544,6 +572,7 @@
             </p>
         </div>
 
+
         <h3 id="antes-despues" style="color: #789ce2; font-size: 1.5rem;"> Antes y Después</h3>
         <div class="comparador" class="subseccion">
             <div class="img-wrapper" id="wrapper-ojo">
@@ -561,7 +590,8 @@
         </button>
         <!-- Modal de otros casos de prótesis oculares -->
         <div id="modal-otros-casos-ojo"
-            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+             onclick="if(event.target === this) this.style.display='none'"
+             style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
             <div
                 style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
                 <button onclick="document.getElementById('modal-otros-casos-ojo').style.display='none'"
@@ -628,6 +658,7 @@
             </div>
         </div>
 
+
         <script>
             document.getElementById('btn-otros-casos-ojo').onclick = function () {
                 document.getElementById('modal-otros-casos-ojo').style.display = 'flex';
@@ -638,6 +669,7 @@
         </script>
     </section>
 
+
     <script>
         // Activar comparadores para los 6 casos
         function activarComparador(wrapperId, sliderId) {
@@ -645,7 +677,9 @@
             const slider = document.getElementById(sliderId);
             const imgTop = wrapper.querySelector(".img-top");
 
+
             if (!wrapper || !slider || !imgTop) return;
+
 
             function moverSlider(posX) {
                 const rect = wrapper.getBoundingClientRect();
@@ -656,12 +690,14 @@
                 imgTop.style.clipPath = `inset(0 ${100 - porcentaje}% 0 0)`;
             }
 
+
             wrapper.addEventListener("mousemove", e => moverSlider(e.clientX));
             wrapper.addEventListener("touchmove", e => {
                 if (e.touches.length > 0) moverSlider(e.touches[0].clientX);
             });
         }
     </script>
+
 
     <!-- FUNCIONES -->
     <script>
@@ -674,11 +710,13 @@
             const estet = document.getElementById("estet");
             const pincelada = document.getElementById("pincelada");
 
+
             rehab.classList.add("anim-r");
             r.style.opacity = 1;
             setTimeout(() => {
                 rehab.style.display = "none";
                 r.querySelector("img").style.display = "inline";
+
 
                 integ.classList.add("anim-i");
                 i.style.opacity = 1;
@@ -686,11 +724,13 @@
                     integ.style.display = "none";
                     i.querySelector("img").style.display = "inline";
 
+
                     estet.classList.add("anim-e");
                     e.style.opacity = 1;
                     setTimeout(() => {
                         estet.style.display = "none";
                         e.querySelector("img").style.display = "inline";
+
 
                         setTimeout(() => {
                             pincelada.style.transition = "opacity 1.5s ease-in-out";
@@ -701,14 +741,17 @@
             }, 1300);
         }
 
+
         function mostrarSeccion(id) {
             const secciones = document.querySelectorAll("section");
             secciones.forEach(sec => sec.classList.add("oculto"));
+
 
             const target = document.getElementById(id);
             if (target) {
                 target.classList.remove("oculto");
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+
 
                 // 🔥 Fuerza a reiniciar animación si es inicio
                 if (id === "inicio") {
@@ -718,11 +761,13 @@
             }
         }
 
+
         function scrollAjustadoA(idElemento) {
             const elemento = document.getElementById(idElemento);
             if (elemento) {
                 const offset = -150; // Podés ajustar este número
                 const posicion = elemento.getBoundingClientRect().top + window.scrollY + offset;
+
 
                 window.scrollTo({
                     top: posicion,
@@ -731,12 +776,15 @@
             }
         }
 
+
         function activarComparador(wrapperId, sliderId) {
             const wrapper = document.getElementById(wrapperId);
             const slider = document.getElementById(sliderId);
             const imgTop = wrapper.querySelector(".img-top");
 
+
             if (!wrapper || !slider || !imgTop) return;
+
 
             function moverSlider(posX) {
                 const rect = wrapper.getBoundingClientRect();
@@ -747,11 +795,13 @@
                 imgTop.style.clipPath = `inset(0 ${100 - porcentaje}% 0 0)`;
             }
 
+
             wrapper.addEventListener("mousemove", e => moverSlider(e.clientX));
             wrapper.addEventListener("touchmove", e => {
                 if (e.touches.length > 0) moverSlider(e.touches[0].clientX);
             });
         }
+
 
         window.addEventListener("DOMContentLoaded", () => {
             const secciones = document.querySelectorAll("section");
@@ -761,12 +811,15 @@
                 }
             });
 
+
             activarComparador("wrapper-dientes", "slider-dientes");
             activarComparador("wrapper-ojo", "slider-ojo");
+
 
             animarInicio(); // ✅ Esto hace que se ejecute apenas entrás
         });
     </script>
+
 
     <script>
         const links = document.querySelectorAll("nav a");
@@ -777,6 +830,7 @@
             });
         });
 
+
         function irACelia() {
             setTimeout(() => {
                 const celiaAnchor = document.getElementById("celia-bio");
@@ -786,6 +840,7 @@
             }, 300);
         }
     </script>
+
 
     <script>
         function irAThelma() {
@@ -798,6 +853,7 @@
         }
     </script>
 
+
     <script>
         function irAMaica() {
             setTimeout(() => {
@@ -809,6 +865,7 @@
         }
     </script>
 
+
     <script>
         // Carrusel automático
         const carruselImgs = document.querySelectorAll('.carrusel-img');
@@ -819,6 +876,7 @@
             carruselImgs[carruselIndex].classList.add('active');
         }, 3000); // Cambia cada 3 segundos
     </script>
+
 
     <!-- FOOTER -->
     <footer>
@@ -834,10 +892,15 @@
             <div class="info-item">
                 <img src="contactoP.png" alt="Email" class="icon-img">
                 <p>contacto@rie.uy</p>
-                <p>+598 099 123 456</p>
+                <p>
+    <a href="tel:+59827081013" id="telefono-footer"style="text-decoration: underline;">
+        +598 2708 1013
+    </a>
+</p>
             </div>
         </div>
     </footer>
+
 
     <script>
         function animarRIEloop() {
@@ -848,9 +911,11 @@
             ];
             let idx = 0;
 
+
             function limpiar() {
                 palabras.forEach(p => document.getElementById(p.id).textContent = "");
             }
+
 
             function escribirPalabra() {
                 if (idx >= palabras.length) {
@@ -882,8 +947,42 @@
             escribirPalabra();
         }
 
+
         window.addEventListener("DOMContentLoaded", animarRIEloop);
     </script>
+    <script>
+document.getElementById('telefono-footer').addEventListener('click', function(e) {
+    // Detecta si NO es móvil
+    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+        e.preventDefault();
+        alert('Para llamar, hacelo desde tu teléfono móvil.');
+    }
+});
+</script>
+    <script>
+function setMenuLabel(label) {
+    document.getElementById('menu-mobile-label').childNodes[0].textContent = label + " ";
+}
+function cerrarMenuMobile() {
+    document.getElementById('menu-mobile-dropdown').style.display = 'none';
+    document.querySelector('.menu-mobile').classList.remove('open');
+}
+document.getElementById('menu-mobile-toggle').onclick = function() {
+    const dropdown = document.getElementById('menu-mobile-dropdown');
+    const menuMobile = document.querySelector('.menu-mobile');
+    if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+        dropdown.style.display = 'flex';
+        menuMobile.classList.add('open');
+    } else {
+        dropdown.style.display = 'none';
+        menuMobile.classList.remove('open');
+    }
+};
+</script>
+
+
 </body>
 
+
 </html>
+
