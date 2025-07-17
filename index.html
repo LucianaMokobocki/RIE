@@ -4,12 +4,6 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" cont<!DOCTYPE html>
-<html lang="es">
-
-
-<head>
-    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RIE • Rehabilitación Integral Estética</title>
     <link rel="stylesheet" href="style.css" />
@@ -34,38 +28,37 @@
                     class="contacto-link">
                     <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
                 </a>
-                <!-- Menú responsive para móvil -->
-                <div class="menu-mobile">
-                    <button id="menu-mobile-toggle" aria-label="Abrir menú"
-                        style="background: none; border: none; padding: 0; display: flex; align-items: center; cursor: pointer;">
-                        <span id="menu-mobile-label" class="menu-mobile-label">
-                            Inicio
-                            <svg id="menu-mobile-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" style="margin-left:8px;transition:transform 0.3s;">
-                                <polyline points="8,10 11,13 14,10" fill="none" stroke="#789ce2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                    </button>
-                    <div id="menu-mobile-dropdown" style="display:none;">
-                        <a href="#" onclick="setMenuLabel('Inicio'); cerrarMenuMobile(); mostrarSeccion('inicio'); return false;">Inicio</a>
-                        <a href="#" onclick="mostrarSeccion('protesis-oculares'); setMenuLabel('Prótesis Oculares'); cerrarMenuMobile()">Prótesis Oculares</a>
-                        <a href="#" onclick="mostrarSeccion('odontologia'); setMenuLabel('Odontología'); cerrarMenuMobile()">Odontología</a>
-                        <a href="#" onclick="mostrarSeccion('equipo'); setMenuLabel('Equipo'); cerrarMenuMobile()">Equipo</a>
-                        <a href="#" onclick="mostrarSeccion('nosotros'); setMenuLabel('Nosotros'); cerrarMenuMobile()">Nosotros</a>
-                        <a href="#" onclick="mostrarSeccion('contacto'); setMenuLabel('Contacto'); cerrarMenuMobile()">Contacto</a>
-                    </div>
-                </div>
             </div>
         </div>
+        <!-- Menú de escritorio -->
         <nav class="menu-desktop">
-            <!-- Menú tradicional, igual que ahora -->
-            <a href="#" class="overlay-info active" onclick="mostrarSeccion('nosotros'); scrollToCelia()">Ver más info de la Dra. Celia</a>
-            <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
-            <a href="#" onclick="mostrarSeccion('protesis-oculares')">Prótesis Oculares</a>
-            <a href="#" onclick="mostrarSeccion('odontologia')">Odontología</a>
-            <a href="#" onclick="mostrarSeccion('equipo')">Equipo</a>
-            <a href="#" onclick="mostrarSeccion('nosotros')">Nosotros</a>
-            <a href="#" onclick="mostrarSeccion('contacto')">Contacto</a>
+            <a href="#" onclick="mostrarSeccion('inicio'); return false;">Inicio</a>
+            <a href="#" onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis Oculares</a>
+            <a href="#" onclick="mostrarSeccion('odontologia'); return false;">Odontología</a>
+            <a href="#" onclick="mostrarSeccion('equipo'); return false;">Equipo</a>
+            <a href="#" onclick="mostrarSeccion('nosotros'); return false;">Nosotros</a>
+            <a href="#" onclick="mostrarSeccion('contacto'); return false;">Contacto</a>
         </nav>
+        <!-- Menú móvil abajo del logo -->
+        <div class="menu-mobile">
+            <button id="menu-mobile-toggle" aria-label="Abrir menú"
+                style="background: none; margin-left: 29px; padding: 0; display: flex; align-items: center; cursor: pointer;">
+                <span id="menu-mobile-label" class="menu-mobile-label">
+                    Inicio
+                    <svg id="menu-mobile-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" style="margin-left:8px;transition:transform 0.3s;">
+                        <polyline points="8,10 11,13 14,10" fill="none" stroke="#789ce2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </span>
+            </button>
+            <div id="menu-mobile-dropdown" style="display:none;">
+                <a href="#" onclick="setMenuLabel('Inicio'); cerrarMenuMobile(); mostrarSeccion('inicio'); return false;">Inicio</a>
+                <a href="#" onclick="mostrarSeccion('protesis-oculares'); setMenuLabel('Prótesis Oculares'); cerrarMenuMobile()">Prótesis Oculares</a>
+                <a href="#" onclick="mostrarSeccion('odontologia'); setMenuLabel('Odontología'); cerrarMenuMobile()">Odontología</a>
+                <a href="#" onclick="mostrarSeccion('equipo'); setMenuLabel('Equipo'); cerrarMenuMobile()">Equipo</a>
+                <a href="#" onclick="mostrarSeccion('nosotros'); setMenuLabel('Nosotros'); cerrarMenuMobile()">Nosotros</a>
+                <a href="#" onclick="mostrarSeccion('contacto'); setMenuLabel('Contacto'); cerrarMenuMobile()">Contacto</a>
+            </div>
+        </div>
     </header>
 
 
