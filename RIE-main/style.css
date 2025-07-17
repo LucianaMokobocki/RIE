@@ -1,0 +1,948 @@
+/* ------------------ ESTILOS BASE ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5fcfd;
+  color: #444;
+  scroll-behavior: smooth;
+  padding-bottom: 50px;
+  width: 100vw;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+header {
+  background-color: white;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.intro-container {
+  text-align: center;
+  margin: 2rem auto;
+  max-width: 800px;
+  padding: 1rem;
+}
+
+.intro-container h3 {
+  font-size: 2rem;
+  color: #789ce2;
+}
+
+.intro-container p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-top: 0.5rem;
+}
+
+.destacados-inicio {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem 1rem;
+  color: #789ce2;
+}
+
+.card-icono {
+  background: #f5fafa;
+  border-radius: 10px;
+  padding: 1.5rem;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-icono img {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+
+.card-icono h4 {
+  color: #789ce2;
+  margin-bottom: 0.5rem;
+}
+
+.card-icono p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+.testimonio-inicio {
+  background: #d9e9af;
+  padding: 2rem;
+  margin: 3rem auto;
+  max-width: 700px;
+  border-left: 5px solid #99c2f2;
+  font-style: italic;
+}
+
+.testimonio-inicio blockquote {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.firma-testimonio {
+  margin-top: 1rem;
+  font-weight: bold;
+  text-align: right;
+  color: #99c2f2;
+}
+
+.carrusel-fotos {
+  margin-bottom: 2rem; /* o podés probar con 3rem si querés más espacio */
+}
+
+
+.logo {
+  max-height: 100px;
+}
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #99c2f2;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #007c91;
+}
+
+
+/* Secciones principales igual ancho y centrado */
+#odontologia, #protesis-oculares, #equipo, #contacto, #nosotros {
+  background-color: rgba(250, 249, 249, 0.95);
+  padding: 20px 20px;
+  border-radius: 10px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(115, 255, 112, 0.05);
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+
+/* Imagen grande igual en ambas secciones */
+.foto-seccion-grande {
+  width: 100%;
+  max-width: 1100px;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+  margin: 30px auto 40px auto;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+#rie-container .palabra {
+  font-family: 'garmondbold', 'Georgia', serif;
+  font-weight: 900;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  color: #789ce2;
+  text-shadow: 0 2px 8px rgba(100,184,195,0.10);
+  display: inline-block;
+  margin-bottom: 8px;
+  transition: color 0.3s;
+}
+
+#rie-container .palabra#rehab { color: #789ce2; }
+#rie-container .palabra#integ { color: #789ce2; }
+#rie-container .palabra#estet { color: #789ce2; }
+/* ------------------ HERO ------------------ */
+.hero {
+  text-align: center;
+  padding: 0px;
+  background: linear-gradient(to right, #e8edf6, #f5fcfd);
+  width: 100%;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  color: #789ce2;
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  margin: 0;
+  font-family: 'Georgia', serif;
+  font-weight: normal;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+/* ------------------ SECCIONES GENERALES ------------------ */
+section {
+  padding: 60px 20px;
+  width: 100%;
+  margin: 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #789ce2;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* ------------------ BLOQUES DE TEXTO ------------------ */
+.protesis-intro,
+.tratamiento,
+.galeria,
+.equipo,
+#nosotros,
+#contacto {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+.tratamiento h3,
+.galeria h3 {
+  margin-bottom: 10px;
+  color: #789ce2;
+}
+
+/* ------------------ GALERIA ------------------ */
+.imagenes-comparacion {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.img-container {
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+
+.img-container:hover {
+  transform: scale(1.05);
+}
+
+.img-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(1) contrast(1.1);
+  transition: filter 0.3s ease;
+}
+
+.etiqueta {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background-color: #789ce2;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* ------------------ EQUIPO ------------------ */
+.equipo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.persona {
+  text-align: center;
+  max-width: 250px;
+}
+
+.persona img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+.persona h4 {
+  margin: 10px 0 5px;
+  color: #789ce2;
+}
+
+.persona p {
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.carrusel-fotos {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carrusel-img {
+  width: 100%;
+  display: none;
+  border-radius: 20px;
+}
+.carrusel-img.active {
+  display: block;
+}
+
+
+/* ------------------ FOOTER ------------------ */
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: #8ea8de;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+footer p {
+  margin: 5px 0;
+}
+
+footer .info {
+  margin-top: 15px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ------------------ ANIMACIONES ------------------ */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes palabraInLeft {
+  0% { transform: translateX(-150%); opacity: 0; }
+  50% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(0); opacity: 0; }
+}
+
+@keyframes palabraInTop {
+  0% { transform: translateY(-150%); opacity: 0; }
+  50% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0; }
+}
+
+@keyframes palabraInRight {
+  0% { transform: translateX(150%); opacity: 0; }
+  50% { transform: translateX(0); opacity: 1; }
+  100% { transform: translateX(0); opacity: 0; }
+}
+
+@keyframes fadeInLetra {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes revealMask {
+  from {
+    clip-path: inset(0 100% 0 0);
+  }
+  to {
+    clip-path: inset(0 0% 0 0);
+  }
+}
+
+/* ------------------ RIE LOGO ANIMADO ------------------ */
+#rie-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.letra {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+}
+
+.palabra {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  opacity: 0;
+  margin-bottom: 10px;
+  animation-fill-mode: forwards;
+}
+
+#intro-tipeo {
+  text-align: center;
+  margin-top: 60px;
+  font-family: 'Georgia', serif;
+  font-size: 2.2rem;
+  color: #98BFFA;
+}
+
+#palabra-tipeada {
+  display: inline-block;
+}
+
+#cursor {
+  display: inline-block;
+  animation: blink 0.8s infinite;
+  color: #98BFFA;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+#rie-letras {
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.letra-final {
+  color: #98BFFA;
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.final-img {
+  width: 120px;
+  height: 120px;
+  margin: -100;
+  opacity: 0;
+  animation: fadeInLetra 0.5s forwards;
+}
+
+#pincelada-container {
+  position: relative;
+  width: 300px;
+  height: auto;
+  overflow: hidden;
+  margin: -1111px auto 0;
+}
+
+#pincelada {
+  width: 300px;
+  height: auto;
+  clip-path: inset(0 100% 0 0);
+  animation: revealMask 2s ease-out forwards;
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+/* ------------------ INFO ICONOS ------------------ */
+.info-grid {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.info-item {
+  text-align: center;
+  max-width: 150px;
+}
+
+.icon-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  background: none;
+}
+
+.telefono-link {
+  text-decoration: none;
+  color: #789ce2;
+;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contacto-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.contacto-link:hover {
+  color: #789ce2;
+}
+
+/* ------------------ RESPONSIVE ------------------ */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .imagenes-comparacion {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .equipo {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Responsive para el logo animado RIE - versión mejorada */
+@media (max-width: 600px) {
+  #rie-container,
+  #rie-tipeo {
+    flex-direction: column !important;
+    gap: 6px !important;
+    font-size: 1.2rem !important;
+    margin-top: 18px !important;
+    align-items: center !important;
+  }
+  .letra,
+  .rie-letra {
+    font-size: 1rem !important;
+    margin-bottom: 0 !important;
+    min-width: 0 !important;
+  }
+  #rie-container .palabra,
+  #rie-tipeo .palabra,
+  .rie-letra span {
+    font-size: 0.95rem !important;
+    margin-bottom: 2px !important;
+    max-width: 92vw !important;
+    word-break: break-word !important;
+    white-space: normal !important;
+    text-align: center !important;
+    letter-spacing: 0 !important;
+  }
+}
+
+/* ------------------ NUEVA SECCIÓN PRÓTESIS OCULARES ------------------ */
+#protesis-oculares {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 40px 20px;
+  border-radius: 12px;
+  max-width: 1000px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  animation: fadeInUp 0.7s ease-in-out;
+}
+
+#protesis-oculares h2 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 30px;
+  color: #789ce2;
+}
+
+#protesis-oculares .subseccion {
+  margin-top: 20px;
+}
+
+.icon-ubi {
+  width: 70px;
+  height: 70px;
+  filter: brightness(0.0);
+}
+
+
+#protesis-oculares .subseccion h3 {
+  color: #789ce2;
+  margin-bottom: 10px;
+}
+
+#protesis-oculares .subseccion p {
+  line-height: 1.6;
+  color: #444;
+  font-size: 1rem;
+}
+
+#protesis-oculares .antes-despues {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#protesis-oculares .antes-despues img {
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+#protesis-oculares .antes-despues .etiqueta {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  color: #789ce2;
+}
+
+
+/*----- secciones -----*/
+.contenido {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.contenido.oculto {
+  display: none;
+  opacity: 0;
+}
+
+
+/*---- antes y despues protesis ----- */
+.comparador {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;  
+}
+
+.img-bottom,
+.img-top {
+  width: 100%;
+  display: block;
+}
+
+.img-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: inset(0 50% 0 0);
+  z-index: 2;
+}
+
+.img-slider {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-2px);
+  width: 4px;
+  height: 100%;
+  background-color: #789ce2;
+  cursor: ew-resize;
+  z-index: 3;
+  border-radius: 2px;
+}
+@keyframes parpadeo {
+  0% { opacity: 1; }
+  100% { opacity: 0.4; }
+}
+
+
+.img-slider.sin-texto::before {
+  display: none;
+}
+
+.flechas {
+  font-size: 36px;
+  font-weight: bold;
+  color: #789ce2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  user-select: none;
+  animation: pulsoFlecha 1.2s ease-in-out infinite;
+}
+
+@keyframes pulsoFlecha {
+  0% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.2); }
+  100% { opacity: 0.2; transform: translate(-50%, -50%) scale(1); }
+}
+
+
+nav a {
+  position: relative;
+  padding: 8px 22px;
+  margin-left: 16px;
+  border-radius: 30px;
+  color: #789ce2;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s, color 0.3s, border 0.3s;
+  background: transparent;
+  display: inline-block;
+  border: 2px solid #789ce2; /* burbuja solo borde */
+  box-shadow: none;
+}
+
+nav a.active,
+nav a:hover {
+  background: linear-gradient(90deg, #a5dbe3 0%, #789ce2 100%);
+  color: #fff;
+  border: 2px solid #789ce2;
+  box-shadow: 0 2px 8px rgba(100,184,195,0.10);
+  text-decoration: none;
+}
+/*---- info de ellas----- */
+.persona {
+  position: relative;
+  width: 200px;
+  text-align: center;
+  margin: 20px;
+}
+.foto-container {
+  position: relative;
+  width: 180px;
+  height: 220px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 50% 50% / 55% 55%; /* forma de huevo parada */
+}
+
+.foto-equipo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 50% 50% / 55% 55%;
+}
+
+/* Overlay mágico */
+.overlay-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #789ce2;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: none;
+  text-decoration: none;
+  border-radius: 50% 50% / 55% 55%;
+  transition: 0.3s ease;
+  padding: 20px;
+}
+
+.foto-container:hover .overlay-info {
+  display: flex;
+  cursor: pointer;
+}
+
+/* Modal de otros casos de prótesis oculares más ancho y fotos alargadas */
+#modal-otros-casos-dientes > div,
+#modal-otros-casos-ojos > div {
+    max-width: 600px;
+    width: 100%;
+    padding: 2rem 0;         /* Solo arriba y abajo */
+    border-radius: 10px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.comparador-modal {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  height: 220px;             /* Igual que la imagen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-wrapper-modal {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    height: 220px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f5f5f5;
+}
+
+.img-wrapper-modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    background: #fff;
+}
+
+@media (max-width: 900px) {
+  .comparador-modal {
+    height: 200px;
+  }
+}
+#rie-tipeo {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-family: 'Montserrat', 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 900;
+  letter-spacing: 0.0em;
+  color: #789ce2 ;
+  margin-bottom: 0.0rem;
+}
+
+.rie-letra {
+  display: flex;
+  align-items: flex-end; /* <-- Esto alinea la palabra con la base de la letra */
+  position: relative;
+  min-width: 0.0rem;
+  line-height: 1;
+}
+
+.rie-letra span {
+  font-weight: 700;
+  font-size: 2.1rem;
+  letter-spacing: 0.0em;
+  margin-left: 0.0em;
+  vertical-align: baseline; /* <-- Esto ayuda a alinear aún mejor */
+  color: #789ce2 ;
+  transition: color 0.3s;
+  line-height: 1;
+  
+    margin-bottom: 0.05em; /* <-- SUBE la palabra respecto a la letra */
+
+}
+
+/* Menú desktop visible solo en pantallas grandes */
+.menu-desktop {
+    display: flex;
+    gap: 1rem;
+}
+.menu-mobile {
+    display: none;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+}
+
+#menu-mobile-toggle {
+    background: none;
+    border: none;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+#menu-mobile-label {
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    background: #eaf1fb;
+    color: #789ce2;
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: 2px solid #789ce2;
+    box-shadow: 0 2px 8px rgba(120,156,226,0.07);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+#menu-mobile-arrow {
+    transition: transform 0.3s;
+}
+
+.menu-mobile.open #menu-mobile-arrow {
+    transform: rotate(-90deg);
+}
+
+#menu-mobile-dropdown {
+    position: absolute;
+    top: 3.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    padding: 0.5rem 1rem;
+    z-index: 999;
+    min-width: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#menu-mobile-dropdown a {
+    color: #789ce2;
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    width: 100%;
+    text-align: center;
+}
+#menu-mobile-dropdown a:hover {
+    background: #eaf1fb;
+    border-radius: 4px;
+}
+
+/* Responsive: solo muestra el menú mobile en pantallas chicas */
+@media (max-width: 900px) {
+    .menu-desktop {
+        display: none !important;
+    }
+    .menu-mobile {
+        display: flex !important;
+    }
+}
+
+.rie-mobile { display: none; }
+.rie-desktop { display: flex; }
+
+@media (max-width: 600px) {
+  .rie-desktop { display: none !important; }
+  .rie-mobile { display: flex !important; }
+}
