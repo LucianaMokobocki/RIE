@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RIE • Rehabilitación Integral Estética</title>
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 
 
@@ -16,8 +17,8 @@
     <header>
         <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
             <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="#" onclick="mostrarSeccion('inicio'); return false;">
-                    <img src="rielogo.png" alt="Logo RIE" class="logo" />
+                <a href="#" data-seccion="inicio" onclick="mostrarSeccion('inicio'); return false;">
+                    <img src="rielogo.png" alt="Logo RIE" class="logo" style="width: 100px; height: 180px;" />
                 </a>
             </div>
             <div style="display: flex; align-items: center; gap: 1rem;">
@@ -32,12 +33,12 @@
         </div>
         <!-- Menú de escritorio -->
         <nav class="menu-desktop">
-            <a href="#" onclick="mostrarSeccion('inicio'); return false;">Inicio</a>
-            <a href="#" onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis Oculares</a>
-            <a href="#" onclick="mostrarSeccion('odontologia'); return false;">Odontología</a>
-            <a href="#" onclick="mostrarSeccion('equipo'); return false;">Equipo</a>
-            <a href="#" onclick="mostrarSeccion('nosotros'); return false;">Nosotros</a>
-            <a href="#" onclick="mostrarSeccion('contacto'); return false;">Contacto</a>
+            <a href="#" data-seccion="inicio" onclick="mostrarSeccion('inicio'); return false;">Inicio</a>
+            <a href="#" data-seccion="protesis-oculares" onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis Oculares</a>
+            <a href="#" data-seccion="odontologia" onclick="mostrarSeccion('odontologia'); return false;">Odontología</a>
+            <a href="#" data-seccion="equipo" onclick="mostrarSeccion('equipo'); return false;">Equipo</a>
+            <a href="#" data-seccion="nosotros" onclick="mostrarSeccion('nosotros'); return false;">Nosotros</a>
+            <a href="#" data-seccion="contacto" onclick="mostrarSeccion('contacto'); return false;">Contacto</a>
         </nav>
         <!-- Menú móvil abajo del logo -->
         <div class="menu-mobile">
@@ -123,7 +124,22 @@
             <p class="firma-testimonio">— Paciente de prótesis ocular</p>
         </div>
 
-
+        <!-- Estadísticas -->
+<div class="stats-inicio">
+  <div class="stat-card">
+    <span class="stat-num" data-target="500">0</span><span class="stat-sufijo">+</span>
+    <div class="stat-label" style="color: #5b72a0;">Clientes atendidos</div>
+  </div>
+  <div class="stat-card">
+    <span class="stat-num" data-target="15">0</span><span class="stat-sufijo">+</span>
+    <div class="stat-label" style="color: #5b72a0;">Años de experiencia</div>
+  </div>
+  
+  <div class="stat-card">
+    <span class="stat-num" data-target="99">0</span><span class="stat-sufijo">%</span>
+    <div class="stat-label" style="color: #5b72a0;">Satisfacción del cliente</div>
+  </div>
+</div>
     </section>
 
 
@@ -739,12 +755,10 @@
             const secciones = document.querySelectorAll("section");
             secciones.forEach(sec => sec.classList.add("oculto"));
 
-
             const target = document.getElementById(id);
             if (target) {
                 target.classList.remove("oculto");
                 window.scrollTo({ top: 0, behavior: 'smooth' });
-
 
                 // 🔥 Fuerza a reiniciar animación si es inicio
                 if (id === "inicio") {
@@ -752,6 +766,32 @@
                     setTimeout(animarInicio, 10); // reejecuta la animación con delay
                 }
             }
+
+            marcarMenuActivo(id);
+        }
+
+       function marcarMenuActivo(id) {
+    // Para menú de escritorio
+    const navLinks = document.querySelectorAll('.menu-desktop a');
+    navLinks.forEach(link => link.classList.remove('active'));
+    const linkToMark = Array.from(navLinks).find(link =>
+        link.getAttribute('data-seccion') === id
+    );
+    if (linkToMark) linkToMark.classList.add('active');
+
+    // Para menú móvil
+    const mobileLinks = document.querySelectorAll('#menu-mobile-dropdown a');
+    mobileLinks.forEach(link => link.classList.remove('active'));
+    const mobileLinkToMark = Array.from(mobileLinks).find(link =>
+        link.getAttribute('data-seccion') === id
+    );
+    if (mobileLinkToMark) mobileLinkToMark.classList.add('active');
+       }
+
+       
+        // Helper para capitalizar la primera letra
+        function capitalizeFirstLetter(str) {
+            return str.charAt(0).toUpperCase() + str.slice(1);
         }
 
 
@@ -971,6 +1011,39 @@ document.getElementById('menu-mobile-toggle').onclick = function() {
         menuMobile.classList.remove('open');
     }
 };
+</script>
+<script>
+function animarStats() {
+  document.querySelectorAll('.stat-num').forEach(el => {
+    const target = +el.getAttribute('data-target');
+     el.textContent = '0';
+    let count = 0;
+    const duration = 1200;
+    const start = performance.now();
+    function update(now) {
+      const progress = Math.min((now - start) / duration, 1);
+      count = Math.floor(progress * target);
+      el.textContent = count;
+      if (progress < 1) {
+        requestAnimationFrame(update);
+      } else {
+        el.textContent = target;
+      }
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+// Solo anima cuando la sección aparece en pantalla
+const statsSection = document.querySelector('.stats-inicio');
+if (statsSection) {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      animarStats();
+    }
+  }, { threshold: 0.4 });
+  observer.observe(statsSection);
+}
 </script>
 
 
