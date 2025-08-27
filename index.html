@@ -5,9 +5,10 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RIE • Rehabilitación Integral Estética</title>
+    <title>Rehabilitación integral estética</title>
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+        rel="stylesheet">
 </head>
 
 
@@ -34,8 +35,12 @@
         <!-- Menú de escritorio -->
         <nav class="menu-desktop">
             <a href="#" data-seccion="inicio" onclick="mostrarSeccion('inicio'); return false;">Inicio</a>
-            <a href="#" data-seccion="protesis-oculares" onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis Oculares</a>
-            <a href="#" data-seccion="odontologia" onclick="mostrarSeccion('odontologia'); return false;">Odontología</a>
+            <a href="#" data-seccion="protesis-oculares"
+                onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis Oculares</a>
+            <a href="#" data-seccion="odontologia"
+                onclick="mostrarSeccion('odontologia'); return false;">Odontología</a>
+            <a href="#" data-seccion="testimonios"
+                onclick="mostrarSeccion('testimonios'); return false;">Testimonios</a>
             <a href="#" data-seccion="equipo" onclick="mostrarSeccion('equipo'); return false;">Equipo</a>
             <a href="#" data-seccion="nosotros" onclick="mostrarSeccion('nosotros'); return false;">Nosotros</a>
             <a href="#" data-seccion="contacto" onclick="mostrarSeccion('contacto'); return false;">Contacto</a>
@@ -46,18 +51,28 @@
                 style="background: none; margin-left: 29px; padding: 0; display: flex; align-items: center; cursor: pointer;">
                 <span id="menu-mobile-label" class="menu-mobile-label">
                     Inicio
-                    <svg id="menu-mobile-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none" style="margin-left:8px;transition:transform 0.3s;">
-                        <polyline points="8,10 11,13 14,10" fill="none" stroke="#789ce2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <svg id="menu-mobile-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                        style="margin-left:8px;transition:transform 0.3s;">
+                        <polyline points="8,10 11,13 14,10" fill="none" stroke="#789ce2" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </span>
             </button>
             <div id="menu-mobile-dropdown" style="display:none;">
-                <a href="#" onclick="setMenuLabel('Inicio'); cerrarMenuMobile(); mostrarSeccion('inicio'); return false;">Inicio</a>
-                <a href="#" onclick="mostrarSeccion('protesis-oculares'); setMenuLabel('Prótesis Oculares'); cerrarMenuMobile()">Prótesis Oculares</a>
-                <a href="#" onclick="mostrarSeccion('odontologia'); setMenuLabel('Odontología'); cerrarMenuMobile()">Odontología</a>
+                <a href="#"
+                    onclick="setMenuLabel('Inicio'); cerrarMenuMobile(); mostrarSeccion('inicio'); return false;">Inicio</a>
+                <a href="#"
+                    onclick="mostrarSeccion('protesis-oculares'); setMenuLabel('Prótesis Oculares'); cerrarMenuMobile()">Prótesis
+                    Oculares</a>
+                <a href="#"
+                    onclick="mostrarSeccion('odontologia'); setMenuLabel('Odontología'); cerrarMenuMobile()">Odontología</a>
                 <a href="#" onclick="mostrarSeccion('equipo'); setMenuLabel('Equipo'); cerrarMenuMobile()">Equipo</a>
-                <a href="#" onclick="mostrarSeccion('nosotros'); setMenuLabel('Nosotros'); cerrarMenuMobile()">Nosotros</a>
-                <a href="#" onclick="mostrarSeccion('contacto'); setMenuLabel('Contacto'); cerrarMenuMobile()">Contacto</a>
+                <a href="#"
+                    onclick="mostrarSeccion('nosotros'); setMenuLabel('Nosotros'); cerrarMenuMobile()">Nosotros</a>
+                <a href="#"
+                    onclick="mostrarSeccion('contacto'); setMenuLabel('Contacto'); cerrarMenuMobile()">Contacto</a>
+                <a href="#"
+                    onclick="mostrarSeccion('testimonios'); setMenuLabel('Testimonios'); cerrarMenuMobile()">Testimonios</a>
             </div>
         </div>
     </header>
@@ -74,21 +89,24 @@
         </div>
 
 
-       
 
 
-        <div id="rie-tipeo" class="rie-desktop" style="display: flex; justify-content: center; gap: 2.5rem; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem;">
-          <span class="rie-letra" id="letra-r">R<span id="palabra-r"></span></span>
-          <span class="rie-letra" id="letra-i">I<span id="palabra-i"></span></span>
-          <span class="rie-letra" id="letra-e">E<span id="palabra-e"></span></span>
+
+        <div id="rie-tipeo" class="rie-desktop"
+            style="display: flex; justify-content: center; gap: 2.5rem; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem;">
+            <span class="rie-letra" id="letra-r" style="color: #789ce2;">R<span id="palabra-r"></span></span>
+            <span class="rie-letra" id="letra-i" style="color: #789ce2;">I<span id="palabra-i"></span></span>
+            <span class="rie-letra" id="letra-e" style="color: #789ce2;">E<span id="palabra-e"></span></span>
         </div>
 
 
         <!-- Logo estático para móvil -->
-<div id="rie-estatico" class="rie-mobile" style="display:none; flex-direction:column; align-items:center; margin-top:30px;">
-    <!--<span style="font-size:2.8rem; font-weight:900; color:#789ce2; letter-spacing:2px;">RIE</span>  -->
-    <span style="font-size:1.2rem; color:#789ce2; margin-top:8px; text-align:center;">Rehabilitación Integral Estética</span>
-</div>
+        <div id="rie-estatico" class="rie-mobile"
+            style="display:none; flex-direction:column; align-items:center; margin-top:30px;">
+            <!--<span style="font-size:2.8rem; font-weight:900; color:#789ce2; letter-spacing:2px;">RIE</span>  -->
+            <span style="font-size:1.2rem; color:#789ce2; margin-top:8px; text-align:center;">Rehabilitación Integral
+                Estética</span>
+        </div>
         <!-- Presentación destacada -->
         <div class="intro-container">
             <!--  <h3>Bienvenidos a RIE</h3> -->
@@ -125,21 +143,21 @@
         </div>
 
         <!-- Estadísticas -->
-<div class="stats-inicio">
-  <div class="stat-card">
-    <span class="stat-num" data-target="500">0</span><span class="stat-sufijo">+</span>
-    <div class="stat-label" style="color: #5b72a0;">Clientes atendidos</div>
-  </div>
-  <div class="stat-card">
-    <span class="stat-num" data-target="15">0</span><span class="stat-sufijo">+</span>
-    <div class="stat-label" style="color: #5b72a0;">Años de experiencia</div>
-  </div>
-  
-  <div class="stat-card">
-    <span class="stat-num" data-target="99">0</span><span class="stat-sufijo">%</span>
-    <div class="stat-label" style="color: #5b72a0;">Satisfacción del cliente</div>
-  </div>
-</div>
+        <div class="stats-inicio">
+            <div class="stat-card">
+                <span class="stat-num" data-target="500">0</span><span class="stat-sufijo">+</span>
+                <div class="stat-label" style="color: #5b72a0;">Clientes atendidos</div>
+            </div>
+            <div class="stat-card">
+                <span class="stat-num" data-target="15">0</span><span class="stat-sufijo">+</span>
+                <div class="stat-label" style="color: #5b72a0;">Años de experiencia</div>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-num" data-target="99">0</span><span class="stat-sufijo">%</span>
+                <div class="stat-label" style="color: #5b72a0;">Satisfacción del cliente</div>
+            </div>
+        </div>
     </section>
 
 
@@ -209,8 +227,36 @@
             </p>
         </div>
 
+        <div class="galeria-antes-despues">
+            <div class="casos-grid">
+                <div class="caso">
+                    <div class="foto-antes-despues">
+                        <div class="foto-antes">
+                            <img src="antes1.jpg" alt="Antes caso 1" class="fade-in-on-scroll">
+                        </div>
+                        <div class="foto-despues">
+                            <img src="despues1.jpg" alt="Después caso 1" class="fade-in-on-scroll">
+                        </div>
+                    </div>
+                </div>
+                <div class="caso">
 
-<div class="galeria subseccion" id="antesYdespues">            <h3 style="color: #789ce2; font-size: 1.5rem; margin-top: 2rem;"> Antes y Después</h3>
+                    <div class="foto-antes-despues">
+                        <div class="foto-antes">
+                            <img src="antes2.jpg" alt="Antes caso 2">
+                        </div>
+                        <div class="foto-despues">
+                            <img src="despues2.jpg" alt="Después caso 2">
+                        </div>
+                    </div>
+                </div>
+                <!-- Agregá más casos según necesites -->
+            </div>
+        </div>
+
+
+        <div class="galeria subseccion" id="antesYdespues">
+            <h3 style="color: #789ce2; font-size: 1.5rem; margin-top: 2rem;"> Antes y Después</h3>
             <div class="comparador">
                 <div class="img-wrapper" id="wrapper-dientes">
                     <img src="d.dientes.png" class="img-top" alt="Después">
@@ -226,9 +272,8 @@
                 Ver otros casos
             </button>
             <!-- Modal de otros casos -->
-            <div id="modal-otros-casos-dientes"
-                 onclick="if(event.target === this) this.style.display='none'"
-                 style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+            <div id="modal-otros-casos-dientes" onclick="if(event.target === this) this.style.display='none'"
+                style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
                 <div
                     style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
                     <button onclick="document.getElementById('modal-otros-casos-dientes').style.display='none'"
@@ -361,10 +406,6 @@
 
 
     <section id="nosotros" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
-
-
-
-
 
 
         <h2 class="section-title"
@@ -528,8 +569,8 @@
 
 
 
-<p style="line-height: 1.6; font-size: 1.1rem; margin-top: 1rem;">
-                Muchas personas que han sufrido la pérdida de un ojo desconocen que pueden mejorar su apariencia, confort y
+        <p style="line-height: 1.6; font-size: 1.1rem; margin-top: 1rem;">
+            Muchas personas que han sufrido la pérdida de un ojo desconocen que pueden mejorar su apariencia, confort y
             calidad de vida con el uso de una <strong>prótesis ocular</strong>.
         </p>
 
@@ -581,8 +622,36 @@
             </p>
         </div>
 
-
+        <br>
         <h3 id="antes-despues" style="color: #789ce2; font-size: 1.5rem;"> Antes y Después</h3>
+
+        <!-- Nueva galería de antes y después (fotos separadas) -->
+        <div class="galeria-antes-despues">
+            <div class="casos-grid">
+                <div class="caso">
+                    <div class="foto-antes-despues">
+                        <div class="foto-antes">
+                            <img src="caso1O-antes.jpg" alt="Antes caso 1" class="fade-in-on-scroll">
+                        </div>
+                        <div class="foto-despues">
+                            <img src="caso1O-desp.jpg" alt="Después caso 1" class="fade-in-on-scroll">
+                        </div>
+                    </div>
+                </div>
+                <div class="caso">
+
+                    <div class="foto-antes-despues">
+                        <div class="foto-antes">
+                            <img src="antes2.jpg" alt="Antes caso 2">
+                        </div>
+                        <div class="foto-despues">
+                            <img src="despues2.jpg" alt="Después caso 2">
+                        </div>
+                    </div>
+                </div>
+                <!-- Agregá más casos según necesites -->
+            </div>
+        </div>
         <div class="comparador" class="subseccion">
             <div class="img-wrapper" id="wrapper-ojo">
                 <img src="ojo.desp.png" class="img-top" alt="Después">
@@ -598,9 +667,8 @@
             Ver otros casos
         </button>
         <!-- Modal de otros casos de prótesis oculares -->
-        <div id="modal-otros-casos-ojo"
-             onclick="if(event.target === this) this.style.display='none'"
-             style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+        <div id="modal-otros-casos-ojo" onclick="if(event.target === this) this.style.display='none'"
+            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
             <div
                 style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
                 <button onclick="document.getElementById('modal-otros-casos-ojo').style.display='none'"
@@ -666,16 +734,56 @@
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Testimonios -->
+
+    <section id="testimonios" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+        <h2 class="section-title"
+            style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">
+            Testimonios
+        </h2>
+        <div class="testimonios-videos" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+            <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                <div class="video-cover" onclick="playTestimonio(this)">
+                    <video class="video-fondo" src="testimonio1.mp4" preload="metadata" muted playsinline></video>
+                    <div class="play-btn">
+                        <svg width="70" height="70" viewBox="0 0 70 70">
+                            <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                stroke-width="2" />
+                            <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                        </svg>
+                    </div>
+                </div>
+                <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
+            </div>
+            <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                <div class="video-cover" onclick="playTestimonio(this)">
+                    <video class="video-fondo" src="testimonio2.mp4" preload="metadata" muted playsinline></video>
+                    <div class="play-btn">
+                        <svg width="70" height="70" viewBox="0 0 70 70">
+                            <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                stroke-width="2" />
+                            <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                        </svg>
+                    </div>
+                </div>
+                <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
+            </div>
+            <!-- Agregá más videos si querés -->
+
+        </div>
+    </section>
 
 
-        <script>
-            document.getElementById('btn-otros-casos-ojo').onclick = function () {
-                document.getElementById('modal-otros-casos-ojo').style.display = 'flex';
-                for (let i = 1; i <= 6; i++) {
-                    activarComparador(`wrapper-ojo-caso${i}`, `slider-ojo-caso${i}`);
-                }
-            };
-        </script>
+    <script>
+        document.getElementById('btn-otros-casos-ojo').onclick = function () {
+            document.getElementById('modal-otros-casos-ojo').style.display = 'flex';
+            for (let i = 1; i <= 6; i++) {
+                activarComparador(`wrapper-ojo-caso${i}`, `slider-ojo-caso${i}`);
+            }
+        };
+    </script>
     </section>
 
 
@@ -755,6 +863,19 @@
             const secciones = document.querySelectorAll("section");
             secciones.forEach(sec => sec.classList.add("oculto"));
 
+            // Pausa y resetea todos los videos de testimonios al cambiar de sección
+            document.querySelectorAll('.video-cover').forEach(c => {
+                const v = c.querySelector('.video-fondo');
+                if (v) {
+                    v.pause();
+                    v.currentTime = 0;
+                    v.muted = true;
+                    v.controls = false;
+                }
+                c.classList.remove('playing');
+                if (c.parentElement) c.parentElement.classList.remove('zoomed');
+            });
+
             const target = document.getElementById(id);
             if (target) {
                 target.classList.remove("oculto");
@@ -770,25 +891,25 @@
             marcarMenuActivo(id);
         }
 
-       function marcarMenuActivo(id) {
-    // Para menú de escritorio
-    const navLinks = document.querySelectorAll('.menu-desktop a');
-    navLinks.forEach(link => link.classList.remove('active'));
-    const linkToMark = Array.from(navLinks).find(link =>
-        link.getAttribute('data-seccion') === id
-    );
-    if (linkToMark) linkToMark.classList.add('active');
+        function marcarMenuActivo(id) {
+            // Para menú de escritorio
+            const navLinks = document.querySelectorAll('.menu-desktop a');
+            navLinks.forEach(link => link.classList.remove('active'));
+            const linkToMark = Array.from(navLinks).find(link =>
+                link.getAttribute('data-seccion') === id
+            );
+            if (linkToMark) linkToMark.classList.add('active');
 
-    // Para menú móvil
-    const mobileLinks = document.querySelectorAll('#menu-mobile-dropdown a');
-    mobileLinks.forEach(link => link.classList.remove('active'));
-    const mobileLinkToMark = Array.from(mobileLinks).find(link =>
-        link.getAttribute('data-seccion') === id
-    );
-    if (mobileLinkToMark) mobileLinkToMark.classList.add('active');
-       }
+            // Para menú móvil
+            const mobileLinks = document.querySelectorAll('#menu-mobile-dropdown a');
+            mobileLinks.forEach(link => link.classList.remove('active'));
+            const mobileLinkToMark = Array.from(mobileLinks).find(link =>
+                link.getAttribute('data-seccion') === id
+            );
+            if (mobileLinkToMark) mobileLinkToMark.classList.add('active');
+        }
 
-       
+
         // Helper para capitalizar la primera letra
         function capitalizeFirstLetter(str) {
             return str.charAt(0).toUpperCase() + str.slice(1);
@@ -926,10 +1047,10 @@
                 <img src="contactoP.png" alt="Email" class="icon-img">
                 <p>contacto@rie.uy</p>
                 <p>
-    <a href="tel:+59827081013" id="telefono-footer"style="text-decoration: underline;">
-        +598 2708 1013
-    </a>
-</p>
+                    <a href="tel:+59827081013" id="telefono-footer" style="text-decoration: underline;">
+                        +598 2708 1013
+                    </a>
+                </p>
             </div>
         </div>
     </footer>
@@ -983,72 +1104,126 @@
 
         window.addEventListener("DOMContentLoaded", animarRIEloop);
     </script>
-    <script>
-document.getElementById('telefono-footer').addEventListener('click', function(e) {
-    // Detecta si NO es móvil
-    if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-        e.preventDefault();
-        alert('Para llamar, hacelo desde tu teléfono móvil.');
+
+  <script>
+function playTestimonio(cover) {
+  // Pausa todos los videos y resetea el estado
+  document.querySelectorAll('.video-cover').forEach(c => {
+    const v = c.querySelector('.video-fondo');
+    if (v) {
+      v.pause();
+      v.currentTime = 0;
+      v.muted = true;
+      v.controls = false;
     }
-});
-</script>
-    <script>
-function setMenuLabel(label) {
-    document.getElementById('menu-mobile-label').childNodes[0].textContent = label + " ";
-}
-function cerrarMenuMobile() {
-    document.getElementById('menu-mobile-dropdown').style.display = 'none';
-    document.querySelector('.menu-mobile').classList.remove('open');
-}
-document.getElementById('menu-mobile-toggle').onclick = function() {
-    const dropdown = document.getElementById('menu-mobile-dropdown');
-    const menuMobile = document.querySelector('.menu-mobile');
-    if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-        dropdown.style.display = 'flex';
-        menuMobile.classList.add('open');
-    } else {
-        dropdown.style.display = 'none';
-        menuMobile.classList.remove('open');
-    }
-};
-</script>
-<script>
-function animarStats() {
-  document.querySelectorAll('.stat-num').forEach(el => {
-    const target = +el.getAttribute('data-target');
-     el.textContent = '0';
-    let count = 0;
-    const duration = 1200;
-    const start = performance.now();
-    function update(now) {
-      const progress = Math.min((now - start) / duration, 1);
-      count = Math.floor(progress * target);
-      el.textContent = count;
-      if (progress < 1) {
-        requestAnimationFrame(update);
-      } else {
-        el.textContent = target;
-      }
-    }
-    requestAnimationFrame(update);
+    c.classList.remove('playing');
+    if (c.parentElement) c.parentElement.classList.remove('zoomed');
   });
+
+  // Activa solo el video clickeado
+  const video = cover.querySelector('.video-fondo');
+  cover.classList.add('playing');
+  if (cover.parentElement) cover.parentElement.classList.add('zoomed');
+  video.muted = false;
+  video.controls = true;
+  video.play();
 }
 
-// Solo anima cuando la sección aparece en pantalla
-const statsSection = document.querySelector('.stats-inicio');
-if (statsSection) {
-  const observer = new IntersectionObserver((entries) => {
-    if (entries[0].isIntersecting) {
-      animarStats();
+
+document.querySelectorAll('.video-fondo').forEach(video => {
+  video.addEventListener('pause', function() {
+    const cover = video.closest('.video-cover');
+    if (cover) {
+      cover.classList.remove('playing');
+      if (cover.parentElement) cover.parentElement.classList.remove('zoomed');
+      video.muted = true;
+      video.controls = false;
+      video.currentTime = 0;
     }
-  }, { threshold: 0.4 });
-  observer.observe(statsSection);
-}
+  });
+});
 </script>
+
+    <script>
+        document.getElementById('telefono-footer').addEventListener('click', function (e) {
+            // Detecta si NO es móvil
+            if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+                e.preventDefault();
+                alert('Para llamar, hacelo desde tu teléfono móvil.');
+            }
+        });
+    </script>
+    <script>
+        function setMenuLabel(label) {
+            document.getElementById('menu-mobile-label').childNodes[0].textContent = label + " ";
+        }
+        function cerrarMenuMobile() {
+            document.getElementById('menu-mobile-dropdown').style.display = 'none';
+            document.querySelector('.menu-mobile').classList.remove('open');
+        }
+        document.getElementById('menu-mobile-toggle').onclick = function () {
+            const dropdown = document.getElementById('menu-mobile-dropdown');
+            const menuMobile = document.querySelector('.menu-mobile');
+            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                dropdown.style.display = 'flex';
+                menuMobile.classList.add('open');
+            } else {
+                dropdown.style.display = 'none';
+                menuMobile.classList.remove('open');
+            }
+        };
+    </script>
+    <script>
+        function animarStats() {
+            document.querySelectorAll('.stat-num').forEach(el => {
+                const target = +el.getAttribute('data-target');
+                el.textContent = '0';
+                let count = 0;
+                const duration = 1200;
+                const start = performance.now();
+                function update(now) {
+                    const progress = Math.min((now - start) / duration, 1);
+                    count = Math.floor(progress * target);
+                    el.textContent = count;
+                    if (progress < 1) {
+                        requestAnimationFrame(update);
+                    } else {
+                        el.textContent = target;
+                    }
+                }
+                requestAnimationFrame(update);
+            });
+        }
+
+        // Solo anima cuando la sección aparece en pantalla
+        const statsSection = document.querySelector('.stats-inicio');
+        if (statsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    animarStats();
+                }
+            }, { threshold: 0.4 });
+            observer.observe(statsSection);
+        }
+    </script>
+    <script>
+        // Efecto fade-in orgánico al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Solo una vez
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.fade-in-on-scroll').forEach(img => {
+            observer.observe(img);
+        });
+    </script>
 
 
 </body>
 
 
 </html>
-

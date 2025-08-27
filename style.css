@@ -13,10 +13,16 @@ body {
   background: #f8faff;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.subseccion h3,
+#protesis-oculares h3,
+#odontologia h3 {
+  color: #789ce2 !important;
+}
+
+rie-estatico {
   font-family: 'Montserrat', 'Inter', Arial, sans-serif;
   font-weight: 700;
-  color: #2563eb;
+  color: #789ce2 !important;
   letter-spacing: 0.5px;
 }
 
@@ -263,6 +269,60 @@ nav.menu-desktop a:hover {
   font-weight: bold;
   text-align: right;
   color: #99c2f2;
+}
+
+.video-cover {
+  position: relative;
+  width: 100%;
+  height: 225px;
+  cursor: pointer;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eaf1fb;
+  box-shadow: 0 2px 16px rgba(120,156,226,0.10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(1.5px) brightness(0.7) grayscale(0.1);
+  transition: filter 0.5s;
+  pointer-events: none;
+}
+.video-cover.playing .video-fondo {
+  filter: none;
+  pointer-events: auto;
+}
+.play-btn {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 2;
+  transition: opacity 0.3s;
+  opacity: 1;
+}
+.video-cover.playing .play-btn {
+  opacity: 0;
+  pointer-events: none;
+}
+.video-testimonio {
+  flex: 1 1 400px;
+  max-width: 400px;
+  transition: flex-basis 0.7s cubic-bezier(.25,.8,.25,1), max-width 0.7s cubic-bezier(.25,.8,.25,1), box-shadow 0.7s;
+  z-index: 10;
+}
+.video-testimonio.zoomed {
+  flex: 2 1 700px;
+  max-width: 700px;
+  z-index: 20;
+}
+
+.video-testimonio:nth-child(2) .video-fondo {
+  object-position: center 64%; ;
 }
 
 /* ===================== ESTADÍSTICAS INICIO ===================== */
@@ -744,6 +804,48 @@ footer .info {
   color: #789ce2;
 }
 
+/* ===================== GALERÍA ANTES Y DESPUÉS ===================== */
+.galeria-antes-despues {
+  margin: 2.5rem 0;
+}
+.galeria-antes-despues h3 {
+  color: #789ce2;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.casos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: center;
+}
+.caso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(120,156,226,0.07);
+  padding: 1.2rem 1rem;
+  min-width: 180px;
+}
+.caso img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 8px rgba(120,156,226,0.08);
+}
+.caso .etiqueta {
+  font-size: 0.95rem;
+  color: #789ce2;
+  margin-bottom: 0.7rem;
+  background: #eaf1fb;
+  border-radius: 12px;
+  padding: 2px 12px;
+}
+
 /* ===================== ODONTOLOGÍA ===================== */
 /* ...Tus reglas para odontología aquí... */
 
@@ -900,3 +1002,54 @@ footer .info {
 }
 
 /* ===================== FIN DEL CSS ===================== */
+/* Galería de antes y después: efecto sutil y profesional */
+.foto-antes-despues {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.foto-antes img, .foto-despues img {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(120,156,226,0.10);
+  transition: 
+    transform 0.45s cubic-bezier(.25,.8,.25,1),
+    box-shadow 0.45s cubic-bezier(.25,.8,.25,1),
+    filter 0.45s cubic-bezier(.25,.8,.25,1);
+  filter: brightness(0.98) contrast(1.04) saturate(1.05);
+}
+
+.foto-antes img:hover, .foto-despues img:hover {
+  transform: scale(1.035) translateY(-8px);
+  box-shadow: 0 12px 32px rgba(120,156,226,0.18), 0 2px 16px rgba(120,156,226,0.10);
+  filter: brightness(1.03) contrast(1.08) saturate(1.1);
+  z-index: 2;
+}
+
+@media (max-width: 700px) {
+  .foto-antes-despues {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .foto-antes img, .foto-despues img {
+    width: 90vw;
+    max-width: 340px;
+    height: auto;
+  }
+}
+
+/* Efecto de aparición orgánica para fotos */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: opacity 0.8s cubic-bezier(.25,.8,.25,1), transform 0.8s cubic-bezier(.25,.8,.25,1);
+  will-change: opacity, transform;
+}
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
