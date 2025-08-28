@@ -325,6 +325,10 @@ nav.menu-desktop a:hover {
   object-position: center 64%; ;
 }
 
+.video-testimonio:nth-child(3) .video-fondo {
+  object-position: center 22%;
+}
+
 /* ===================== ESTADÍSTICAS INICIO ===================== */
 .stats-inicio {
   display: flex;
@@ -772,8 +776,8 @@ footer .info {
   margin-top: 20px;
 }
 .icon-ubi {
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   filter: brightness(0.0);
 }
 #protesis-oculares .subseccion h3 {
