@@ -12,6 +12,7 @@ function mostrarSeccion(id) {
 const slider = document.getElementById("slider-bar");
 const imgTop = document.querySelector(".img-top");
 
+
 let isDragging = false;
 
 slider.addEventListener("mousedown", () => isDragging = true);
