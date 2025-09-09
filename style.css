@@ -221,6 +221,17 @@ nav.menu-desktop a:hover {
   margin-top: 0.5rem;
 }
 
+/* Fotos de los destacados más anchas */
+.card-icono img {
+  width: 185px;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* ===================== DESTACADOS INICIO ===================== */
 .destacados-inicio {
   display: flex;
@@ -238,10 +249,7 @@ nav.menu-desktop a:hover {
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.card-icono img {
-  width: 60px;
-  margin-bottom: 1rem;
-}
+
 .card-icono h4 {
   color: #789ce2;
   margin-bottom: 0.5rem;
@@ -253,7 +261,7 @@ nav.menu-desktop a:hover {
 
 /* ===================== TESTIMONIO ===================== */
 .testimonio-inicio {
-  background: #fddcbc;
+  background: #b1bfd1;
   padding: 2rem;
   margin: 3rem auto;
   max-width: 700px;
@@ -796,6 +804,19 @@ footer .info {
   flex-wrap: wrap;
   margin-top: 20px;
 }
+
+/* Ajusta la posición vertical para que los ojos coincidan */
+#wrapper-ojo-caso2 .img-top,
+#wrapper-ojo-caso2 .img-bottom {
+  object-position: center 35%;
+}
+
+/* Ajusta la posición vertical para que los ojos coincidan en el primer caso */
+#wrapper-ojo-caso1 .img-top,
+#wrapper-ojo-caso1 .img-bottom {
+  object-position: center 38%;
+}
+
 #protesis-oculares .antes-despues img {
   width: 250px;
   border-radius: 10px;
@@ -849,6 +870,7 @@ footer .info {
   border-radius: 12px;
   padding: 2px 12px;
 }
+
 
 /* ===================== ODONTOLOGÍA ===================== */
 /* ...Tus reglas para odontología aquí... */
