@@ -30,3 +30,4 @@ window.addEventListener("mousemove", e => {
   slider.style.left = `${porcentaje}%`;
   imgTop.style.clipPath = `inset(0 ${100 - porcentaje}% 0 0)`;
 });
+
