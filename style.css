@@ -1142,3 +1142,73 @@ footer .info {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
+
+/* posicion de fotos*/
+
+
+
+.foto-despues img[src="barbaD.jpeg"] {
+  object-position: 40% 30%;
+}
+
+.foto-despues img[src="barbaA.jpeg"] {
+  object-position: 90%;
+}
+
+
+
+/* SOLO dentro del modal de "otros casos" */
+#modal-otros-casos-ojo .foto-antes,
+#modal-otros-casos-ojo .foto-despues {
+  height: 200px;              /* más bajitas → más rectangulares */
+  aspect-ratio: 3 / 1;        /* 🔥 rectángulo horizontal */
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+#modal-otros-casos-ojo .foto-antes img,
+#modal-otros-casos-ojo .foto-despues img {
+  width: 80%;
+  object-fit: contain;        /* no corta nada */
+}
+
+/* Modal de dientes - fotos rectangulares para ver todo */
+#modal-otros-casos-dientes .foto-antes,
+#modal-otros-casos-dientes .foto-despues {
+  height: 150px;              /* altura fija */
+  width: 450px;               /* ancho fijo */
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  overflow: hidden;
+  flex-shrink: 0;             /* no se encogen */
+}
+
+#modal-otros-casos-dientes .foto-antes img,
+#modal-otros-casos-dientes .foto-despues img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* llena todo el espacio, hace zoom si es necesario */
+}
+
+/* Reduce el espacio entre antes y después en el modal de dientes */
+#modal-otros-casos-dientes .foto-antes-despues {
+  gap: 0.4rem;                /* muy cerca */
+}
+
+/* Agrega margen alrededor del contenido del modal de dientes */
+#modal-otros-casos-dientes > div {
+  padding: 1.5rem !important;
+}
+
+#modal-otros-casos-dientes .casos-grid {
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+

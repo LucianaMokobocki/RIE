@@ -1,1256 +1,1313 @@
-<!DOCTYPE html>
-<html lang="es">
+    <!DOCTYPE html>
+    <html lang="es">
 
 
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rehabilitación integral estética</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
-        rel="stylesheet">
-</head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Rehabilitación integral estética</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Montserrat:wght@700&display=swap"
+            rel="stylesheet">
+    </head>
 
 
-<body>
+    <body>
 
 
-    <header>
-        <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="#" data-seccion="inicio" onclick="mostrarSeccion('inicio'); return false;">
-                    <img src="rielogo.png" alt="Logo RIE" class="logo" style="width: 100px; height: 180px;" />
-                </a>
+        <header>
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 0 2rem;">
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <a href="#" data-seccion="inicio" onclick="mostrarSeccion('inicio'); return false;">
+                        <img src="rielogo.png" alt="Logo RIE" class="logo" style="width: 100px; height: 180px;" />
+                    </a>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem;">
+                    <a href="https://wa.me/59891664488" target="_blank">
+                        <img src="TEL.png" alt="WhatsApp" style="width: 45px; height: 45px; margin-left: 15px;">
+                    </a>
+                    <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank"
+                        class="contacto-link">
+                        <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
+                    </a>
+                </div>
             </div>
-            <div style="display: flex; align-items: center; gap: 1rem;">
-                <a href="https://wa.me/59891664488" target="_blank">
-                    <img src="TEL.png" alt="WhatsApp" style="width: 45px; height: 45px; margin-left: 15px;">
-                </a>
-                <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank"
-                    class="contacto-link">
-                    <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
-                </a>
-            </div>
-        </div>
-        <!-- Menú de escritorio -->
-        <nav class="menu-desktop">
-            <a href="#" data-seccion="inicio" onclick="mostrarSeccion('inicio'); return false;">Inicio</a>
-            <a href="#" data-seccion="protesis-oculares"
-                onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis Oculares</a>
-            <a href="#" data-seccion="odontologia"
-                onclick="mostrarSeccion('odontologia'); return false;">Odontología</a>
-            <a href="#" data-seccion="testimonios"
-                onclick="mostrarSeccion('testimonios'); return false;">Testimonios</a>
-            <a href="#" data-seccion="equipo" onclick="mostrarSeccion('equipo'); return false;">Equipo</a>
-            <a href="#" data-seccion="nosotros" onclick="mostrarSeccion('nosotros'); return false;">Nosotros</a>
-            <a href="#" data-seccion="contacto" onclick="mostrarSeccion('contacto'); return false;">Contacto</a>
-        </nav>
-        <!-- Menú móvil abajo del logo -->
-        <div class="menu-mobile">
-            <button id="menu-mobile-toggle" aria-label="Abrir menú"
-                style="background: none; margin-left: 29px; padding: 0; display: flex; align-items: center; cursor: pointer;">
-                <span id="menu-mobile-label" class="menu-mobile-label">
-                    Inicio
-                    <svg id="menu-mobile-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
-                        style="margin-left:8px;transition:transform 0.3s;">
-                        <polyline points="8,10 11,13 14,10" fill="none" stroke="#789ce2" stroke-width="2"
-                            stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                </span>
-            </button>
-            <div id="menu-mobile-dropdown" style="display:none;">
-                <a href="#"
-                    onclick="setMenuLabel('Inicio'); cerrarMenuMobile(); mostrarSeccion('inicio'); return false;">Inicio</a>
-                <a href="#"
-                    onclick="mostrarSeccion('protesis-oculares'); setMenuLabel('Prótesis Oculares'); cerrarMenuMobile()">Prótesis
-                    Oculares</a>
-                <a href="#"
-                    onclick="mostrarSeccion('odontologia'); setMenuLabel('Odontología'); cerrarMenuMobile()">Odontología</a>
-                <a href="#" onclick="mostrarSeccion('equipo'); setMenuLabel('Equipo'); cerrarMenuMobile()">Equipo</a>
-                <a href="#"
-                    onclick="mostrarSeccion('nosotros'); setMenuLabel('Nosotros'); cerrarMenuMobile()">Nosotros</a>
-                <a href="#"
-                    onclick="mostrarSeccion('contacto'); setMenuLabel('Contacto'); cerrarMenuMobile()">Contacto</a>
-                <a href="#"
-                    onclick="mostrarSeccion('testimonios'); setMenuLabel('Testimonios'); cerrarMenuMobile()">Testimonios</a>
-            </div>
-        </div>
-    </header>
-
-
-    <section id="inicio" class="hero contenido">
-
-
-        <!-- Carrusel de fotos automático -->
-        <div class="carrusel-fotos" style="margin-bottom: 2rem;">
-            <img src="foto1.png" class="carrusel-img active" alt="Foto 1">
-            <img src="foto2.png" class="carrusel-img" alt="Foto 2">
-            <img src="foto3.png" class="carrusel-img" alt="Foto 3">
-        </div>
-
-
-
-
-
-        <div id="rie-tipeo" class="rie-desktop"
-            style="display: flex; justify-content: center; gap: 2.5rem; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem;">
-            <span class="rie-letra" id="letra-r" style="color: #789ce2;">R<span id="palabra-r"></span></span>
-            <span class="rie-letra" id="letra-i" style="color: #789ce2;">I<span id="palabra-i"></span></span>
-            <span class="rie-letra" id="letra-e" style="color: #789ce2;">E<span id="palabra-e"></span></span>
-        </div>
-
-
-
-        <!-- Presentación destacada -->
-        <div class="intro-container">
-            <!--  <h3>Bienvenidos a RIE</h3> -->
-            <p>Un espacio donde la estética, la salud y la humanidad se encuentran para transformar vidas.</p>
-        </div>
-
-
-        <!-- Sección destacada con íconos -->
-        <div class="destacados-inicio">
-            <div class="card-icono">
-                <img src="feliz1.jpg" alt="Estética" />
-                <h4>Estética Avanzada</h4>
-                <p>Aplicamos las últimas técnicas para lograr resultados naturales y armoniosos.</p>
-            </div>
-            <div class="card-icono">
-                <img src="feliz2.jpg" alt="Apoyo emocional" />
-                <h4>Apoyo Integral</h4>
-                <p>Acompañamos cada proceso con empatía, escucha y compromiso.</p>
-            </div>
-            <div class="card-icono">
-                <img src="feliz3.jpg" alt="Técnica" />
-                <h4>Tecnología & Precisión</h4>
-                <p>Combinamos lo artesanal con lo tecnológico para una atención única.</p>
-            </div>
-        </div>
-
-
-        <!-- Testimonio -->
-        <div class="testimonio-inicio">
-            <blockquote>
-                "Volver a mirarme al espejo y sonreír sin miedo, fue el mejor regalo que me hicieron en RIE."
-            </blockquote>
-            <p class="firma-testimonio">— Paciente de prótesis ocular</p>
-        </div>
-
-        <!-- Estadísticas -->
-        <div class="stats-inicio">
-            <div class="stat-card">
-                <span class="stat-num" data-target="500">0</span><span class="stat-sufijo">+</span>
-                <div class="stat-label" style="color: #5b72a0;">Clientes atendidos</div>
-            </div>
-            <div class="stat-card">
-                <span class="stat-num" data-target="15">0</span><span class="stat-sufijo">+</span>
-                <div class="stat-label" style="color: #5b72a0;">Años de experiencia</div>
-            </div>
-
-            <div class="stat-card">
-                <span class="stat-num" data-target="100">0</span><span class="stat-sufijo">%</span>
-                <div class="stat-label" style="color: #5b72a0;">Satisfacción del cliente</div>
-            </div>
-        </div>
-    </section>
-
-
-
-
-    <!-- ODONTOLOGIA -->
-    <section id="odontologia" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
-        <h2 class="section-title"
-            style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">
-            Odontología
-        </h2>
-        <div style="margin-top: 1rem; margin-bottom: 2rem;">
-            <nav style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="#" onclick="scrollAjustadoA('info'); return false;">Información</a>
-                <a href="#" onclick="scrollAjustadoA('antesYdespues'); return false;">Antes y Después</a>
+            <!-- Menú de escritorio -->
+            <nav class="menu-desktop">
+                <a href="#" data-seccion="inicio" onclick="mostrarSeccion('inicio'); return false;">Inicio</a>
+                <a href="#" data-seccion="protesis-oculares"
+                    onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis Oculares</a>
+                <a href="#" data-seccion="odontologia"
+                    onclick="mostrarSeccion('odontologia'); return false;">Odontología</a>
+                <a href="#" data-seccion="testimonios"
+                    onclick="mostrarSeccion('testimonios'); return false;">Testimonios</a>
+                <a href="#" data-seccion="equipo" onclick="mostrarSeccion('equipo'); return false;">Equipo</a>
+                <a href="#" data-seccion="nosotros" onclick="mostrarSeccion('nosotros'); return false;">Nosotros</a>
+                <a href="#" data-seccion="contacto" onclick="mostrarSeccion('contacto'); return false;">Contacto</a>
             </nav>
-        </div>
-        <img src="dientesFalsos.jpg" alt="Odontología" class="foto-seccion-grande">
-
-
-
-        <div id="info" class="subseccion"
-            style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Rehabilitación integral estética</h3>
-            <p>Al llegar un paciente nuevo al consultorio se lo ve en forma <strong>integral</strong>...</p>
-            <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
-            <div class="contenido-colapsable" style="display:none;">
-                <p>
-                    El primer día se realiza una <strong>historia clínica</strong> con todos sus datos, se le
-                    indican los estudios radiográficos necesarios y se escuchan los <strong>deseos
-                        estéticos</strong> del paciente.</p>
-                <p>Planteamos todos los posibles planes de tratamientos, ya que para un mismo problema hay distintas
-                    soluciones con diferentes ventajas y desventajas.</p>
-                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
-            </div>
-        </div>
-
-
-        <div id="info" class="subseccion"
-            style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Prioridad: La Salud</h3>
-            <p>La primer etapa, independiente al plan de tratamiento, será <strong>devolverle la salud</strong>
-                perdida al paciente, no sin antes...</p>
-            <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
-            <div class="contenido-colapsable" style="display:none;">
-                <p><strong>enseñarle</strong> todas las técnicas de higiene
-                    dental para su caso individual.</p>
-                <p>De esta manera seremos <strong>socios</strong>: una vez dado de alta, el paciente se compromete a
-                    realizar lo aprendido en el consultorio, y cada seis meses es nuestro compromiso recordarle su
-                    control. Esta es la única forma de mantener su <strong>salud bucal de por vida</strong>.</p>
-                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
-            </div>
-        </div>
-
-
-        <div id="info" class="subseccion"
-            style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Estética</h3>
-            <p>Hombres y mujeres quieren verse y sentirse cada vez más jóvenes...</p>
-            <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
-            <div class="contenido-colapsable" style="display:none;">
-                <p> Es indiscutible que la
-                    <strong>apariencia personal</strong> está tomando mucha importancia. Las redes sociales y las
-                    selfies ya son algo de todos los días.
-                </p>
-                <p>Los dientes, al igual que los demás órganos del cuerpo, <strong>sufren modificaciones</strong>
-                    con el paso del tiempo: puede cambiar su forma, su color y textura.</p>
-                <p>Hoy por hoy existen <strong>excelentes materiales</strong> y <strong>nuevas técnicas</strong> que
-                    generan cambios fantásticos. Los pacientes lo valoran mucho. <em>Según ellos, les cambia la
-                        vida.</em></p>
-                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
-            </div>
-        </div>
-
-        <div class="galeria-antes-despues">
-            <div class="casos-grid">
-                <div class="caso">
-                    <div class="foto-antes-despues">
-                        <div class="foto-antes">
-                            <img src="antes1.jpg" alt="Antes caso 1" class="fade-in-on-scroll">
-                        </div>
-                        <div class="foto-despues">
-                            <img src="despues1.jpg" alt="Después caso 1" class="fade-in-on-scroll">
-                        </div>
-                    </div>
-                </div>
-                <div class="caso">
-
-                    <div class="foto-antes-despues">
-                        <div class="foto-antes">
-                            <img src="antes2.jpg" alt="Antes caso 2">
-                        </div>
-                        <div class="foto-despues">
-                            <img src="despues2.jpg" alt="Después caso 2">
-                        </div>
-                    </div>
-                </div>
-                <!-- Agregá más casos según necesites -->
-            </div>
-        </div>
-
-
-        <div class="galeria subseccion" id="antesYdespues">
-            <h3 style="color: #789ce2; font-size: 1.5rem; margin-top: 2rem;"> Antes y Después</h3>
-            <div class="comparador">
-                <div class="img-wrapper" id="wrapper-dientes">
-                    <img src="d.dientes.png" class="img-top" alt="Después">
-                    <div class="img-slider" id="slider-dientes">
-                        <span class="flechas">⇆</span>
-                    </div>
-                    <img src="a.dientes.png" class="img-bottom" alt="Antes">
+            <!-- Menú móvil abajo del logo -->
+            <div class="menu-mobile">
+                <button id="menu-mobile-toggle" aria-label="Abrir menú"
+                    style="background: none; margin-left: 29px; padding: 0; display: flex; align-items: center; cursor: pointer;">
+                    <span id="menu-mobile-label" class="menu-mobile-label">
+                        Inicio
+                        <svg id="menu-mobile-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
+                            style="margin-left:8px;transition:transform 0.3s;">
+                            <polyline points="8,10 11,13 14,10" fill="none" stroke="#789ce2" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </span>
+                </button>
+                <div id="menu-mobile-dropdown" style="display:none;">
+                    <a href="#"
+                        onclick="setMenuLabel('Inicio'); cerrarMenuMobile(); mostrarSeccion('inicio'); return false;">Inicio</a>
+                    <a href="#"
+                        onclick="mostrarSeccion('protesis-oculares'); setMenuLabel('Prótesis Oculares'); cerrarMenuMobile()">Prótesis
+                        Oculares</a>
+                    <a href="#"
+                        onclick="mostrarSeccion('odontologia'); setMenuLabel('Odontología'); cerrarMenuMobile()">Odontología</a>
+                    <a href="#" onclick="mostrarSeccion('equipo'); setMenuLabel('Equipo'); cerrarMenuMobile()">Equipo</a>
+                    <a href="#"
+                        onclick="mostrarSeccion('nosotros'); setMenuLabel('Nosotros'); cerrarMenuMobile()">Nosotros</a>
+                    <a href="#"
+                        onclick="mostrarSeccion('contacto'); setMenuLabel('Contacto'); cerrarMenuMobile()">Contacto</a>
+                    <a href="#"
+                        onclick="mostrarSeccion('testimonios'); setMenuLabel('Testimonios'); cerrarMenuMobile()">Testimonios</a>
                 </div>
             </div>
+        </header>
+
+
+        <section id="inicio" class="hero contenido">
+
+
+            <!-- Carrusel de fotos automático -->
+            <div class="carrusel-fotos" style="margin-bottom: 2rem;">
+                <img src="foto1.png" class="carrusel-img active" alt="Foto 1">
+                <img src="foto2.png" class="carrusel-img" alt="Foto 2">
+                <img src="foto3.png" class="carrusel-img" alt="Foto 3">
+            </div>
+
+
+
+
+
+            <div id="rie-tipeo" class="rie-desktop"
+                style="display: flex; justify-content: center; gap: 2.5rem; font-size: 2.5rem; font-weight: bold; margin-bottom: 1.5rem;">
+                <span class="rie-letra" id="letra-r" style="color: #789ce2;">R<span id="palabra-r"></span></span>
+                <span class="rie-letra" id="letra-i" style="color: #789ce2;">I<span id="palabra-i"></span></span>
+                <span class="rie-letra" id="letra-e" style="color: #789ce2;">E<span id="palabra-e"></span></span>
+            </div>
+
+
+
+            <!-- Presentación destacada -->
+            <div class="intro-container">
+                <!--  <h3>Bienvenidos a RIE</h3> -->
+                <p>Un espacio donde la estética, la salud y la humanidad se encuentran para transformar vidas.</p>
+            </div>
+
+
+            <!-- Sección destacada con íconos -->
+            <div class="destacados-inicio">
+                <div class="card-icono">
+                    <img src="feliz1.jpg" alt="Estética" />
+                    <h4>Estética Avanzada</h4>
+                    <p>Aplicamos las últimas técnicas para lograr resultados naturales y armoniosos.</p>
+                </div>
+                <div class="card-icono">
+                    <img src="feliz2.jpg" alt="Apoyo emocional" />
+                    <h4>Apoyo Integral</h4>
+                    <p>Acompañamos cada proceso con empatía, escucha y compromiso.</p>
+                </div>
+                <div class="card-icono">
+                    <img src="feliz3.jpg" alt="Técnica" />
+                    <h4>Tecnología & Precisión</h4>
+                    <p>Combinamos lo artesanal con lo tecnológico para una atención única.</p>
+                </div>
+            </div>
+
+
+            <!-- Testimonio -->
+            <div class="testimonio-inicio">
+                <blockquote>
+                    "Volver a mirarme al espejo y sonreír sin miedo, fue el mejor regalo que me hicieron en RIE."
+                </blockquote>
+                <p class="firma-testimonio">— Paciente de prótesis ocular</p>
+            </div>
+
+            <!-- Estadísticas -->
+            <div class="stats-inicio">
+                <div class="stat-card">
+                    <span class="stat-num" data-target="500">0</span><span class="stat-sufijo">+</span>
+                    <div class="stat-label" style="color: #5b72a0;">Clientes atendidos</div>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-num" data-target="15">0</span><span class="stat-sufijo">+</span>
+                    <div class="stat-label" style="color: #5b72a0;">Años de experiencia</div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-num" data-target="100">0</span><span class="stat-sufijo">%</span>
+                    <div class="stat-label" style="color: #5b72a0;">Satisfacción del cliente</div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ODONTOLOGIA -->
+        <section id="odontologia" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+            <h2 class="section-title"
+                style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">
+                Odontología
+            </h2>
+            <div style="margin-top: 1rem; margin-bottom: 2rem;">
+                <nav style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#" onclick="scrollAjustadoA('info'); return false;">Información</a>
+                    <a href="#" onclick="scrollAjustadoA('antesYdespues'); return false;">Antes y Después</a>
+                </nav>
+            </div>
+            <img src="dientesFalsos.jpg" alt="Odontología" class="foto-seccion-grande">
+
+
+
+            <div id="info" class="subseccion"
+                style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Rehabilitación integral estética</h3>
+                <p>Al llegar un paciente nuevo al consultorio se lo ve en forma <strong>integral</strong>...</p>
+                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
+                <div class="contenido-colapsable" style="display:none;">
+                    <p>
+                        El primer día se realiza una <strong>historia clínica</strong> con todos sus datos, se le
+                        indican los estudios radiográficos necesarios y se escuchan los <strong>deseos
+                            estéticos</strong> del paciente.</p>
+                    <p>Planteamos todos los posibles planes de tratamientos, ya que para un mismo problema hay distintas
+                        soluciones con diferentes ventajas y desventajas.</p>
+                    <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
+                </div>
+            </div>
+
+
+            <div id="info" class="subseccion"
+                style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Prioridad: La Salud</h3>
+                <p>La primer etapa, independiente al plan de tratamiento, será <strong>devolverle la salud</strong>
+                    perdida al paciente, no sin antes...</p>
+                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
+                <div class="contenido-colapsable" style="display:none;">
+                    <p><strong>enseñarle</strong> todas las técnicas de higiene
+                        dental para su caso individual.</p>
+                    <p>De esta manera seremos <strong>socios</strong>: una vez dado de alta, el paciente se compromete a
+                        realizar lo aprendido en el consultorio, y cada seis meses es nuestro compromiso recordarle su
+                        control. Esta es la única forma de mantener su <strong>salud bucal de por vida</strong>.</p>
+                    <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
+                </div>
+            </div>
+
+
+            <div id="info" class="subseccion"
+                style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Estética</h3>
+                <p>Hombres y mujeres quieren verse y sentirse cada vez más jóvenes...</p>
+                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
+                <div class="contenido-colapsable" style="display:none;">
+                    <p> Es indiscutible que la
+                        <strong>apariencia personal</strong> está tomando mucha importancia. Las redes sociales y las
+                        selfies ya son algo de todos los días.
+                    </p>
+                    <p>Los dientes, al igual que los demás órganos del cuerpo, <strong>sufren modificaciones</strong>
+                        con el paso del tiempo: puede cambiar su forma, su color y textura.</p>
+                    <p>Hoy por hoy existen <strong>excelentes materiales</strong> y <strong>nuevas técnicas</strong> que
+                        generan cambios fantásticos. Los pacientes lo valoran mucho. <em>Según ellos, les cambia la
+                            vida.</em></p>
+                    <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
+                </div>
+            </div>
+
+        
+            <br>
+            <h3 id="antesYdespues" style="color: #789ce2; font-size: 1.5rem;"> Antes y Después</h3>
+
+            <!-- Nueva galería de antes y después (fotos separadas) -->
+            <div class="galeria-antes-despues">
+                <div class="casos-grid">
+                    <div class="caso">
+                        <div class="foto-antes-despues">
+                            <div class="foto-antes">
+                                <img src="caraDientesAntes.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
+                            </div>
+                            <div class="foto-despues">
+                                <img src="caraDientesDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+    
+    <br>
+
+             <div class="casos-grid">
+                    <div class="caso">
+                        <div class="foto-antes-despues">
+                            <div class="foto-antes">
+                                <img src="mediaCaraAntes.jpg" alt="Antes caso 1" class="fade-in-on-scroll">
+                            </div>
+                            <div class="foto-despues">
+                                <img src="mediaCaraDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            
+        
+                
             <!-- Botón para ver otros casos -->
             <button id="btn-otros-casos-dientes"
                 style="margin-left: 1rem; background: #789ce2; color: white; border: none; border-radius: 5px; padding: 0.4rem 1rem; cursor: pointer;">
                 Ver otros casos
             </button>
-            <!-- Modal de otros casos -->
+            
+            <!-- Modal de otros casos de odontología -->
             <div id="modal-otros-casos-dientes" onclick="if(event.target === this) this.style.display='none'"
                 style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
                 <div
                     style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
                     <button onclick="document.getElementById('modal-otros-casos-dientes').style.display='none'"
                         style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">×</button>
-                    <h4 style="color:#789ce2;">Otros casos de Prótesis Dentales</h4>
+                    <h4 style="color:#789ce2;">Otros casos odontología</h4>
                     <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                        <!-- Un comparador por fila, tamaño grande y alargado -->
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso1">
-                                <img src="d.dientes.png" class="img-top" alt="Después">
-                                <div class="img-slider" id="slider-diente-caso1">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
+                        <!--  1 Un comparador por fila, tamaño grande y alargado -->
+                    <div class="casos-grid">
+                    <div class="caso">
+                        <div class="foto-antes-despues">
+                            <div class="foto-antes">
+                                <img src="viejaAntes.JPG" alt="Antes caso 1" class="fade-in-on-scroll">
+                            </div>
+                            <div class="foto-despues">
+                                <img src="viejaDesp.JPG" alt="Después caso 1" class="fade-in-on-scroll">
                             </div>
                         </div>
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso2">
-                                <img src="d.dientes.png" class="img-top" alt="Después">
-                                <div class="img-slider" id="slider-diente-caso2">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
+                    </div>
+
+                </div>
+                        <!-- 2 -->
+                    <div class="casos-grid">
+                    <div class="caso">
+                        <div class="foto-antes-despues">
+                            <div class="foto-antes">
+                                <img src="barbaA.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
+                            </div>
+                            <div class="foto-despues">
+                                <img src="barbaD.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
                             </div>
                         </div>
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso3">
-                                <img src="d.dientes.png" class="img-top" alt="Después">
-                                <div class="img-slider" id="slider-diente-caso3">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
+                    </div>
+
+                </div>
+                        <!-- 3 -->
+                    <div class="casos-grid">
+                    <div class="caso">
+                        <div class="foto-antes-despues">
+                            <div class="foto-antes">
+                                <img src="dienteRotoA.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
+                            </div>
+                            <div class="foto-despues">
+                                <img src="dienteRotoD.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
                             </div>
                         </div>
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso4">
-                                <img src="d.dientes.png" class="img-top" alt="Después">
-                                <div class="img-slider" id="slider-diente-caso4">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
+                    </div>
+
+                </div>
+                        <!-- 4 -->
+                    <div class="casos-grid">
+                    <div class="caso">
+                        <div class="foto-antes-despues">
+                            <div class="foto-antes">
+                                <img src="caraDientesAntes.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
+                            </div>
+                            <div class="foto-despues">
+                                <img src="caraDientesDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
                             </div>
                         </div>
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso5">
-                                <img src="d.dientes.png" class="img-top" alt="Después">
-                                <div class="img-slider" id="slider-diente-caso5">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
+                    </div>
+
+                </div>
+                        <!-- 5 -->
+                    <div class="casos-grid">
+                    <div class="caso">
+                        <div class="foto-antes-despues">
+                            <div class="foto-antes">
+                                <img src="caraDientesAntes.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
+                            </div>
+                            <div class="foto-despues">
+                                <img src="caraDientesDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
                             </div>
                         </div>
+                    </div>
+
+                </div>
+                        <!-- 6-->
+                        <div class="casos-grid">
+                    <div class="caso">
+                        <div class="foto-antes-despues">
+                            <div class="foto-antes">
+                                <img src="caraDientesAntes.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
+                            </div>
+                            <div class="foto-despues">
+                                <img src="caraDientesDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+            <script>
+                document.getElementById('btn-otros-casos-dientes').onclick = function () {
+                    document.getElementById('modal-otros-casos-dientes').style.display = 'flex';
+                    for (let i = 1; i <= 6; i++) {
+                        activarComparador(`wrapper-diente-caso${i}`, `slider-diente-caso${i}`);
+                    }
+                };
+            </script>
+        </section>
+
+
+
+
+        <!-- EQUIPO -->
+        <section id="equipo" class="contenido oculto">
+
+
+            <h2 class="section-title">Nuestro Equipo</h2>
+            <div class="equipo">
+
+
+                <div class="persona">
+                    <div class="foto-container">
+                        <img src="celia.png" alt="Dra. Celia Luksenburg" class="foto-equipo" />
+                        <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irACelia()">Ver más info
+                            de la
+                            Dra. Celia</a>
+                    </div>
+                    <h4>Dra. Celia Luksenburg</h4>
+                    <p>Especialista en rehabilitación estética</p>
+                </div>
+
+
+                <div class="persona">
+                    <div class="foto-container">
+                        <img src="thelma.png" alt="Dra. Thelma Grunfeld" class="foto-equipo" />
+                        <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irAThelma()">Ver más info
+                            de
+                            la Dra. Thelma</a>
+                    </div>
+                    <h4>Dra. Thelma Grunfeld</h4>
+                    <p>Ortodoncista especializada en tratamientos avanzados</p>
+                </div>
+
+
+                <div class="persona">
+                    <div class="foto-container">
+                        <img src="maica.png" alt="Asistente Maica" class="foto-equipo" />
+                        <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irAMaica()">Ver más info
+                            de la
+                            Dra. Maica</a>
+                    </div>
+                    <h4>Maica</h4>
+                    <p>Asistente técnica en procedimientos odontológicos</p>
+                </div>
+
+
+            </div>
+        </section>
+
+
+        <!-- NOSOTROS -->
+
+
+        <section id="nosotros" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+
+
+            <h2 class="section-title"
+                style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">Sobre
+                Nosotros</h2>
+            <p style="font-size: 1.1rem; line-height: 1.6;">RIE es un centro dedicado a mejorar la calidad de vida de las
+                personas mediante tratamientos estéticos y funcionales. Creemos en un abordaje integral, humano y
+                personalizado.</p>
+
+
+            <div id="celia-bio"
+                style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Dra. Celia Luksenburg</h3>
+                <p style="font-weight: bold; font-size: 1.2rem; color: #333;">Trayectoria</p>
+                <p style="line-height: 1.7;">Desde un principio tuvo muy clara su vocación. En 1992 ingresó en la Facultad
+                    de Odontología de la UDELAR, la cual disfrutó profundamente. Desde que se recibió y hasta el día de hoy,
+                    nunca perdió el contacto con la misma.<br>
+                    En 1993 ingresó al taller de pintura de Fernando López Lage, pudiendo aunar de esta forma sus dos
+                    pasiones: la <strong>odontología</strong> y el <strong>arte</strong>.</p>
+
+
+                <p style="line-height: 1.7;">En cuanto al arte, realizó varias exposiciones, intervino en concursos, sacó el
+                    primer premio en el concurso del SMU, recibió varias menciones especiales y fue seleccionada para una
+                    Bienal en Buenos Aires.</p>
+
+
+                <p style="line-height: 1.7;">En un momento, decidió dejar de crear en un solo plano y comenzar a crear en
+                    tres dimensiones. Trabajó con maniquíes, los pintaba y los exponía; otros los daba vuelta y con
+                    plastilina les creaba una nueva cara. Hasta que llegó un día clave en su carrera profesional. En una
+                    conferencia de la Dra. Isabel Jankielewicz sobre <strong>Prótesis Buco Maxilo Facial</strong>, se sintió
+                    totalmente identificada. Al finalizar, la Dra. Isabel dijo: “esta disciplina está basada en tres
+                    pilares: <strong>AMOR, ARTE Y CIENCIA</strong>”. Fue en aquel momento que descubrió que ese era su
+                    camino. Era la tercera dimensión que ella estaba buscando.</p>
+
+
+                <p style="line-height: 1.7;">A partir de 2005 comenzó a ampliar conocimientos en el Servicio de Prótesis
+                    Buco Maxilo Facial de la Facultad de Odontología de la Universidad de la República, atendiendo pacientes
+                    mutilados faciales. Tarea que ha desarrollado ininterrumpidamente hasta hoy, con el mismo entusiasmo de
+                    siempre.</p>
+
+
+                <p style="line-height: 1.7;">Nunca se detiene, tanto en Odontología tradicional como en Prótesis Buco Maxilo
+                    Facial, por lo que continuamente asiste a distintos cursos, jornadas y congresos.</p>
+
+
+                <p style="font-weight: bold; font-size: 1.2rem; color: #333; margin-top: 2rem;">Cursos, Jornadas, Congresos,
+                    Conferencias y Presentaciones</p>
+                <ul style="line-height: 1.7; padding-left: 1.2rem;">
+                    <li>2005 - Curso de Implantes Osteointegrados (Escuela de Graduados UDELAR)</li>
+                    <li>2006 - Curso de Cirugía para el Odontólogo General (Universidad Católica)</li>
+                    <li>2007 - Jornadas de Prótesis Buco Maxilo Facial e Implantes Intra y Extraorales</li>
+                    <li>2008 - Presentación: “Prótesis Buco Maxilo Facial, Calidad de Vida” (SMI)</li>
+                    <li>2011 - Presentación: “Prótesis Ocular… Un Caso Conmovedor” (SMI)</li>
+                    <li>2013 - Congreso Latinoamericano (La Habana) — Se integra a la Sociedad Latinoamericana de PBMF</li>
+                    <li>2014 - Conferencista y póster: Técnicas de Impresión Alternativas (Córdoba)</li>
+                    <li>2015 - Curso de Prótesis Dentales Implanto Soportadas</li>
+                    <li>2015 - Anaplastology Association Conference (Río de Janeiro)</li>
+                    <li>2016 - Congreso de Rehabilitación de la Cara (Santiago de Chile)</li>
+                    <li>2016 - Curso de Estética y Oclusión (Argentina)</li>
+                    <li>2016 - Presentación: “Prótesis Ocular… ¿Tarea del Odontólogo?”</li>
+                    <li>2017 - Curso de Estética y Carillas Dentales</li>
+                    <li>2017 - Aprobado Grado Dos en PBMF, UDELAR</li>
+                    <li>2019 - Gana cargo de Grado Dos en PBMF, UDELAR</li>
+                    <li>2019 - Presentación de protocolo en S.U.I.O sobre higiene de prótesis ocular</li>
+                </ul>
+
+
+                <p style="margin-top: 2rem; line-height: 1.7;"><strong>"Hoy</strong>, sigo haciendo lo que amo. Me gusta la
+                    transformación, la creación. En Odontología, más que nada en el área de Rehabilitación Estética, y en
+                    Prótesis Buco Maxilo Facial, especialmente en Prótesis Oculares. Es allí donde puedo volcar y
+                    desarrollar toda mi parte artística, sin nunca dejar de lado los otros dos pilares: la
+                    <strong>CIENCIA</strong> y el <strong>AMOR</strong>. Por esto y más, siempre estoy y estaré muy
+                    agradecida."
+                </p>
+            </div>
+
+
+            <div id="thelma"
+                style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Dra. Thelma Grunfeld</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    La Dra. Thelma Grunfeld es ortodoncista especializada en tratamientos avanzados, con una mirada
+                    estética, funcional y personalizada.
+                    Con años de experiencia y formación continua, trabaja con un enfoque integral que permite transformar
+                    sonrisas respetando la armonía facial.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    Su trato cercano y compromiso con cada paciente hacen de ella una profesional destacada en el área de
+                    ortodoncia y estética dental.
+                </p>
+            </div>
+
+
+            <!-- MAICA -->
+            <div id="maica"
+                style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Maica</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    Maica es la asistente técnica del equipo, apasionada por la atención personalizada y los detalles que
+                    marcan la diferencia.
+                    Su calidez humana y precisión profesional son clave para brindar una experiencia cómoda, eficiente y
+                    confiable en cada tratamiento.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    Es parte esencial de RIE, acompañando a los pacientes en cada paso con dedicación y empatía.
+                </p>
+            </div>
+        </section>
+
+
+        <!-- CONTACTO -->
+        <section id="contacto" class="contenido oculto">
+            <h4> Mail</h4>
+
+
+            <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank"
+                style="color: #7c5c9c;  text-decoration: underline;" class="contacto-link">
+                consultoriodentalrie@gmail.com
+            </a>
+            <br>
+            <h4>Telefono </h4>
+            <a href="https://wa.me/59891664488" target="_blank" style="color: #7c5c9c;  text-decoration: underline;">
+                +598 91 664 488
+            </a>
+            <br>
+            <br>
+            <h4>Ubicación</h4>
+            <div class="info-item">
+
+
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.167210331529!2d-56.16329098461604!3d-34.910650681005716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95aab1f7e4dfe56f%3A0x302ac693b098963a!2sBulevar%20Espa%C3%B1a%202665%2C%2011300%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1ses!2suy!4v1717944341343!5m2!1ses!2suy"
+                    width="300" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+
+        </section>
+
+
+        <!-- PROTESIS OCULARES -->
+        <section id="protesis-oculares" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+            <h2 style="color: #789ce2; font-size: 2rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">Prótesis
+                Oculares</h2>
+
+
+
+            <div style="margin-top: 1rem; margin-bottom: 2rem;">
+                <nav style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="#" onclick="scrollAjustadoA('elaboracion'); return false;">Elaboración</a>
+                    <a href="#" onclick="scrollAjustadoA('etapas'); return false;">Etapas</a>
+                    <a href="#" onclick="scrollAjustadoA('antes-despues'); return false;">Antes y Después</a>
+
+
+                </nav>
+            </div>
+            <img src="foto2.jpg" alt="Prótesis Oculares" class="foto-seccion-grande">
+
+            <p style="line-height: 1.6; font-size: 1.1rem; margin-top: 1rem;">
+                Muchas personas que han sufrido la pérdida de un ojo desconocen que pueden mejorar su apariencia, confort y
+                calidad de vida con el uso de una <strong>prótesis ocular</strong>.
+            </p>
+
+
+            <p style="line-height: 1.6; font-size: 1.1rem;">
+                Las causas pueden ser <strong>congénitas</strong> o <strong>adquiridas</strong>. Dentro de estas últimas se
+                incluyen etiologías <em>traumáticas, oncológicas, infecciosas</em> u otras.
+            </p>
+
+
+            <div id="elaboracion" class="subseccion"
+                style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Elaboración a Medida</h3>
+                <p>La elaboración de una prótesis ocular es una tarea tanto profesional como artesanal...</p>
+                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
+                <div class="contenido-colapsable" style="display:none;">
+                    <p>ya que
+                        <strong>cada una es única</strong>. Requiere máxima atención y precisión para lograr resultados
+                        óptimos. Utilizamos materiales con los más altos estándares de calidad disponibles.
+                    </p>
+                    <p>Las técnicas y los materiales son claves para alcanzar una estética realista. Nuestro objetivo es
+                        lograr una <strong>apariencia natural y armónica</strong>.</p>
+                    <p>Nos enfocamos no solo en la estética, sino también en brindar <strong>acompañamiento
+                            emocional</strong> durante el proceso.</p>
+                    <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
+                </div>
+            </div>
+
+
+            <div id="etapas" class="subseccion"
+                style="margin-top: 2.5rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Tratamiento – Etapas</h3>
+                <p>El primer paso es la toma de impresión de la cavidad ocular para definir la forma exacta de la
+                    prótesis...</p>
+                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
+                <div class="contenido-colapsable" style="display:none;">
+                    <p> Esto garantiza una adaptación precisa, mayor confort y mejor movimiento
+                        cuando es posible.</p>
+                    <p>Luego, se determina cuidadosamente el <strong>color de la esclera</strong> (parte blanca del ojo), el
+                        <strong>iris</strong> y los detalles como venas, diámetro y profundidad. Todo esto se realiza con
+                        técnicas artísticas en presencia del paciente, utilizando acuarelas para una reproducción fidedigna
+                        del ojo sano.
+                    </p>
+                    <p>Dedicamos el tiempo necesario para explicar cada paso y acompañar al paciente en el proceso. También
+                        brindamos orientación sobre <strong>cuidados e higiene</strong> de la prótesis.</p>
+                    <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
+                </div>
+            </div>
+            <br>
+            <h3 id="antes-despues" style="color: #789ce2; font-size: 1.5rem;"> Antes y Después</h3>
+
+            <!-- Nueva galería de antes y después (fotos separadas) -->
+            <div class="galeria-antes-despues">
+                <div class="casos-grid">
+                    <div class="caso">
+                        <div class="foto-antes-despues">
+                            <div class="foto-antes">
+                                <img src="antesCara1.png" alt="Antes caso 1" class="fade-in-on-scroll">
+                            </div>
+                            <div class="foto-despues">
+                                <img src="despCara1.png" alt="Después caso 1" class="fade-in-on-scroll">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="comparador" class="subseccion">
+                <div class="img-wrapper" id="wrapper-ojo">
+                    <img src="ojo.desp.jpg" class="img-top" alt="Después">
+                    <div class="img-slider" id="slider-ojo">
+                        <span class="flechas">⇆</span>
+                    </div>
+                    <img src="ojo.antes.jpg" class="img-bottom" alt="Antes">
+                </div>
+            </div>
+            <!-- Botón para ver otros casos -->
+            <button id="btn-otros-casos-ojo"
+                style="margin-left: 1rem; background: #789ce2; color: white; border: none; border-radius: 5px; padding: 0.4rem 1rem; cursor: pointer;">
+                Ver otros casos
+            </button>
+            <!-- Modal de otros casos de prótesis oculares -->
+            <div id="modal-otros-casos-ojo" onclick="if(event.target === this) this.style.display='none'"
+                style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
+                <div
+                    style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
+                    <button onclick="document.getElementById('modal-otros-casos-ojo').style.display='none'"
+                        style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">×</button>
+                    <h4 style="color:#789ce2;">Otros casos de Prótesis Oculares</h4>
+                    <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
+                     
+                        <!--  1 Un comparador por fila, tamaño grande y alargado -->
                         <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-diente-caso6">
-                                <img src="d.dientes.png" class="img-top" alt="Después">
-                                <div class="img-slider" id="slider-diente-caso6">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso1">
+                                <img src="caso1O-antes.jpg" class="img-top" alt="antes">
+                                <div class="img-slider" id="slider-ojo-caso1">
                                     <span class="flechas">⇆</span>
                                 </div>
-                                <img src="a.dientes.png" class="img-bottom" alt="Antes">
+                                <img src="caso1O-desp.jpg" class="img-bottom" alt="Después">
+                            </div>
+                        </div>
+                        <!-- Repite para los otros casos -->
+                        <!-- 2 -->
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso2">
+                                <img src="caso2O-antes.jpg" class="img-top" alt="Antes">
+                                <div class="img-slider" id="slider-ojo-caso2">
+                                    <span class="flechas">⇆</span>
+                                </div>
+                                <img src="caso2O-desp.jpg" class="img-bottom" alt="Después">
+                            </div>
+                        </div>
+                        <!-- 3 -->
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso3">
+                                <img src="caso3O-antes.png" class="img-top" alt="Antes">
+                                <div class="img-slider" id="slider-ojo-caso3">
+                                    <span class="flechas">⇆</span>
+                                </div>
+                                <img src="caso3O-desp.png" class="img-bottom" alt="Después">
+                            </div>
+                        </div>
+                        <!-- 4 -->
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso4">
+                                <img src="caso4" class="img-top" alt="antes">
+                                <div class="img-slider" id="slider-ojo-caso4">
+                                    <span class="flechas">⇆</span>
+                                </div>
+                                <img src="caso4" class="img-bottom" alt="después">
+                            </div>
+                        </div>
+                        <!-- 5 -->
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso5">
+                                <img src="ojo.desp.png" class="img-top" alt="Después">
+                                <div class="img-slider" id="slider-ojo-caso5">
+                                    <span class="flechas">⇆</span>
+                                </div>
+                                <img src="ojo.antes.png" class="img-bottom" alt="Antes">
+                            </div>
+                        </div>
+                        <!-- 6-->
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso6">
+                                <img src="ojo.desp.png" class="img-top" alt="Después">
+                                <div class="img-slider" id="slider-ojo-caso6">
+                                    <span class="flechas">⇆</span>
+                                </div>
+                                <img src="ojo.antes.png" class="img-bottom" alt="Antes">
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
+
+        <!-- Testimonios -->
+
+        <section id="testimonios" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+            <h2 class="section-title"
+                style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">
+                Testimonios
+            </h2>
+            <div class="testimonios-videos" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                    <div class="video-cover" onclick="playTestimonio(this)">
+                        <video class="video-fondo" src="testimonio1.mp4" preload="metadata" muted playsinline></video>
+                        <div class="play-btn">
+                            <svg width="70" height="70" viewBox="0 0 70 70">
+                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                    stroke-width="2" />
+                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
+                </div>
+                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                    <div class="video-cover" onclick="playTestimonio(this)">
+                        <video class="video-fondo" src="testimonio2.mp4" preload="metadata" muted playsinline></video>
+                        <div class="play-btn">
+                            <svg width="70" height="70" viewBox="0 0 70 70">
+                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                    stroke-width="2" />
+                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
+                </div>
+                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                    <div class="video-cover" onclick="playTestimonio(this)">
+                        <video class="video-fondo" src="testiminio4.mp4" preload="metadata" muted playsinline></video>
+                        <div class="play-btn">
+                            <svg width="70" height="70" viewBox="0 0 70 70">
+                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                    stroke-width="2" />
+                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
+                </div>
+                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                    <div class="video-cover" onclick="playTestimonio(this)">
+                        <video class="video-fondo" src="testiminio5.mp4" preload="metadata" muted playsinline></video>
+                        <div class="play-btn">
+                            <svg width="70" height="70" viewBox="0 0 70 70">
+                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                    stroke-width="2" />
+                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
+                </div>
+                <!-- Agregá más videos si querés -->
+
+                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                    <div class="video-cover" onclick="playTestimonio(this)">
+                        <video class="video-fondo" src="testimonio3.mp4" preload="metadata" muted playsinline></video>
+                        <div class="play-btn">
+                            <svg width="70" height="70" viewBox="0 0 70 70">
+                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                    stroke-width="2" />
+                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
+                </div>
+            </div>
+        </section>
 
 
         <script>
-            document.getElementById('btn-otros-casos-dientes').onclick = function () {
-                document.getElementById('modal-otros-casos-dientes').style.display = 'flex';
-                for (let i = 1; i <= 6; i++) {
-                    activarComparador(`wrapper-diente-caso${i}`, `slider-diente-caso${i}`);
+            document.getElementById('btn-otros-casos-ojo').onclick = function () {
+                document.getElementById('modal-otros-casos-ojo').style.display = 'flex';
+                for (let i = 1; i <= 7; i++) {
+                    activarComparador(`wrapper-ojo-caso${i}`, `slider-ojo-caso${i}`);
                 }
             };
         </script>
-    </section>
+        </section>
 
 
+        <script>
+            // Activar comparadores para los 6 casos
+            function activarComparador(wrapperId, sliderId) {
+                const wrapper = document.getElementById(wrapperId);
+                const slider = document.getElementById(sliderId);
+                const imgTop = wrapper.querySelector(".img-top");
 
 
-    <!-- EQUIPO -->
-    <section id="equipo" class="contenido oculto">
+                if (!wrapper || !slider || !imgTop) return;
 
 
-        <h2 class="section-title">Nuestro Equipo</h2>
-        <div class="equipo">
-
-
-            <div class="persona">
-                <div class="foto-container">
-                    <img src="celia.png" alt="Dra. Celia Luksenburg" class="foto-equipo" />
-                    <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irACelia()">Ver más info
-                        de la
-                        Dra. Celia</a>
-                </div>
-                <h4>Dra. Celia Luksenburg</h4>
-                <p>Especialista en rehabilitación estética</p>
-            </div>
-
-
-            <div class="persona">
-                <div class="foto-container">
-                    <img src="thelma.png" alt="Dra. Thelma Grunfeld" class="foto-equipo" />
-                    <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irAThelma()">Ver más info
-                        de
-                        la Dra. Thelma</a>
-                </div>
-                <h4>Dra. Thelma Grunfeld</h4>
-                <p>Ortodoncista especializada en tratamientos avanzados</p>
-            </div>
-
-
-            <div class="persona">
-                <div class="foto-container">
-                    <img src="maica.png" alt="Asistente Maica" class="foto-equipo" />
-                    <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irAMaica()">Ver más info
-                        de la
-                        Dra. Maica</a>
-                </div>
-                <h4>Maica</h4>
-                <p>Asistente técnica en procedimientos odontológicos</p>
-            </div>
-
-
-        </div>
-    </section>
-
-
-    <!-- NOSOTROS -->
-
-
-    <section id="nosotros" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
-
-
-        <h2 class="section-title"
-            style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">Sobre
-            Nosotros</h2>
-        <p style="font-size: 1.1rem; line-height: 1.6;">RIE es un centro dedicado a mejorar la calidad de vida de las
-            personas mediante tratamientos estéticos y funcionales. Creemos en un abordaje integral, humano y
-            personalizado.</p>
-
-
-        <div id="celia-bio"
-            style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Dra. Celia Luksenburg</h3>
-            <p style="font-weight: bold; font-size: 1.2rem; color: #333;">Trayectoria</p>
-            <p style="line-height: 1.7;">Desde un principio tuvo muy clara su vocación. En 1992 ingresó en la Facultad
-                de Odontología de la UDELAR, la cual disfrutó profundamente. Desde que se recibió y hasta el día de hoy,
-                nunca perdió el contacto con la misma.<br>
-                En 1993 ingresó al taller de pintura de Fernando López Lage, pudiendo aunar de esta forma sus dos
-                pasiones: la <strong>odontología</strong> y el <strong>arte</strong>.</p>
-
-
-            <p style="line-height: 1.7;">En cuanto al arte, realizó varias exposiciones, intervino en concursos, sacó el
-                primer premio en el concurso del SMU, recibió varias menciones especiales y fue seleccionada para una
-                Bienal en Buenos Aires.</p>
-
-
-            <p style="line-height: 1.7;">En un momento, decidió dejar de crear en un solo plano y comenzar a crear en
-                tres dimensiones. Trabajó con maniquíes, los pintaba y los exponía; otros los daba vuelta y con
-                plastilina les creaba una nueva cara. Hasta que llegó un día clave en su carrera profesional. En una
-                conferencia de la Dra. Isabel Jankielewicz sobre <strong>Prótesis Buco Maxilo Facial</strong>, se sintió
-                totalmente identificada. Al finalizar, la Dra. Isabel dijo: “esta disciplina está basada en tres
-                pilares: <strong>AMOR, ARTE Y CIENCIA</strong>”. Fue en aquel momento que descubrió que ese era su
-                camino. Era la tercera dimensión que ella estaba buscando.</p>
-
-
-            <p style="line-height: 1.7;">A partir de 2005 comenzó a ampliar conocimientos en el Servicio de Prótesis
-                Buco Maxilo Facial de la Facultad de Odontología de la Universidad de la República, atendiendo pacientes
-                mutilados faciales. Tarea que ha desarrollado ininterrumpidamente hasta hoy, con el mismo entusiasmo de
-                siempre.</p>
-
-
-            <p style="line-height: 1.7;">Nunca se detiene, tanto en Odontología tradicional como en Prótesis Buco Maxilo
-                Facial, por lo que continuamente asiste a distintos cursos, jornadas y congresos.</p>
-
-
-            <p style="font-weight: bold; font-size: 1.2rem; color: #333; margin-top: 2rem;">Cursos, Jornadas, Congresos,
-                Conferencias y Presentaciones</p>
-            <ul style="line-height: 1.7; padding-left: 1.2rem;">
-                <li>2005 - Curso de Implantes Osteointegrados (Escuela de Graduados UDELAR)</li>
-                <li>2006 - Curso de Cirugía para el Odontólogo General (Universidad Católica)</li>
-                <li>2007 - Jornadas de Prótesis Buco Maxilo Facial e Implantes Intra y Extraorales</li>
-                <li>2008 - Presentación: “Prótesis Buco Maxilo Facial, Calidad de Vida” (SMI)</li>
-                <li>2011 - Presentación: “Prótesis Ocular… Un Caso Conmovedor” (SMI)</li>
-                <li>2013 - Congreso Latinoamericano (La Habana) — Se integra a la Sociedad Latinoamericana de PBMF</li>
-                <li>2014 - Conferencista y póster: Técnicas de Impresión Alternativas (Córdoba)</li>
-                <li>2015 - Curso de Prótesis Dentales Implanto Soportadas</li>
-                <li>2015 - Anaplastology Association Conference (Río de Janeiro)</li>
-                <li>2016 - Congreso de Rehabilitación de la Cara (Santiago de Chile)</li>
-                <li>2016 - Curso de Estética y Oclusión (Argentina)</li>
-                <li>2016 - Presentación: “Prótesis Ocular… ¿Tarea del Odontólogo?”</li>
-                <li>2017 - Curso de Estética y Carillas Dentales</li>
-                <li>2017 - Aprobado Grado Dos en PBMF, UDELAR</li>
-                <li>2019 - Gana cargo de Grado Dos en PBMF, UDELAR</li>
-                <li>2019 - Presentación de protocolo en S.U.I.O sobre higiene de prótesis ocular</li>
-            </ul>
-
-
-            <p style="margin-top: 2rem; line-height: 1.7;"><strong>"Hoy</strong>, sigo haciendo lo que amo. Me gusta la
-                transformación, la creación. En Odontología, más que nada en el área de Rehabilitación Estética, y en
-                Prótesis Buco Maxilo Facial, especialmente en Prótesis Oculares. Es allí donde puedo volcar y
-                desarrollar toda mi parte artística, sin nunca dejar de lado los otros dos pilares: la
-                <strong>CIENCIA</strong> y el <strong>AMOR</strong>. Por esto y más, siempre estoy y estaré muy
-                agradecida."
-            </p>
-        </div>
-
-
-        <div id="thelma"
-            style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Dra. Thelma Grunfeld</h3>
-            <p style="font-size: 1.1rem; line-height: 1.6;">
-                La Dra. Thelma Grunfeld es ortodoncista especializada en tratamientos avanzados, con una mirada
-                estética, funcional y personalizada.
-                Con años de experiencia y formación continua, trabaja con un enfoque integral que permite transformar
-                sonrisas respetando la armonía facial.
-            </p>
-            <p style="font-size: 1.1rem; line-height: 1.6;">
-                Su trato cercano y compromiso con cada paciente hacen de ella una profesional destacada en el área de
-                ortodoncia y estética dental.
-            </p>
-        </div>
-
-
-        <!-- MAICA -->
-        <div id="maica"
-            style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Maica</h3>
-            <p style="font-size: 1.1rem; line-height: 1.6;">
-                Maica es la asistente técnica del equipo, apasionada por la atención personalizada y los detalles que
-                marcan la diferencia.
-                Su calidez humana y precisión profesional son clave para brindar una experiencia cómoda, eficiente y
-                confiable en cada tratamiento.
-            </p>
-            <p style="font-size: 1.1rem; line-height: 1.6;">
-                Es parte esencial de RIE, acompañando a los pacientes en cada paso con dedicación y empatía.
-            </p>
-        </div>
-    </section>
-
-
-    <!-- CONTACTO -->
-    <section id="contacto" class="contenido oculto">
-        <h4> Mail</h4>
-
-
-        <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank"
-            style="color: #7c5c9c;  text-decoration: underline;" class="contacto-link">
-            consultoriodentalrie@gmail.com
-        </a>
-        <br>
-        <h4>Telefono </h4>
-        <a href="https://wa.me/59891664488" target="_blank" style="color: #7c5c9c;  text-decoration: underline;">
-            +598 91 664 488
-        </a>
-        <br>
-        <br>
-        <h4>Ubicación</h4>
-        <div class="info-item">
-
-
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.167210331529!2d-56.16329098461604!3d-34.910650681005716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95aab1f7e4dfe56f%3A0x302ac693b098963a!2sBulevar%20Espa%C3%B1a%202665%2C%2011300%20Montevideo%2C%20Departamento%20de%20Montevideo%2C%20Uruguay!5e0!3m2!1ses!2suy!4v1717944341343!5m2!1ses!2suy"
-                width="300" height="200" style="border:0; border-radius: 10px;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-            </iframe>
-        </div>
-
-
-    </section>
-
-
-    <!-- PROTESIS OCULARES -->
-    <section id="protesis-oculares" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
-        <h2 style="color: #789ce2; font-size: 2rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">Prótesis
-            Oculares</h2>
-
-
-
-        <div style="margin-top: 1rem; margin-bottom: 2rem;">
-            <nav style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                <a href="#" onclick="scrollAjustadoA('elaboracion'); return false;">Elaboración</a>
-                <a href="#" onclick="scrollAjustadoA('etapas'); return false;">Etapas</a>
-                <a href="#" onclick="scrollAjustadoA('antes-despues'); return false;">Antes y Después</a>
-
-
-            </nav>
-        </div>
-        <img src="foto2.jpg" alt="Prótesis Oculares" class="foto-seccion-grande">
-
-
-
-
-
-
-        <p style="line-height: 1.6; font-size: 1.1rem; margin-top: 1rem;">
-            Muchas personas que han sufrido la pérdida de un ojo desconocen que pueden mejorar su apariencia, confort y
-            calidad de vida con el uso de una <strong>prótesis ocular</strong>.
-        </p>
-
-
-        <p style="line-height: 1.6; font-size: 1.1rem;">
-            Las causas pueden ser <strong>congénitas</strong> o <strong>adquiridas</strong>. Dentro de estas últimas se
-            incluyen etiologías <em>traumáticas, oncológicas, infecciosas</em> u otras.
-        </p>
-
-
-
-
-        <div id="elaboracion" class="subseccion"
-            style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Elaboración a Medida</h3>
-            <p>La elaboración de una prótesis ocular es una tarea tanto profesional como artesanal...</p>
-            <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
-            <div class="contenido-colapsable" style="display:none;">
-                <p>ya que
-                    <strong>cada una es única</strong>. Requiere máxima atención y precisión para lograr resultados
-                    óptimos. Utilizamos materiales con los más altos estándares de calidad disponibles.
-                </p>
-                <p>Las técnicas y los materiales son claves para alcanzar una estética realista. Nuestro objetivo es
-                    lograr una <strong>apariencia natural y armónica</strong>.</p>
-                <p>Nos enfocamos no solo en la estética, sino también en brindar <strong>acompañamiento
-                        emocional</strong> durante el proceso.</p>
-                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
-            </div>
-        </div>
-
-
-        <div id="etapas" class="subseccion"
-            style="margin-top: 2.5rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-            <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Tratamiento – Etapas</h3>
-            <p>El primer paso es la toma de impresión de la cavidad ocular para definir la forma exacta de la
-                prótesis...</p>
-            <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
-            <div class="contenido-colapsable" style="display:none;">
-                <p> Esto garantiza una adaptación precisa, mayor confort y mejor movimiento
-                    cuando es posible.</p>
-                <p>Luego, se determina cuidadosamente el <strong>color de la esclera</strong> (parte blanca del ojo), el
-                    <strong>iris</strong> y los detalles como venas, diámetro y profundidad. Todo esto se realiza con
-                    técnicas artísticas en presencia del paciente, utilizando acuarelas para una reproducción fidedigna
-                    del ojo sano.
-                </p>
-                <p>Dedicamos el tiempo necesario para explicar cada paso y acompañar al paciente en el proceso. También
-                    brindamos orientación sobre <strong>cuidados e higiene</strong> de la prótesis.</p>
-                <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
-            </div>
-        </div>
-        <br>
-        <h3 id="antes-despues" style="color: #789ce2; font-size: 1.5rem;"> Antes y Después</h3>
-
-        <!-- Nueva galería de antes y después (fotos separadas) -->
-        <div class="galeria-antes-despues">
-            <div class="casos-grid">
-                <div class="caso">
-                    <div class="foto-antes-despues">
-                        <div class="foto-antes">
-                            <img src="antesCara1.png" alt="Antes caso 1" class="fade-in-on-scroll">
-                        </div>
-                        <div class="foto-despues">
-                            <img src="despCara1.png" alt="Después caso 1" class="fade-in-on-scroll">
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-        <div class="comparador" class="subseccion">
-            <div class="img-wrapper" id="wrapper-ojo">
-                <img src="ojo.desp.jpg" class="img-top" alt="Después">
-                <div class="img-slider" id="slider-ojo">
-                    <span class="flechas">⇆</span>
-                </div>
-                <img src="ojo.antes.jpg" class="img-bottom" alt="Antes">
-            </div>
-        </div>
-        <!-- Botón para ver otros casos -->
-        <button id="btn-otros-casos-ojo"
-            style="margin-left: 1rem; background: #789ce2; color: white; border: none; border-radius: 5px; padding: 0.4rem 1rem; cursor: pointer;">
-            Ver otros casos
-        </button>
-        <!-- Modal de otros casos de prótesis oculares -->
-        <div id="modal-otros-casos-ojo" onclick="if(event.target === this) this.style.display='none'"
-            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
-            <div
-                style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
-                <button onclick="document.getElementById('modal-otros-casos-ojo').style.display='none'"
-                    style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">×</button>
-                <h4 style="color:#789ce2;">Otros casos de Prótesis Oculares</h4>
-                <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                    <!--  1 Un comparador por fila, tamaño grande y alargado -->
-                    <div class="comparador comparador-modal">
-                        <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso1">
-                            <img src="caso1O-antes.jpg" class="img-top" alt="antes">
-                            <div class="img-slider" id="slider-ojo-caso1">
-                                <span class="flechas">⇆</span>
-                            </div>
-                            <img src="caso1O-desp.jpg" class="img-bottom" alt="Después">
-                        </div>
-                    </div>
-                    <!-- Repite para los otros casos -->
-                    <!-- 2 -->
-                    <div class="comparador comparador-modal">
-                        <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso2">
-                            <img src="caso2O-antes.jpg" class="img-top" alt="Antes">
-                            <div class="img-slider" id="slider-ojo-caso2">
-                                <span class="flechas">⇆</span>
-                            </div>
-                            <img src="caso2O-desp.jpg" class="img-bottom" alt="Después">
-                        </div>
-                    </div>
-                    <!-- 3 -->
-                    <div class="comparador comparador-modal">
-                        <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso3">
-                            <img src="caso3O-antes.png" class="img-top" alt="Antes">
-                            <div class="img-slider" id="slider-ojo-caso3">
-                                <span class="flechas">⇆</span>
-                            </div>
-                            <img src="caso3O-desp.png" class="img-bottom" alt="Después">
-                        </div>
-                    </div>
-                    <!-- 4 -->
-                    <div class="comparador comparador-modal">
-                        <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso4">
-                            <img src="caso4" class="img-top" alt="antes">
-                            <div class="img-slider" id="slider-ojo-caso4">
-                                <span class="flechas">⇆</span>
-                            </div>
-                            <img src="caso4" class="img-bottom" alt="después">
-                        </div>
-                    </div>
-                    <!-- 5 -->
-                    <div class="comparador comparador-modal">
-                        <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso5">
-                            <img src="ojo.desp.png" class="img-top" alt="Después">
-                            <div class="img-slider" id="slider-ojo-caso5">
-                                <span class="flechas">⇆</span>
-                            </div>
-                            <img src="ojo.antes.png" class="img-bottom" alt="Antes">
-                        </div>
-                    </div>
-                    <!-- 6-->
-                    <div class="comparador comparador-modal">
-                        <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso6">
-                            <img src="ojo.desp.png" class="img-top" alt="Después">
-                            <div class="img-slider" id="slider-ojo-caso6">
-                                <span class="flechas">⇆</span>
-                            </div>
-                            <img src="ojo.antes.png" class="img-bottom" alt="Antes">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonios -->
-
-    <section id="testimonios" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
-        <h2 class="section-title"
-            style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">
-            Testimonios
-        </h2>
-        <div class="testimonios-videos" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
-            <div class="video-testimonio" style="max-width: 400px; position: relative;">
-                <div class="video-cover" onclick="playTestimonio(this)">
-                    <video class="video-fondo" src="testimonio1.mp4" preload="metadata" muted playsinline></video>
-                    <div class="play-btn">
-                        <svg width="70" height="70" viewBox="0 0 70 70">
-                            <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
-                                stroke-width="2" />
-                            <polygon points="28,22 52,35 28,48" fill="#789ce2" />
-                        </svg>
-                    </div>
-                </div>
-                <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
-            </div>
-            <div class="video-testimonio" style="max-width: 400px; position: relative;">
-                <div class="video-cover" onclick="playTestimonio(this)">
-                    <video class="video-fondo" src="testimonio2.mp4" preload="metadata" muted playsinline></video>
-                    <div class="play-btn">
-                        <svg width="70" height="70" viewBox="0 0 70 70">
-                            <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
-                                stroke-width="2" />
-                            <polygon points="28,22 52,35 28,48" fill="#789ce2" />
-                        </svg>
-                    </div>
-                </div>
-                <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
-            </div>
-            <!-- Agregá más videos si querés -->
-
-            <div class="video-testimonio" style="max-width: 400px; position: relative;">
-                <div class="video-cover" onclick="playTestimonio(this)">
-                    <video class="video-fondo" src="testimonio3.mp4" preload="metadata" muted playsinline></video>
-                    <div class="play-btn">
-                        <svg width="70" height="70" viewBox="0 0 70 70">
-                            <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
-                                stroke-width="2" />
-                            <polygon points="28,22 52,35 28,48" fill="#789ce2" />
-                        </svg>
-                    </div>
-                </div>
-                <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
-            </div>
-        </div>
-    </section>
-
-
-    <script>
-        document.getElementById('btn-otros-casos-ojo').onclick = function () {
-            document.getElementById('modal-otros-casos-ojo').style.display = 'flex';
-            for (let i = 1; i <= 6; i++) {
-                activarComparador(`wrapper-ojo-caso${i}`, `slider-ojo-caso${i}`);
-            }
-        };
-    </script>
-    </section>
-
-
-    <script>
-        // Activar comparadores para los 6 casos
-        function activarComparador(wrapperId, sliderId) {
-            const wrapper = document.getElementById(wrapperId);
-            const slider = document.getElementById(sliderId);
-            const imgTop = wrapper.querySelector(".img-top");
-
-
-            if (!wrapper || !slider || !imgTop) return;
-
-
-            function moverSlider(posX) {
-                const rect = wrapper.getBoundingClientRect();
-                let pos = posX - rect.left;
-                pos = Math.max(0, Math.min(pos, rect.width));
-                const porcentaje = (pos / rect.width) * 100;
-                slider.style.left = `${porcentaje}%`;
-                imgTop.style.clipPath = `inset(0 ${100 - porcentaje}% 0 0)`;
-            }
-
-
-            wrapper.addEventListener("mousemove", e => moverSlider(e.clientX));
-            wrapper.addEventListener("touchmove", e => {
-                if (e.touches.length > 0) moverSlider(e.touches[0].clientX);
-            });
-        }
-    </script>
-
-
-    <!-- FUNCIONES -->
-    <script>
-        function animarInicio() {
-            const r = document.getElementById("r");
-            const i = document.getElementById("i");
-            const e = document.getElementById("e");
-            const rehab = document.getElementById("rehab");
-            const integ = document.getElementById("integ");
-            const estet = document.getElementById("estet");
-            const pincelada = document.getElementById("pincelada");
-
-
-            rehab.classList.add("anim-r");
-            r.style.opacity = 1;
-            setTimeout(() => {
-                rehab.style.display = "none";
-                r.querySelector("img").style.display = "inline";
-
-
-                integ.classList.add("anim-i");
-                i.style.opacity = 1;
-                setTimeout(() => {
-                    integ.style.display = "none";
-                    i.querySelector("img").style.display = "inline";
-
-
-                    estet.classList.add("anim-e");
-                    e.style.opacity = 1;
-                    setTimeout(() => {
-                        estet.style.display = "none";
-                        e.querySelector("img").style.display = "inline";
-
-
-                        setTimeout(() => {
-                            pincelada.style.transition = "opacity 1.5s ease-in-out";
-                            pincelada.style.opacity = 1;
-                        }, 500);
-                    }, 1300);
-                }, 1300);
-            }, 1300);
-        }
-
-
-        function mostrarSeccion(id) {
-            const secciones = document.querySelectorAll("section");
-            secciones.forEach(sec => sec.classList.add("oculto"));
-
-            // Pausa y resetea todos los videos de testimonios al cambiar de sección
-            document.querySelectorAll('.video-cover').forEach(c => {
-                const v = c.querySelector('.video-fondo');
-                if (v) {
-                    v.pause();
-                    v.currentTime = 0;
-                    v.muted = true;
-                    v.controls = false;
+                function moverSlider(posX) {
+                    const rect = wrapper.getBoundingClientRect();
+                    let pos = posX - rect.left;
+                    pos = Math.max(0, Math.min(pos, rect.width));
+                    const porcentaje = (pos / rect.width) * 100;
+                    slider.style.left = `${porcentaje}%`;
+                    imgTop.style.clipPath = `inset(0 ${100 - porcentaje}% 0 0)`;
                 }
-                c.classList.remove('playing');
-                if (c.parentElement) c.parentElement.classList.remove('zoomed');
-            });
-
-            const target = document.getElementById(id);
-            if (target) {
-                target.classList.remove("oculto");
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-
-                // 🔥 Fuerza a reiniciar animación si es inicio
-                if (id === "inicio") {
-                    resetearInicio(); // 👈 nuevo
-                    setTimeout(animarInicio, 10); // reejecuta la animación con delay
-                }
-            }
-
-            marcarMenuActivo(id);
-        }
-
-        function marcarMenuActivo(id) {
-            // Para menú de escritorio
-            const navLinks = document.querySelectorAll('.menu-desktop a');
-            navLinks.forEach(link => link.classList.remove('active'));
-            const linkToMark = Array.from(navLinks).find(link =>
-                link.getAttribute('data-seccion') === id
-            );
-            if (linkToMark) linkToMark.classList.add('active');
-
-            // Para menú móvil
-            const mobileLinks = document.querySelectorAll('#menu-mobile-dropdown a');
-            mobileLinks.forEach(link => link.classList.remove('active'));
-            const mobileLinkToMark = Array.from(mobileLinks).find(link =>
-                link.getAttribute('data-seccion') === id
-            );
-            if (mobileLinkToMark) mobileLinkToMark.classList.add('active');
-        }
 
 
-        // Helper para capitalizar la primera letra
-        function capitalizeFirstLetter(str) {
-            return str.charAt(0).toUpperCase() + str.slice(1);
-        }
-
-
-        function scrollAjustadoA(idElemento) {
-            const elemento = document.getElementById(idElemento);
-            if (elemento) {
-                const offset = -150; // Podés ajustar este número
-                const posicion = elemento.getBoundingClientRect().top + window.scrollY + offset;
-
-
-                window.scrollTo({
-                    top: posicion,
-                    behavior: 'smooth'
+                wrapper.addEventListener("mousemove", e => moverSlider(e.clientX));
+                wrapper.addEventListener("touchmove", e => {
+                    if (e.touches.length > 0) moverSlider(e.touches[0].clientX);
                 });
             }
-        }
+        </script>
 
 
-        function activarComparador(wrapperId, sliderId) {
-            const wrapper = document.getElementById(wrapperId);
-            const slider = document.getElementById(sliderId);
-            const imgTop = wrapper.querySelector(".img-top");
+        <!-- FUNCIONES -->
+        <script>
+            function animarInicio() {
+                const r = document.getElementById("r");
+                const i = document.getElementById("i");
+                const e = document.getElementById("e");
+                const rehab = document.getElementById("rehab");
+                const integ = document.getElementById("integ");
+                const estet = document.getElementById("estet");
+                const pincelada = document.getElementById("pincelada");
 
 
-            if (!wrapper || !slider || !imgTop) return;
+                rehab.classList.add("anim-r");
+                r.style.opacity = 1;
+                setTimeout(() => {
+                    rehab.style.display = "none";
+                    r.querySelector("img").style.display = "inline";
 
 
-            function moverSlider(posX) {
-                const rect = wrapper.getBoundingClientRect();
-                let pos = posX - rect.left;
-                pos = Math.max(0, Math.min(pos, rect.width));
-                const porcentaje = (pos / rect.width) * 100;
-                slider.style.left = `${porcentaje}%`;
-                imgTop.style.clipPath = `inset(0 ${100 - porcentaje}% 0 0)`;
-            }
-
-
-            wrapper.addEventListener("mousemove", e => moverSlider(e.clientX));
-            wrapper.addEventListener("touchmove", e => {
-                if (e.touches.length > 0) moverSlider(e.touches[0].clientX);
-            });
-        }
-
-
-        window.addEventListener("DOMContentLoaded", () => {
-            const secciones = document.querySelectorAll("section");
-            secciones.forEach(sec => {
-                if (sec.id !== "inicio") {
-                    sec.classList.add("oculto");
-                }
-            });
-
-
-            activarComparador("wrapper-dientes", "slider-dientes");
-            activarComparador("wrapper-ojo", "slider-ojo");
-
-
-            animarInicio(); // ✅ Esto hace que se ejecute apenas entrás
-        });
-    </script>
-
-
-    <script>
-        const links = document.querySelectorAll("nav a");
-        links.forEach(link => {
-            link.addEventListener("click", function () {
-                links.forEach(l => l.classList.remove("active"));
-                this.classList.add("active");
-            });
-        });
-
-
-        function irACelia() {
-            setTimeout(() => {
-                const celiaAnchor = document.getElementById("celia-bio");
-                if (celiaAnchor) {
-                    celiaAnchor.scrollIntoView({ behavior: "smooth" });
-                }
-            }, 300);
-        }
-    </script>
-
-
-    <script>
-        function irAThelma() {
-            setTimeout(() => {
-                const thelma = document.getElementById("thelma");
-                if (thelma) {
-                    thelma.scrollIntoView({ behavior: 'smooth' });
-                }
-            }, 300);
-        }
-    </script>
-
-
-    <script>
-        function irAMaica() {
-            setTimeout(() => {
-                const thelma = document.getElementById("maica");
-                if (thelma) {
-                    thelma.scrollIntoView({ behavior: 'smooth' });
-                }
-            }, 300);
-        }
-    </script>
-
-
-    <script>
-        // Carrusel automático
-        const carruselImgs = document.querySelectorAll('.carrusel-img');
-        let carruselIndex = 0;
-        setInterval(() => {
-            carruselImgs[carruselIndex].classList.remove('active');
-            carruselIndex = (carruselIndex + 1) % carruselImgs.length;
-            carruselImgs[carruselIndex].classList.add('active');
-        }, 3000); // Cambia cada 3 segundos
-    </script>
-
-
-    <!-- FOOTER -->
-    <footer>
-        <div class="info-grid">
-            <div class="info-item">
-                <img src="a.png" alt="Ubicación" class="icon-img icon-ubi">
-                <p>Bulevar España 2665 apto. 903 Montevideo</p>
-            </div>
-            <div class="info-item">
-                <img src="b.png" alt="Horario" class="icon-img">
-                <p>Lunes a Viernes de 9:00 a 18:00</p>
-            </div>
-            <div class="info-item">
-                <img src="c.png" alt="Email" class="icon-img">
-                <p>contacto@rie.uy</p>
-                <p>
-                    <a href="tel:+59827081013" id="telefono-footer" style="text-decoration: underline;">
-                        +598 2708 1013
-                    </a>
-                    <a href="tel:+59891664488" id="telefono-footer" style="text-decoration: underline;"> +598 91 664
-                        488</a>
-                </p>
-            </div>
-        </div>
-    </footer>
-
-
-    <script>
-        function animarRIEloop() {
-            const palabras = [
-                { id: "palabra-r", texto: "ehabilitación" },
-                { id: "palabra-i", texto: "ntegral" },
-                { id: "palabra-e", texto: "stética" }
-            ];
-            let idx = 0;
-
-
-            function limpiar() {
-                palabras.forEach(p => document.getElementById(p.id).textContent = "");
-            }
-
-
-            function escribirPalabra() {
-                if (idx >= palabras.length) {
-                    // Espera 1 segundo, borra palabras y repite
+                    integ.classList.add("anim-i");
+                    i.style.opacity = 1;
                     setTimeout(() => {
-                        limpiar();
-                        idx = 0;
-                        setTimeout(escribirPalabra, 700);
-                    }, 1000);
-                    return;
-                }
-                const { id, texto } = palabras[idx];
-                let i = 0;
-                const span = document.getElementById(id);
-                span.textContent = "";
-                function escribirLetra() {
-                    if (i < texto.length) {
-                        span.textContent += texto[i];
-                        i++;
-                        setTimeout(escribirLetra, 80);
-                    } else {
-                        idx++;
-                        setTimeout(escribirPalabra, 350);
+                        integ.style.display = "none";
+                        i.querySelector("img").style.display = "inline";
+
+
+                        estet.classList.add("anim-e");
+                        e.style.opacity = 1;
+                        setTimeout(() => {
+                            estet.style.display = "none";
+                            e.querySelector("img").style.display = "inline";
+
+
+                            setTimeout(() => {
+                                pincelada.style.transition = "opacity 1.5s ease-in-out";
+                                pincelada.style.opacity = 1;
+                            }, 500);
+                        }, 1300);
+                    }, 1300);
+                }, 1300);
+            }
+
+
+            function mostrarSeccion(id) {
+                const secciones = document.querySelectorAll("section");
+                secciones.forEach(sec => sec.classList.add("oculto"));
+
+                // Pausa y resetea todos los videos de testimonios al cambiar de sección
+                document.querySelectorAll('.video-cover').forEach(c => {
+                    const v = c.querySelector('.video-fondo');
+                    if (v) {
+                        v.pause();
+                        v.currentTime = 0;
+                        v.muted = true;
+                        v.controls = false;
+                    }
+                    c.classList.remove('playing');
+                    if (c.parentElement) c.parentElement.classList.remove('zoomed');
+                });
+
+                const target = document.getElementById(id);
+                if (target) {
+                    target.classList.remove("oculto");
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+
+                    // 🔥 Fuerza a reiniciar animación si es inicio
+                    if (id === "inicio") {
+                        resetearInicio(); // 👈 nuevo
+                        setTimeout(animarInicio, 10); // reejecuta la animación con delay
+                    }
+                    
+                    // Activa comparadores al mostrar la sección
+                    if (id === "protesis-oculares") {
+                        setTimeout(() => activarComparador("wrapper-ojo", "slider-ojo"), 100);
+                    }
+                    if (id === "odontologia") {
+                        setTimeout(() => activarComparador("wrapper-dientes", "slider-dientes"), 100);
                     }
                 }
-                escribirLetra();
+
+                marcarMenuActivo(id);
             }
-            limpiar();
-            escribirPalabra();
-        }
+
+            function marcarMenuActivo(id) {
+                // Para menú de escritorio
+                const navLinks = document.querySelectorAll('.menu-desktop a');
+                navLinks.forEach(link => link.classList.remove('active'));
+                const linkToMark = Array.from(navLinks).find(link =>
+                    link.getAttribute('data-seccion') === id
+                );
+                if (linkToMark) linkToMark.classList.add('active');
+
+                // Para menú móvil
+                const mobileLinks = document.querySelectorAll('#menu-mobile-dropdown a');
+                mobileLinks.forEach(link => link.classList.remove('active'));
+                const mobileLinkToMark = Array.from(mobileLinks).find(link =>
+                    link.getAttribute('data-seccion') === id
+                );
+                if (mobileLinkToMark) mobileLinkToMark.classList.add('active');
+            }
 
 
-        window.addEventListener("DOMContentLoaded", animarRIEloop);
-    </script>
+            // Helper para capitalizar la primera letra
+            function capitalizeFirstLetter(str) {
+                return str.charAt(0).toUpperCase() + str.slice(1);
+            }
 
-    <script>
-        function playTestimonio(cover) {
-            // Pausa todos los videos y resetea el estado
-            document.querySelectorAll('.video-cover').forEach(c => {
-                const v = c.querySelector('.video-fondo');
-                if (v) {
-                    v.pause();
-                    v.currentTime = 0;
-                    v.muted = true;
-                    v.controls = false;
+
+            function scrollAjustadoA(idElemento) {
+                const elemento = document.getElementById(idElemento);
+                if (elemento) {
+                    const offset = -150; // Podés ajustar este número
+                    const posicion = elemento.getBoundingClientRect().top + window.scrollY + offset;
+
+
+                    window.scrollTo({
+                        top: posicion,
+                        behavior: 'smooth'
+                    });
                 }
-                c.classList.remove('playing');
-                if (c.parentElement) c.parentElement.classList.remove('zoomed');
-            });
-
-            // Activa solo el video clickeado
-            const video = cover.querySelector('.video-fondo');
-            cover.classList.add('playing');
-            if (cover.parentElement) cover.parentElement.classList.add('zoomed');
-            video.muted = false;
-            video.controls = true;
-            video.play();
-        }
+            }
 
 
-        document.querySelectorAll('.video-fondo').forEach(video => {
-            video.addEventListener('pause', function () {
-                const cover = video.closest('.video-cover');
-                if (cover) {
-                    cover.classList.remove('playing');
-                    if (cover.parentElement) cover.parentElement.classList.remove('zoomed');
-                    video.muted = true;
-                    video.controls = false;
-                    video.currentTime = 0;
+            function activarComparador(wrapperId, sliderId) {
+                const wrapper = document.getElementById(wrapperId);
+                const slider = document.getElementById(sliderId);
+                const imgTop = wrapper.querySelector(".img-top");
+
+
+                if (!wrapper || !slider || !imgTop) return;
+
+
+                function moverSlider(posX) {
+                    const rect = wrapper.getBoundingClientRect();
+                    let pos = posX - rect.left;
+                    pos = Math.max(0, Math.min(pos, rect.width));
+                    const porcentaje = (pos / rect.width) * 100;
+                    slider.style.left = `${porcentaje}%`;
+                    imgTop.style.clipPath = `inset(0 ${100 - porcentaje}% 0 0)`;
                 }
-            });
-        });
-    </script>
 
-    <script>
-        document.getElementById('telefono-footer').addEventListener('click', function (e) {
-            // Detecta si NO es móvil
-            if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-                e.preventDefault();
-                alert('Para llamar, hacelo desde tu teléfono móvil.');
+
+                wrapper.addEventListener("mousemove", e => moverSlider(e.clientX));
+                wrapper.addEventListener("touchmove", e => {
+                    if (e.touches.length > 0) moverSlider(e.touches[0].clientX);
+                });
             }
-        });
-    </script>
-    <script>
-        function setMenuLabel(label) {
-            document.getElementById('menu-mobile-label').childNodes[0].textContent = label + " ";
-        }
-        function cerrarMenuMobile() {
-            document.getElementById('menu-mobile-dropdown').style.display = 'none';
-            document.querySelector('.menu-mobile').classList.remove('open');
-        }
-        document.getElementById('menu-mobile-toggle').onclick = function () {
-            const dropdown = document.getElementById('menu-mobile-dropdown');
-            const menuMobile = document.querySelector('.menu-mobile');
-            if (dropdown.style.display === 'none' || dropdown.style.display === '') {
-                dropdown.style.display = 'flex';
-                menuMobile.classList.add('open');
-            } else {
-                dropdown.style.display = 'none';
-                menuMobile.classList.remove('open');
-            }
-        };
-    </script>
-    <script>
-        function animarStats() {
-            document.querySelectorAll('.stat-num').forEach(el => {
-                const target = +el.getAttribute('data-target');
-                el.textContent = '0';
-                let count = 0;
-                const duration = 1200;
-                const start = performance.now();
-                function update(now) {
-                    const progress = Math.min((now - start) / duration, 1);
-                    count = Math.floor(progress * target);
-                    el.textContent = count;
-                    if (progress < 1) {
-                        requestAnimationFrame(update);
-                    } else {
-                        el.textContent = target;
+
+
+            window.addEventListener("DOMContentLoaded", () => {
+                const secciones = document.querySelectorAll("section");
+                secciones.forEach(sec => {
+                    if (sec.id !== "inicio") {
+                        sec.classList.add("oculto");
                     }
-                }
-                requestAnimationFrame(update);
-            });
-        }
+                });
 
-        // Solo anima cuando la sección aparece en pantalla
-        const statsSection = document.querySelector('.stats-inicio');
-        if (statsSection) {
+
+                activarComparador("wrapper-dientes", "slider-dientes");
+                activarComparador("wrapper-ojo", "slider-ojo");
+
+
+                animarInicio(); // ✅ Esto hace que se ejecute apenas entrás
+            });
+        </script>
+
+
+        <script>
+            const links = document.querySelectorAll("nav a");
+            links.forEach(link => {
+                link.addEventListener("click", function () {
+                    links.forEach(l => l.classList.remove("active"));
+                    this.classList.add("active");
+                });
+            });
+
+
+            function irACelia() {
+                setTimeout(() => {
+                    const celiaAnchor = document.getElementById("celia-bio");
+                    if (celiaAnchor) {
+                        celiaAnchor.scrollIntoView({ behavior: "smooth" });
+                    }
+                }, 300);
+            }
+        </script>
+
+
+        <script>
+            function irAThelma() {
+                setTimeout(() => {
+                    const thelma = document.getElementById("thelma");
+                    if (thelma) {
+                        thelma.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 300);
+            }
+        </script>
+
+
+        <script>
+            function irAMaica() {
+                setTimeout(() => {
+                    const thelma = document.getElementById("maica");
+                    if (thelma) {
+                        thelma.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 300);
+            }
+        </script>
+
+
+        <script>
+            // Carrusel automático
+            const carruselImgs = document.querySelectorAll('.carrusel-img');
+            let carruselIndex = 0;
+            setInterval(() => {
+                carruselImgs[carruselIndex].classList.remove('active');
+                carruselIndex = (carruselIndex + 1) % carruselImgs.length;
+                carruselImgs[carruselIndex].classList.add('active');
+            }, 3000); // Cambia cada 3 segundos
+        </script>
+
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="info-grid">
+                <div class="info-item">
+                    <img src="a.png" alt="Ubicación" class="icon-img icon-ubi">
+                    <p>Bulevar España 2665 apto. 903 Montevideo</p>
+                </div>
+                <div class="info-item">
+                    <img src="b.png" alt="Horario" class="icon-img">
+                    <p>Lunes a Viernes de 9:00 a 18:00</p>
+                </div>
+                <div class="info-item">
+                    <img src="c.png" alt="Email" class="icon-img">
+                    <p>contacto@rie.uy</p>
+                    <p>
+                        <a href="tel:+59827081013" id="telefono-footer" style="text-decoration: underline;">
+                            +598 2708 1013
+                        </a>
+                        <a href="tel:+59891664488" id="telefono-footer" style="text-decoration: underline;"> +598 91 664
+                            488</a>
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+
+        <script>
+            function animarRIEloop() {
+                const palabras = [
+                    { id: "palabra-r", texto: "ehabilitación" },
+                    { id: "palabra-i", texto: "ntegral" },
+                    { id: "palabra-e", texto: "stética" }
+                ];
+                let idx = 0;
+
+
+                function limpiar() {
+                    palabras.forEach(p => document.getElementById(p.id).textContent = "");
+                }
+
+
+                function escribirPalabra() {
+                    if (idx >= palabras.length) {
+                        // Espera 1 segundo, borra palabras y repite
+                        setTimeout(() => {
+                            limpiar();
+                            idx = 0;
+                            setTimeout(escribirPalabra, 700);
+                        }, 1000);
+                        return;
+                    }
+                    const { id, texto } = palabras[idx];
+                    let i = 0;
+                    const span = document.getElementById(id);
+                    span.textContent = "";
+                    function escribirLetra() {
+                        if (i < texto.length) {
+                            span.textContent += texto[i];
+                            i++;
+                            setTimeout(escribirLetra, 80);
+                        } else {
+                            idx++;
+                            setTimeout(escribirPalabra, 350);
+                        }
+                    }
+                    escribirLetra();
+                }
+                limpiar();
+                escribirPalabra();
+            }
+
+
+            window.addEventListener("DOMContentLoaded", animarRIEloop);
+        </script>
+
+        <script>
+            function playTestimonio(cover) {
+                // Pausa todos los videos y resetea el estado
+                document.querySelectorAll('.video-cover').forEach(c => {
+                    const v = c.querySelector('.video-fondo');
+                    if (v) {
+                        v.pause();
+                        v.currentTime = 0;
+                        v.muted = true;
+                        v.controls = false;
+                    }
+                    c.classList.remove('playing');
+                    if (c.parentElement) c.parentElement.classList.remove('zoomed');
+                });
+
+                // Activa solo el video clickeado
+                const video = cover.querySelector('.video-fondo');
+                cover.classList.add('playing');
+                if (cover.parentElement) cover.parentElement.classList.add('zoomed');
+                video.muted = false;
+                video.controls = true;
+                video.play();
+            }
+
+
+            document.querySelectorAll('.video-fondo').forEach(video => {
+                video.addEventListener('pause', function () {
+                    const cover = video.closest('.video-cover');
+                    if (cover) {
+                        cover.classList.remove('playing');
+                        if (cover.parentElement) cover.parentElement.classList.remove('zoomed');
+                        video.muted = true;
+                        video.controls = false;
+                        video.currentTime = 0;
+                    }
+                });
+            });
+        </script>
+
+        <script>
+            document.getElementById('telefono-footer').addEventListener('click', function (e) {
+                // Detecta si NO es móvil
+                if (!/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+                    e.preventDefault();
+                    alert('Para llamar, hacelo desde tu teléfono móvil.');
+                }
+            });
+        </script>
+        <script>
+            function setMenuLabel(label) {
+                document.getElementById('menu-mobile-label').childNodes[0].textContent = label + " ";
+            }
+            function cerrarMenuMobile() {
+                document.getElementById('menu-mobile-dropdown').style.display = 'none';
+                document.querySelector('.menu-mobile').classList.remove('open');
+            }
+            document.getElementById('menu-mobile-toggle').onclick = function () {
+                const dropdown = document.getElementById('menu-mobile-dropdown');
+                const menuMobile = document.querySelector('.menu-mobile');
+                if (dropdown.style.display === 'none' || dropdown.style.display === '') {
+                    dropdown.style.display = 'flex';
+                    menuMobile.classList.add('open');
+                } else {
+                    dropdown.style.display = 'none';
+                    menuMobile.classList.remove('open');
+                }
+            };
+        </script>
+        <script>
+            function animarStats() {
+                document.querySelectorAll('.stat-num').forEach(el => {
+                    const target = +el.getAttribute('data-target');
+                    el.textContent = '0';
+                    let count = 0;
+                    const duration = 1200;
+                    const start = performance.now();
+                    function update(now) {
+                        const progress = Math.min((now - start) / duration, 1);
+                        count = Math.floor(progress * target);
+                        el.textContent = count;
+                        if (progress < 1) {
+                            requestAnimationFrame(update);
+                        } else {
+                            el.textContent = target;
+                        }
+                    }
+                    requestAnimationFrame(update);
+                });
+            }
+
+            // Solo anima cuando la sección aparece en pantalla
+            const statsSection = document.querySelector('.stats-inicio');
+            if (statsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting) {
+                        animarStats();
+                    }
+                }, { threshold: 0.4 });
+                observer.observe(statsSection);
+            }
+        </script>
+        <script>
+            // Efecto fade-in orgánico al hacer scroll
             const observer = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                    animarStats();
-                }
-            }, { threshold: 0.4 });
-            observer.observe(statsSection);
-        }
-    </script>
-    <script>
-        // Efecto fade-in orgánico al hacer scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    observer.unobserve(entry.target); // Solo una vez
-                }
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target); // Solo una vez
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.fade-in-on-scroll').forEach(img => {
+                observer.observe(img);
             });
-        }, { threshold: 0.2 });
+        </script>
 
-        document.querySelectorAll('.fade-in-on-scroll').forEach(img => {
-            observer.observe(img);
-        });
-    </script>
-
-    <script>
-        function toggleColapsable(btn) {
-            // Si el botón está afuera (Ver más)
-            if (btn.nextElementSibling && btn.nextElementSibling.classList.contains('contenido-colapsable')) {
-                btn.nextElementSibling.style.display = "block";
-                btn.style.display = "none";
-            } else {
-                // Si el botón está adentro (Ver menos)
-                const contenido = btn.parentElement;
-                contenido.style.display = "none";
-                // Buscar el botón "Ver más" anterior
-                let prev = contenido.previousElementSibling;
-                while (prev && !(prev.classList && prev.classList.contains('btn-ver-mas'))) {
-                    prev = prev.previousElementSibling;
+        <script>
+            function toggleColapsable(btn) {
+                // Si el botón está afuera (Ver más)
+                if (btn.nextElementSibling && btn.nextElementSibling.classList.contains('contenido-colapsable')) {
+                    btn.nextElementSibling.style.display = "block";
+                    btn.style.display = "none";
+                } else {
+                    // Si el botón está adentro (Ver menos)
+                    const contenido = btn.parentElement;
+                    contenido.style.display = "none";
+                    // Buscar el botón "Ver más" anterior
+                    let prev = contenido.previousElementSibling;
+                    while (prev && !(prev.classList && prev.classList.contains('btn-ver-mas'))) {
+                        prev = prev.previousElementSibling;
+                    }
+                    if (prev) prev.style.display = "inline-block";
                 }
-                if (prev) prev.style.display = "inline-block";
             }
-        }
-    </script>
+        </script>
 
-</body>
+    </body>
 
 
-</html>
+    </html>
