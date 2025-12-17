@@ -36,7 +36,7 @@
             <nav class="menu-desktop">
                 <a href="#" data-seccion="inicio" onclick="mostrarSeccion('inicio'); return false;">Inicio</a>
                 <a href="#" data-seccion="protesis-oculares"
-                    onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis Oculares</a>
+                    onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis oculares</a>
                 <a href="#" data-seccion="odontologia"
                     onclick="mostrarSeccion('odontologia'); return false;">Odontología</a>
                 <a href="#" data-seccion="testimonios"
@@ -63,7 +63,7 @@
                         onclick="setMenuLabel('Inicio'); cerrarMenuMobile(); mostrarSeccion('inicio'); return false;">Inicio</a>
                     <a href="#"
                         onclick="mostrarSeccion('protesis-oculares'); setMenuLabel('Prótesis Oculares'); cerrarMenuMobile()">Prótesis
-                        Oculares</a>
+                        oculares</a>
                     <a href="#"
                         onclick="mostrarSeccion('odontologia'); setMenuLabel('Odontología'); cerrarMenuMobile()">Odontología</a>
                     <a href="#" onclick="mostrarSeccion('equipo'); setMenuLabel('Equipo'); cerrarMenuMobile()">Equipo</a>
@@ -85,7 +85,7 @@
             <div class="carrusel-fotos" style="margin-bottom: 2rem;">
                 <img src="foto1.png" class="carrusel-img active" alt="Foto 1">
                 <img src="foto2.png" class="carrusel-img" alt="Foto 2">
-                <img src="foto3.png" class="carrusel-img" alt="Foto 3">
+                <img src="foto3.jpg" class="carrusel-img" alt="Foto 3">
             </div>
 
 
@@ -104,7 +104,7 @@
             <!-- Presentación destacada -->
             <div class="intro-container">
                 <!--  <h3>Bienvenidos a RIE</h3> -->
-                <p>Un espacio donde la estética, la salud y la humanidad se encuentran para transformar vidas.</p>
+                <p style="font-family: 'Segoe UI', 'Arial', sans-serif; font-size: 1.35rem; color: #5a6e8c; line-height: 1.8; font-weight: 400; letter-spacing: 0.3px;">Un espacio donde la estética, la salud y la humanidad se encuentran para transformar vidas.</p>
             </div>
 
 
@@ -112,18 +112,18 @@
             <div class="destacados-inicio">
                 <div class="card-icono">
                     <img src="feliz1.jpg" alt="Estética" />
-                    <h4>Estética Avanzada</h4>
+                    <h4>Estética avanzada</h4>
                     <p>Aplicamos las últimas técnicas para lograr resultados naturales y armoniosos.</p>
                 </div>
                 <div class="card-icono">
                     <img src="feliz2.jpg" alt="Apoyo emocional" />
-                    <h4>Apoyo Integral</h4>
+                    <h4>Apoyo integral</h4>
                     <p>Acompañamos cada proceso con empatía, escucha y compromiso.</p>
                 </div>
                 <div class="card-icono">
                     <img src="feliz3.jpg" alt="Técnica" />
-                    <h4>Tecnología & Precisión</h4>
-                    <p>Combinamos lo artesanal con lo tecnológico para una atención única.</p>
+                    <h4>Tecnología y precisión</h4>
+                    <p>Combinamos lo artístico con lo tecnológico para una atención única.</p>
                 </div>
             </div>
 
@@ -134,23 +134,6 @@
                     "Volver a mirarme al espejo y sonreír sin miedo, fue el mejor regalo que me hicieron en RIE."
                 </blockquote>
                 <p class="firma-testimonio">— Paciente de prótesis ocular</p>
-            </div>
-
-            <!-- Estadísticas -->
-            <div class="stats-inicio">
-                <div class="stat-card">
-                    <span class="stat-num" data-target="500">0</span><span class="stat-sufijo">+</span>
-                    <div class="stat-label" style="color: #5b72a0;">Clientes atendidos</div>
-                </div>
-                <div class="stat-card">
-                    <span class="stat-num" data-target="15">0</span><span class="stat-sufijo">+</span>
-                    <div class="stat-label" style="color: #5b72a0;">Años de experiencia</div>
-                </div>
-
-                <div class="stat-card">
-                    <span class="stat-num" data-target="100">0</span><span class="stat-sufijo">%</span>
-                    <div class="stat-label" style="color: #5b72a0;">Satisfacción del cliente</div>
-                </div>
             </div>
         </section>
 
@@ -166,7 +149,7 @@
             <div style="margin-top: 1rem; margin-bottom: 2rem;">
                 <nav style="display: flex; gap: 1rem; flex-wrap: wrap;">
                     <a href="#" onclick="scrollAjustadoA('info'); return false;">Información</a>
-                    <a href="#" onclick="scrollAjustadoA('antesYdespues'); return false;">Antes y Después</a>
+                    <a href="#" onclick="scrollAjustadoA('antesYdespues'); return false;">Antes y después</a>
                 </nav>
             </div>
             <img src="dientesFalsos.jpg" alt="Odontología" class="foto-seccion-grande">
@@ -176,15 +159,20 @@
             <div id="info" class="subseccion"
                 style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Rehabilitación integral estética</h3>
-                <p>Al llegar un paciente nuevo al consultorio se lo ve en forma <strong>integral</strong>...</p>
+                <p>Se trabaja de forma <strong>integral</strong></p>
                 <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
                 <div class="contenido-colapsable" style="display:none;">
                     <p>
-                        El primer día se realiza una <strong>historia clínica</strong> con todos sus datos, se le
-                        indican los estudios radiográficos necesarios y se escuchan los <strong>deseos
-                            estéticos</strong> del paciente.</p>
-                    <p>Planteamos todos los posibles planes de tratamientos, ya que para un mismo problema hay distintas
-                        soluciones con diferentes ventajas y desventajas.</p>
+                       Al recibir a un paciente nuevo en el consultorio, realizamos
+una evaluación integral de su salud bucal y facial.
+En la primera consulta se confecciona la historia clínica
+completa, se solicitan los estudios radiográficos necesarios y,
+fundamentalmente, se escuchan los deseos y expectativas
+estéticas del paciente.
+A partir de este análisis, planteamos todos los posibles
+planes de tratamiento, ya que para un mismo problema
+pueden existir distintas soluciones, cada una con sus ventajas
+y desventajas. De esta manera, el paciente puede tomar una decisión informada, acompañada y personalizada. </p>
                     <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
                 </div>
             </div>
@@ -192,16 +180,23 @@
 
             <div id="info" class="subseccion"
                 style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Prioridad: La Salud</h3>
-                <p>La primer etapa, independiente al plan de tratamiento, será <strong>devolverle la salud</strong>
-                    perdida al paciente, no sin antes...</p>
+                <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Prioridad: La salud</h3>
+                <p>La salud bucal es siempre el primer paso. Sin salud, no es
+posible realizar tratamientos estéticos.</p>
                 <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
                 <div class="contenido-colapsable" style="display:none;">
-                    <p><strong>enseñarle</strong> todas las técnicas de higiene
-                        dental para su caso individual.</p>
-                    <p>De esta manera seremos <strong>socios</strong>: una vez dado de alta, el paciente se compromete a
-                        realizar lo aprendido en el consultorio, y cada seis meses es nuestro compromiso recordarle su
-                        control. Esta es la única forma de mantener su <strong>salud bucal de por vida</strong>.</p>
+                    <p>Antes de cualquier tratamiento estético, es imprescindible
+recuperar y mantener la salud bucal.
+Evaluamos encías, dientes y hábitos de higiene, y realizamos
+los tratamientos necesarios para eliminar infecciones, sarro o
+lesiones activas.</p>
+<br>
+                    <p>Además, brindamos al paciente las herramientas y la
+educación necesarias para que pueda cuidar y sostener su
+salud en el tiempo.</p>
+<br>
+<p>Solo sobre una base de salud es posible lograr resultados
+estéticos duraderos y responsables.</p>
                     <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
                 </div>
             </div>
@@ -210,25 +205,39 @@
             <div id="info" class="subseccion"
                 style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Estética</h3>
-                <p>Hombres y mujeres quieren verse y sentirse cada vez más jóvenes...</p>
+                <p>Logramos resultados estéticos de excelencia, naturales
+y armónicos, que transforman sonrisas y mejoran la
+calidad de vida.</p>
                 <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
                 <div class="contenido-colapsable" style="display:none;">
-                    <p> Es indiscutible que la
-                        <strong>apariencia personal</strong> está tomando mucha importancia. Las redes sociales y las
-                        selfies ya son algo de todos los días.
+                    <p> Para nosotros, mejorar la calidad de vida es devolver
+la posibilidad de sonreír con libertad. La sonrisa es una
+expresión emocional que permite conectar con la
+alegría, la confianza y el bienestar, generando un
+impacto positivo y retroalimentativo en la vida
+personal y social de cada paciente.
                     </p>
-                    <p>Los dientes, al igual que los demás órganos del cuerpo, <strong>sufren modificaciones</strong>
-                        con el paso del tiempo: puede cambiar su forma, su color y textura.</p>
-                    <p>Hoy por hoy existen <strong>excelentes materiales</strong> y <strong>nuevas técnicas</strong> que
-                        generan cambios fantásticos. Los pacientes lo valoran mucho. <em>Según ellos, les cambia la
-                            vida.</em></p>
+                    <br>
+                    <p>En RIE utilizamos materiales de alta calidad y
+tecnología de vanguardia, con capacitación continua.
+La incorporación del escáner intraoral nos permite
+mayor precisión en el diagnóstico y en los
+tratamientos, logrando resultados más predecibles.</p>
+<br>
+                    <p>La estética de excelencia no solo requiere técnica,
+tecnología y criterio estético, sino también sensibilidad
+artística y un alto nivel de detalle por parte del
+profesional. Nuestra formación en prótesis oculares y
+faciales aporta una mirada artística y un nivel de
+detalle único, esenciales para lograr resultados
+naturales, armónicos y personalizados.</p>
                     <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
                 </div>
             </div>
 
         
             <br>
-            <h3 id="antesYdespues" style="color: #789ce2; font-size: 1.5rem;"> Antes y Después</h3>
+            <h3 id="antesYdespues" style="color: #789ce2; font-size: 1.5rem;"> Antes y después</h3>
 
             <!-- Nueva galería de antes y después (fotos separadas) -->
             <div class="galeria-antes-despues">
@@ -282,6 +291,7 @@
                         <!--  1 Un comparador por fila, tamaño grande y alargado -->
                     <div class="casos-grid">
                     <div class="caso">
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 1</p>
                         <div class="foto-antes-despues">
                             <div class="foto-antes">
                                 <img src="viejaAntes.JPG" alt="Antes caso 1" class="fade-in-on-scroll">
@@ -296,6 +306,7 @@
                         <!-- 2 -->
                     <div class="casos-grid">
                     <div class="caso">
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 2</p>
                         <div class="foto-antes-despues">
                             <div class="foto-antes">
                                 <img src="barbaA.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
@@ -310,6 +321,7 @@
                         <!-- 3 -->
                     <div class="casos-grid">
                     <div class="caso">
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 3</p>
                         <div class="foto-antes-despues">
                             <div class="foto-antes">
                                 <img src="dienteRotoA.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
@@ -324,12 +336,13 @@
                         <!-- 4 -->
                     <div class="casos-grid">
                     <div class="caso">
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 4</p>
                         <div class="foto-antes-despues">
                             <div class="foto-antes">
-                                <img src="caraDientesAntes.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
+                                <img src="sinDienteAntes.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
                             </div>
                             <div class="foto-despues">
-                                <img src="caraDientesDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
+                                <img src="sinDienteDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll" style="object-position: bottom 700%;">
                             </div>
                         </div>
                     </div>
@@ -338,12 +351,13 @@
                         <!-- 5 -->
                     <div class="casos-grid">
                     <div class="caso">
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 5</p>
                         <div class="foto-antes-despues">
                             <div class="foto-antes">
-                                <img src="caraDientesAntes.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
+                                <img src="babaA.jpg" alt="Antes caso 1" class="fade-in-on-scroll">
                             </div>
                             <div class="foto-despues">
-                                <img src="caraDientesDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
+                                <img src="babaD.jpg" alt="Después caso 1" class="fade-in-on-scroll">
                             </div>
                         </div>
                     </div>
@@ -352,12 +366,13 @@
                         <!-- 6-->
                         <div class="casos-grid">
                     <div class="caso">
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 6</p>
                         <div class="foto-antes-despues">
                             <div class="foto-antes">
-                                <img src="caraDientesAntes.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
+                                <img src="yoA.PNG" alt="Antes caso 1" class="fade-in-on-scroll">
                             </div>
                             <div class="foto-despues">
-                                <img src="caraDientesDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
+                                <img src="yoD.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
                             </div>
                         </div>
                     </div>
@@ -416,12 +431,12 @@
 
                 <div class="persona">
                     <div class="foto-container">
-                        <img src="maica.png" alt="Asistente Maica" class="foto-equipo" />
+                        <img src="maica.jpg" alt="Asistente Maica" class="foto-equipo" />
                         <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irAMaica()">Ver más info
                             de la
-                            Dra. Maica</a>
+                            Dra. Maika</a>
                     </div>
-                    <h4>Maica</h4>
+                    <h4>Maika</h4>
                     <p>Asistente técnica en procedimientos odontológicos</p>
                 </div>
 
@@ -578,7 +593,7 @@
         <!-- PROTESIS OCULARES -->
         <section id="protesis-oculares" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
             <h2 style="color: #789ce2; font-size: 2rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">Prótesis
-                Oculares</h2>
+                oculares</h2>
 
 
 
@@ -586,7 +601,7 @@
                 <nav style="display: flex; gap: 1rem; flex-wrap: wrap;">
                     <a href="#" onclick="scrollAjustadoA('elaboracion'); return false;">Elaboración</a>
                     <a href="#" onclick="scrollAjustadoA('etapas'); return false;">Etapas</a>
-                    <a href="#" onclick="scrollAjustadoA('antes-despues'); return false;">Antes y Después</a>
+                    <a href="#" onclick="scrollAjustadoA('antes-despues'); return false;">Antes y después</a>
 
 
                 </nav>
@@ -607,19 +622,24 @@
 
             <div id="elaboracion" class="subseccion"
                 style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
-                <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Elaboración a Medida</h3>
-                <p>La elaboración de una prótesis ocular es una tarea tanto profesional como artesanal...</p>
+                <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Elaboración a medida</h3>
+                <p>Cada prótesis es única</p>
                 <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
                 <div class="contenido-colapsable" style="display:none;">
-                    <p>ya que
-                        <strong>cada una es única</strong>. Requiere máxima atención y precisión para lograr resultados
-                        óptimos. Utilizamos materiales con los más altos estándares de calidad disponibles.
-                    </p>
-                    <p>Las técnicas y los materiales son claves para alcanzar una estética realista. Nuestro objetivo es
-                        lograr una <strong>apariencia natural y armónica</strong>.</p>
-                    <p>Nos enfocamos no solo en la estética, sino también en brindar <strong>acompañamiento
-                            emocional</strong> durante el proceso.</p>
-                    <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
+           <p>
+                            Su elaboración comienza con la <strong>forma</strong>, determinada a
+    partir de la impresión de la cavidad anoftálmica.</p>
+    <p>A partir de allí, se realiza la selección del <strong>diámetro del
+    iris y de la pupila.</strong> Luego, el iris es pintado a mano,
+    logrando un <strong>color </strong> exclusivo que imita al ojo homologo.</p>
+
+    <p>Finalmente se trabaja la <strong>esclera</strong> (la parte blanca del
+    ojo), que no es verdaderamente blanca, sino que
+    contiene múltiples matices.</p>
+   <p> En ella se reproducen cuidadosamente los capilares,
+    respetando la forma y disposición propias de cada
+    paciente.</p>
+                        <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
                 </div>
             </div>
 
@@ -628,23 +648,33 @@
                 style="margin-top: 2.5rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Tratamiento – Etapas</h3>
                 <p>El primer paso es la toma de impresión de la cavidad ocular para definir la forma exacta de la
-                    prótesis...</p>
+                    prótesis</p>
                 <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
                 <div class="contenido-colapsable" style="display:none;">
-                    <p> Esto garantiza una adaptación precisa, mayor confort y mejor movimiento
-                        cuando es posible.</p>
-                    <p>Luego, se determina cuidadosamente el <strong>color de la esclera</strong> (parte blanca del ojo), el
-                        <strong>iris</strong> y los detalles como venas, diámetro y profundidad. Todo esto se realiza con
-                        técnicas artísticas en presencia del paciente, utilizando acuarelas para una reproducción fidedigna
-                        del ojo sano.
+                    <p> El tratamiento se realiza en varias etapas, pensadas
+para que el paciente esté siempre acompañado y
+contenido, en un entorno cuidado y amable.</p>
+                    <p>Tras la toma de impresión, se realiza la pintura del iris,
+que es llevada a cabo por la profesional con el
+paciente presente en el consultorio, permitiendo un
+resultado altamente personalizado.
                     </p>
-                    <p>Dedicamos el tiempo necesario para explicar cada paso y acompañar al paciente en el proceso. También
-                        brindamos orientación sobre <strong>cuidados e higiene</strong> de la prótesis.</p>
+                    <br>
+                    <p> Habitualmente, la confección de la prótesis ocular
+requiere <strong>tres sesiones</strong>, intercaladas con etapas de
+trabajo en laboratorio. No obstante, en casos
+particulares , como pacientes del <strong>interior del país o
+del exterior del país </strong>, es posible realizar la prótesis en
+<strong>una sola jornada</strong>, desde la mañana hasta la tarde,
+entregándola el mismo día.</p>
+<p>En estos casos, el trabajo de laboratorio se integra al
+consultorio, lo que permite un proceso ágil y dinámico
+sin perder precisión ni calidad.</p>
                     <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver menos</button>
                 </div>
             </div>
             <br>
-            <h3 id="antes-despues" style="color: #789ce2; font-size: 1.5rem;"> Antes y Después</h3>
+            <h3 id="antes-despues" style="color: #789ce2; font-size: 1.5rem;"> Antes y después</h3>
 
             <!-- Nueva galería de antes y después (fotos separadas) -->
             <div class="galeria-antes-despues">
@@ -683,10 +713,34 @@
                     style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
                     <button onclick="document.getElementById('modal-otros-casos-ojo').style.display='none'"
                         style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">×</button>
-                    <h4 style="color:#789ce2;">Otros casos de Prótesis Oculares</h4>
+                    <h4 style="color:#789ce2;">Otros casos de prótesis oculares</h4>
                     <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                     
+                  <br>
+                         <!-- 2 -->
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 1</p>
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso2">
+                                <img src="caso2O-antes.jpg" class="img-top" alt="Antes">
+                                <div class="img-slider" id="slider-ojo-caso2">
+                                    <span class="flechas">⇆</span>
+                                </div>
+                                <img src="caso2O-desp.jpg" class="img-bottom" alt="Después">
+                            </div>
+                        </div>
+                         <!-- 4 -->
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 2</p>
+                        <div class="comparador comparador-modal">
+                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso4">
+                                <img src="rubiaA.JPG" class="img-top" alt="antes">
+                                <div class="img-slider" id="slider-ojo-caso4">
+                                    <span class="flechas">⇆</span>
+                                </div>
+                                <img src="rubiaD.jpg" class="img-bottom" alt="después">
+                            </div>
+                        </div>
+
                         <!--  1 Un comparador por fila, tamaño grande y alargado -->
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 3</p>
                         <div class="comparador comparador-modal">
                             <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso1">
                                 <img src="caso1O-antes.jpg" class="img-top" alt="antes">
@@ -697,17 +751,9 @@
                             </div>
                         </div>
                         <!-- Repite para los otros casos -->
-                        <!-- 2 -->
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso2">
-                                <img src="caso2O-antes.jpg" class="img-top" alt="Antes">
-                                <div class="img-slider" id="slider-ojo-caso2">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="caso2O-desp.jpg" class="img-bottom" alt="Después">
-                            </div>
-                        </div>
+                       
                         <!-- 3 -->
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 4</p>
                         <div class="comparador comparador-modal">
                             <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso3">
                                 <img src="caso3O-antes.png" class="img-top" alt="Antes">
@@ -717,36 +763,21 @@
                                 <img src="caso3O-desp.png" class="img-bottom" alt="Después">
                             </div>
                         </div>
-                        <!-- 4 -->
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso4">
-                                <img src="caso4" class="img-top" alt="antes">
-                                <div class="img-slider" id="slider-ojo-caso4">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="caso4" class="img-bottom" alt="después">
-                            </div>
-                        </div>
+                       
+
                         <!-- 5 -->
+                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 5</p>
                         <div class="comparador comparador-modal">
                             <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso5">
-                                <img src="ojo.desp.png" class="img-top" alt="Después">
+                                <img src="rojoA.jpg" class="img-top" alt="Después">
                                 <div class="img-slider" id="slider-ojo-caso5">
                                     <span class="flechas">⇆</span>
                                 </div>
-                                <img src="ojo.antes.png" class="img-bottom" alt="Antes">
+                                <img src="rojoD.JPG" class="img-bottom" alt="Antes">
                             </div>
                         </div>
-                        <!-- 6-->
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso6">
-                                <img src="ojo.desp.png" class="img-top" alt="Después">
-                                <div class="img-slider" id="slider-ojo-caso6">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="ojo.antes.png" class="img-bottom" alt="Antes">
-                            </div>
-                        </div>
+
+                       
                     </div>
                 </div>
             </div>
@@ -760,22 +791,10 @@
                 Testimonios
             </h2>
             <div class="testimonios-videos" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+               
                 <div class="video-testimonio" style="max-width: 400px; position: relative;">
                     <div class="video-cover" onclick="playTestimonio(this)">
-                        <video class="video-fondo" src="testimonio1.mp4" preload="metadata" muted playsinline></video>
-                        <div class="play-btn">
-                            <svg width="70" height="70" viewBox="0 0 70 70">
-                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
-                                    stroke-width="2" />
-                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
-                            </svg>
-                        </div>
-                    </div>
-                    <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
-                </div>
-                <div class="video-testimonio" style="max-width: 400px; position: relative;">
-                    <div class="video-cover" onclick="playTestimonio(this)">
-                        <video class="video-fondo" src="testimonio2.mp4" preload="metadata" muted playsinline></video>
+                        <video class="video-fondo" src="testimonio2.mp4" id="video-testimonio-2" preload="metadata" muted playsinline ></video>
                         <div class="play-btn">
                             <svg width="70" height="70" viewBox="0 0 70 70">
                                 <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
@@ -799,9 +818,9 @@
                     </div>
                     <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
                 </div>
-                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                <div class="video-testimonio" style="max-width: 400px; position: relative;" >
                     <div class="video-cover" onclick="playTestimonio(this)">
-                        <video class="video-fondo" src="testiminio5.mp4" preload="metadata" muted playsinline></video>
+                        <video class="video-fondo" id="video-testimonio-5"src="testiminio5.mp4" preload="metadata" muted playsinline ></video>
                         <div class="play-btn">
                             <svg width="70" height="70" viewBox="0 0 70 70">
                                 <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
@@ -816,7 +835,7 @@
 
                 <div class="video-testimonio" style="max-width: 400px; position: relative;">
                     <div class="video-cover" onclick="playTestimonio(this)">
-                        <video class="video-fondo" src="testimonio3.mp4" preload="metadata" muted playsinline></video>
+                        <video class="video-fondo" id="video-testimonio-3" src="testimonio3.mp4" preload="metadata" muted playsinline></video>
                         <div class="play-btn">
                             <svg width="70" height="70" viewBox="0 0 70 70">
                                 <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
@@ -1124,40 +1143,64 @@
         <script>
             function animarRIEloop() {
                 const palabras = [
-                    { id: "palabra-r", texto: "ehabilitación" },
-                    { id: "palabra-i", texto: "ntegral" },
-                    { id: "palabra-e", texto: "stética" }
+                    { id: "palabra-r", texto: "ehabilitación", letraId: "letra-r" },
+                    { id: "palabra-i", texto: "ntegral", letraId: "letra-i" },
+                    { id: "palabra-e", texto: "stética", letraId: "letra-e" }
                 ];
                 let idx = 0;
+                const rieTipeo = document.getElementById("rie-tipeo");
+                const esMobile = () => window.innerWidth <= 700;
 
 
                 function limpiar() {
-                    palabras.forEach(p => document.getElementById(p.id).textContent = "");
+                    palabras.forEach(p => {
+                        document.getElementById(p.id).textContent = "";
+                        document.getElementById(p.letraId).style.visibility = "hidden";
+                    });
                 }
 
 
                 function escribirPalabra() {
                     if (idx >= palabras.length) {
-                        // Espera 1 segundo, borra palabras y repite
+                        // Solo cambiar a horizontal en móvil
+                        if (esMobile()) {
+                            rieTipeo.style.setProperty("flex-direction", "row", "important");
+                            rieTipeo.style.setProperty("gap", "1.5rem", "important");
+                        }
+                        
                         setTimeout(() => {
+                            // Volver a vertical solo en móvil
+                            if (esMobile()) {
+                                rieTipeo.style.setProperty("flex-direction", "column", "important");
+                                rieTipeo.style.setProperty("gap", "0.5rem", "important");
+                            }
                             limpiar();
                             idx = 0;
                             setTimeout(escribirPalabra, 700);
                         }, 1000);
                         return;
                     }
-                    const { id, texto } = palabras[idx];
+                    const { id, texto, letraId } = palabras[idx];
                     let i = 0;
                     const span = document.getElementById(id);
+                    const letra = document.getElementById(letraId);
+                    
+                    // Mostrar la letra cuando empieza a escribir
+                    letra.style.visibility = "visible";
                     span.textContent = "";
+                    
                     function escribirLetra() {
                         if (i < texto.length) {
                             span.textContent += texto[i];
                             i++;
                             setTimeout(escribirLetra, 80);
                         } else {
-                            idx++;
-                            setTimeout(escribirPalabra, 350);
+                            // Esperar un momento y luego borrar la palabra, dejando solo la letra inicial
+                            setTimeout(() => {
+                                span.textContent = "";
+                                idx++;
+                                setTimeout(escribirPalabra, 350);
+                            }, 500);
                         }
                     }
                     escribirLetra();

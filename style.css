@@ -392,12 +392,20 @@ nav.menu-desktop a:hover {
   z-index: 20;
 }
 
-.video-testimonio:nth-child(2) .video-fondo {
-  object-position: center 64%; ;
+#video-testimonio-2 {
+  object-fit: cover;
+  object-position: center 74%;
 }
 
-.video-testimonio:nth-child(3) .video-fondo {
-  object-position: center 22%;
+#video-testimonio-5 {
+  object-fit: cover;
+  object-position: center 64%;
+}
+
+
+#video-testimonio-3 {
+  object-fit: cover;
+  object-position: center 30%;
 }
 
 /* ===================== ESTADÍSTICAS INICIO ===================== */
@@ -607,6 +615,8 @@ section {
   width: 100%;
   display: none;
   border-radius: 20px;
+  object-fit: cover;
+  height: 400px;  /* altura fija para que todas queden igual */
 }
 .carrusel-img.active {
   display: block;
@@ -827,6 +837,17 @@ footer .info {
   box-shadow: 0 2px 16px rgba(0,0,0,0.08);
 }
 
+@media (max-width: 700px) {
+  .foto-seccion-grande {
+    width: 100%;
+    height: 60vw;
+    max-height: 60vw;
+    object-fit: cover;
+    border-radius: 20px;
+    margin: 1rem auto;
+  }
+}
+
 /* ===================== PRÓTESIS OCULARES ===================== */
 #protesis-oculares {
   background-color: rgba(255, 255, 255, 0.95);
@@ -953,12 +974,14 @@ footer .info {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  display: flex;  
+  display: flex;
+  background: transparent;
 }
 .img-bottom,
 .img-top {
   width: 100%;
   display: block;
+  background: transparent;
 }
 .img-top {
   position: absolute;
@@ -1009,7 +1032,6 @@ footer .info {
   width: 100%;
   max-width: 600px;
   margin: 0 auto 2rem auto;
-  height: 220px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1018,21 +1040,22 @@ footer .info {
   position: relative;
   width: 100%;
   max-width: 600px;
-  height: 220px;
   border-radius: 10px;
   overflow: hidden;
-  background: #f5f5f5;
+  background: transparent;
 }
 .img-wrapper-modal img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   display: block;
-  background: #fff;
 }
 @media (max-width: 900px) {
   .comparador-modal {
-    height: 200px;
+    max-width: 500px;
+  }
+  .img-wrapper-modal {
+    max-width: 500px;
   }
 }
 
@@ -1066,21 +1089,22 @@ footer .info {
   #rie-container,
   #rie-tipeo {
     flex-direction: column !important;
-    gap: 6px !important;
-    font-size: 1.2rem !important;
+    gap: 0.5rem !important;
+    font-size: 1.45rem !important;
     margin-top: 18px !important;
     align-items: center !important;
+    justify-content: center !important;
   }
   .letra,
   .rie-letra {
-    font-size: 1rem !important;
+    font-size: 1.45rem !important;
     margin-bottom: 0 !important;
     min-width: 0 !important;
   }
   #rie-container .palabra,
   #rie-tipeo .palabra,
   .rie-letra span {
-    font-size: 0.95rem !important;
+    font-size: 1.4rem !important;
     margin-bottom: 2px !important;
     max-width: 92vw !important;
     word-break: break-word !important;
@@ -1121,13 +1145,15 @@ footer .info {
 
 @media (max-width: 700px) {
   .foto-antes-despues {
-    flex-direction: column;
-    gap: 1.2rem;
+    flex-direction: row;
+    gap: 0.8rem;
   }
   .foto-antes img, .foto-despues img {
-    width: 90vw;
-    max-width: 340px;
-    height: auto;
+    width: 45vw;
+    max-width: 200px;
+    height: 45vw;
+    max-height: 200px;
+    object-fit: cover;
   }
 }
 
@@ -1176,6 +1202,15 @@ footer .info {
   object-fit: contain;        /* no corta nada */
 }
 
+@media (max-width: 700px) {
+  #modal-otros-casos-ojo p {
+    margin-bottom: 0.3rem;
+  }
+  #modal-otros-casos-ojo .comparador-modal {
+    margin-bottom: 0.5rem;
+  }
+}
+
 /* Modal de dientes - fotos rectangulares para ver todo */
 #modal-otros-casos-dientes .foto-antes,
 #modal-otros-casos-dientes .foto-despues {
@@ -1197,6 +1232,11 @@ footer .info {
   object-fit: cover;          /* llena todo el espacio, hace zoom si es necesario */
 }
 
+/* Ajuste específico para la foto del caso 4 después - baja la imagen */
+#modal-otros-casos-dientes .caso:nth-child(4) .foto-despues img {
+  object-position: top 100%;  /* baja la imagen un 30% desde arriba */
+}
+
 /* Reduce el espacio entre antes y después en el modal de dientes */
 #modal-otros-casos-dientes .foto-antes-despues {
   gap: 0.4rem;                /* muy cerca */
@@ -1210,5 +1250,39 @@ footer .info {
 #modal-otros-casos-dientes .casos-grid {
   padding: 0.5rem;
   margin-bottom: 1rem;
+}
+
+@media (max-width: 700px) {
+  #modal-otros-casos-dientes .foto-antes,
+  #modal-otros-casos-dientes .foto-despues {
+    width: 85vw;
+    max-width: 350px;
+    height: 120px;
+  }
+  
+  #modal-otros-casos-dientes .foto-antes img,
+  #modal-otros-casos-dientes .foto-despues img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #modal-otros-casos-dientes .foto-antes-despues {
+    flex-direction: column;
+    gap: 0.8rem;
+    align-items: center;
+  }
+  
+  #modal-otros-casos-dientes .casos-grid {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  #modal-otros-casos-dientes .caso {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
