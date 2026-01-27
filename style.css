@@ -1284,5 +1284,24 @@ footer .info {
     flex-direction: column;
     align-items: center;
   }
+  
+  /* Flechas más pequeñas y mejor posicionadas en móvil */
+  .flecha-nav {
+    width: 28px !important;
+    height: 28px !important;
+    font-size: 1rem !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+}
+
+/* Estilos generales para las flechas de navegación */
+.flecha-nav:hover {
+  background: rgba(120, 156, 226, 0.9) !important;
+  transform: scale(1.1);
+}
+
+.flecha-nav:active {
+  transform: scale(0.95);
 }
 

@@ -133,7 +133,7 @@
                 <blockquote>
                     "Volver a mirarme al espejo y sonreír sin miedo, fue el mejor regalo que me hicieron en RIE."
                 </blockquote>
-                <p class="firma-testimonio">— Paciente de prótesis ocular</p>
+                <p class="firma-testimonio">— Paciente de RIE</p>
             </div>
         </section>
 
@@ -283,101 +283,120 @@ naturales, armónicos y personalizados.</p>
             <div id="modal-otros-casos-dientes" onclick="if(event.target === this) this.style.display='none'"
                 style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
                 <div
-                    style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
+                    style="background:white; padding:2rem; border-radius:10px; width:90vw; max-width:1400px; max-height:95vh; overflow:auto; position:relative;">
                     <button onclick="document.getElementById('modal-otros-casos-dientes').style.display='none'"
                         style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">×</button>
-                    <h4 style="color:#789ce2;">Otros casos odontología</h4>
-                    <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                        <!--  1 Un comparador por fila, tamaño grande y alargado -->
-                    <div class="casos-grid">
-                    <div class="caso">
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 1</p>
-                        <div class="foto-antes-despues">
-                            <div class="foto-antes">
-                                <img src="viejaAntes.JPG" alt="Antes caso 1" class="fade-in-on-scroll">
+                    <h4 style="color:#789ce2; text-align:center; margin-bottom:1rem;">Otros casos odontología</h4>
+                    
+                    <!-- Indicador de caso actual -->
+                    <p id="indicador-caso-dientes" style="text-align:center; color:#789ce2; font-weight:600; margin-bottom:1.5rem;">Caso 1</p>
+                    
+                    <!-- Contenedor de casos -->
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:1.5rem;">
+                        <!-- Casos -->
+                        <div id="casos-container-dientes" style="width:100%; display:flex; justify-content:center;">
+                            <!-- Caso 1 -->
+                            <div class="caso-diente" data-caso="1" style="display:block;">
+                                <div class="casos-grid">
+                                    <div class="caso">
+                                        <div class="foto-antes-despues">
+                                            <div class="foto-antes">
+                                                <img src="viejaAntes.JPG" alt="Antes caso 1">
+                                            </div>
+                                            <div class="foto-despues">
+                                                <img src="viejaDesp.JPG" alt="Después caso 1">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="foto-despues">
-                                <img src="viejaDesp.JPG" alt="Después caso 1" class="fade-in-on-scroll">
+                            
+                            <!-- Caso 2 -->
+                            <div class="caso-diente" data-caso="2" style="display:none;">
+                                <div class="casos-grid">
+                                    <div class="caso">
+                                        <div class="foto-antes-despues">
+                                            <div class="foto-antes">
+                                                <img src="barbaA.jpeg" alt="Antes caso 2">
+                                            </div>
+                                            <div class="foto-despues">
+                                                <img src="barbaD.jpeg" alt="Después caso 2">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Caso 3 -->
+                            <div class="caso-diente" data-caso="3" style="display:none;">
+                                <div class="casos-grid">
+                                    <div class="caso">
+                                        <div class="foto-antes-despues">
+                                            <div class="foto-antes">
+                                                <img src="dienteRotoA.jpeg" alt="Antes caso 3">
+                                            </div>
+                                            <div class="foto-despues">
+                                                <img src="dienteRotoD.jpeg" alt="Después caso 3">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Caso 4 -->
+                            <div class="caso-diente" data-caso="4" style="display:none;">
+                                <div class="casos-grid">
+                                    <div class="caso">
+                                        <div class="foto-antes-despues">
+                                            <div class="foto-antes">
+                                                <img src="sinDienteAntes.jpeg" alt="Antes caso 4">
+                                            </div>
+                                            <div class="foto-despues">
+                                                <img src="sinDienteDesp.jpeg" alt="Después caso 4" style="object-position: bottom 350%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Caso 5 -->
+                            <div class="caso-diente" data-caso="5" style="display:none;">
+                                <div class="casos-grid">
+                                    <div class="caso">
+                                        <div class="foto-antes-despues">
+                                            <div class="foto-antes">
+                                                <img src="babaA.jpg" alt="Antes caso 5">
+                                            </div>
+                                            <div class="foto-despues">
+                                                <img src="babaD.jpg" alt="Después caso 5">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Caso 6 -->
+                            <div class="caso-diente" data-caso="6" style="display:none;">
+                                <div class="casos-grid">
+                                    <div class="caso">
+                                        <div class="foto-antes-despues">
+                                            <div class="foto-antes">
+                                                <img src="yoA.PNG" alt="Antes caso 6">
+                                            </div>
+                                            <div class="foto-despues">
+                                                <img src="yoD.jpeg" alt="Después caso 6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                </div>
-                        <!-- 2 -->
-                    <div class="casos-grid">
-                    <div class="caso">
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 2</p>
-                        <div class="foto-antes-despues">
-                            <div class="foto-antes">
-                                <img src="barbaA.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
-                            </div>
-                            <div class="foto-despues">
-                                <img src="barbaD.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
-                            </div>
+                        
+                        <!-- Flechas de navegación abajo -->
+                        <div style="display:flex; gap:1.5rem; justify-content:center; align-items:center;">
+                            <button onclick="navegarCasoDientes(-1)" class="flecha-nav" style="background:rgba(120, 156, 226, 0.8); color:white; border:none; border-radius:50%; width:40px; height:40px; font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: all 0.3s;">‹</button>
+                            <button onclick="navegarCasoDientes(1)" class="flecha-nav" style="background:rgba(120, 156, 226, 0.8); color:white; border:none; border-radius:50%; width:40px; height:40px; font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: all 0.3s;">›</button>
                         </div>
-                    </div>
-
-                </div>
-                        <!-- 3 -->
-                    <div class="casos-grid">
-                    <div class="caso">
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 3</p>
-                        <div class="foto-antes-despues">
-                            <div class="foto-antes">
-                                <img src="dienteRotoA.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
-                            </div>
-                            <div class="foto-despues">
-                                <img src="dienteRotoD.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                        <!-- 4 -->
-                    <div class="casos-grid">
-                    <div class="caso">
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 4</p>
-                        <div class="foto-antes-despues">
-                            <div class="foto-antes">
-                                <img src="sinDienteAntes.jpeg" alt="Antes caso 1" class="fade-in-on-scroll">
-                            </div>
-                            <div class="foto-despues">
-                                <img src="sinDienteDesp.jpeg" alt="Después caso 1" class="fade-in-on-scroll" style="object-position: bottom 700%;">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                        <!-- 5 -->
-                    <div class="casos-grid">
-                    <div class="caso">
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 5</p>
-                        <div class="foto-antes-despues">
-                            <div class="foto-antes">
-                                <img src="babaA.jpg" alt="Antes caso 1" class="fade-in-on-scroll">
-                            </div>
-                            <div class="foto-despues">
-                                <img src="babaD.jpg" alt="Después caso 1" class="fade-in-on-scroll">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                        <!-- 6-->
-                        <div class="casos-grid">
-                    <div class="caso">
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%;">Caso 6</p>
-                        <div class="foto-antes-despues">
-                            <div class="foto-antes">
-                                <img src="yoA.PNG" alt="Antes caso 1" class="fade-in-on-scroll">
-                            </div>
-                            <div class="foto-despues">
-                                <img src="yoD.jpeg" alt="Después caso 1" class="fade-in-on-scroll">
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
                     </div>
                 </div>
             </div>
@@ -385,12 +404,33 @@ naturales, armónicos y personalizados.</p>
         </section>
 
             <script>
+                let casoActualDientes = 1;
+                const totalCasosDientes = 6;
+                
                 document.getElementById('btn-otros-casos-dientes').onclick = function () {
+                    casoActualDientes = 1;
                     document.getElementById('modal-otros-casos-dientes').style.display = 'flex';
-                    for (let i = 1; i <= 6; i++) {
-                        activarComparador(`wrapper-diente-caso${i}`, `slider-diente-caso${i}`);
-                    }
+                    mostrarCasoDientes(1);
                 };
+                
+                function navegarCasoDientes(direccion) {
+                    casoActualDientes += direccion;
+                    if (casoActualDientes < 1) casoActualDientes = totalCasosDientes;
+                    if (casoActualDientes > totalCasosDientes) casoActualDientes = 1;
+                    mostrarCasoDientes(casoActualDientes);
+                }
+                
+                function mostrarCasoDientes(numeroCaso) {
+                    const casos = document.querySelectorAll('.caso-diente');
+                    casos.forEach(caso => {
+                        caso.style.display = 'none';
+                    });
+                    const casoActivo = document.querySelector(`.caso-diente[data-caso="${numeroCaso}"]`);
+                    if (casoActivo) {
+                        casoActivo.style.display = 'block';
+                    }
+                    document.getElementById('indicador-caso-dientes').textContent = `Caso ${numeroCaso}`;
+                }
             </script>
         </section>
 
@@ -651,14 +691,6 @@ naturales, armónicos y personalizados.</p>
                     prótesis</p>
                 <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
                 <div class="contenido-colapsable" style="display:none;">
-                    <p> El tratamiento se realiza en varias etapas, pensadas
-para que el paciente esté siempre acompañado y
-contenido, en un entorno cuidado y amable.</p>
-                    <p>Tras la toma de impresión, se realiza la pintura del iris,
-que es llevada a cabo por la profesional con el
-paciente presente en el consultorio, permitiendo un
-resultado altamente personalizado.
-                    </p>
                     <br>
                     <p> Habitualmente, la confección de la prótesis ocular
 requiere <strong>tres sesiones</strong>, intercaladas con etapas de
@@ -710,74 +742,89 @@ sin perder precisión ni calidad.</p>
             <div id="modal-otros-casos-ojo" onclick="if(event.target === this) this.style.display='none'"
                 style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center;">
                 <div
-                    style="background:white; padding:2rem; border-radius:10px; width:80vw; max-width:1200px; max-height:98vh; overflow:auto; position:relative;">
+                    style="background:white; padding:2rem; border-radius:10px; width:90vw; max-width:1400px; max-height:95vh; overflow:auto; position:relative;">
                     <button onclick="document.getElementById('modal-otros-casos-ojo').style.display='none'"
                         style="position:absolute; top:10px; right:10px; background:none; border:none; font-size:1.5rem; cursor:pointer;">×</button>
-                    <h4 style="color:#789ce2;">Otros casos de prótesis oculares</h4>
-                    <div style="display: flex; flex-direction: column; gap: 2rem; align-items: center;">
-                  <br>
-                         <!-- 2 -->
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 1</p>
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso2">
-                                <img src="caso2O-antes.jpg" class="img-top" alt="Antes">
-                                <div class="img-slider" id="slider-ojo-caso2">
-                                    <span class="flechas">⇆</span>
+                    <h4 style="color:#789ce2; text-align:center; margin-bottom:1rem;">Otros casos de prótesis oculares</h4>
+                    
+                    <!-- Indicador de caso actual -->
+                    <p id="indicador-caso-ojo" style="text-align:center; color:#789ce2; font-weight:600; margin-bottom:1.5rem;">Caso 1</p>
+                    
+                    <!-- Contenedor de casos -->
+                    <div style="display:flex; flex-direction:column; align-items:center; gap:1.5rem;">
+                        <!-- Casos -->
+                        <div id="casos-container-ojo" style="width:100%; display:flex; justify-content:center;">
+                            <!-- Caso 1 -->
+                            <div class="caso-ojo" data-caso="1" style="display:block;">
+                                <div class="comparador comparador-modal">
+                                    <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso2">
+                                        <img src="caso2O-antes.jpg" class="img-top" alt="Antes">
+                                        <div class="img-slider" id="slider-ojo-caso2">
+                                            <span class="flechas">⇆</span>
+                                        </div>
+                                        <img src="caso2O-desp.jpg" class="img-bottom" alt="Después">
+                                    </div>
                                 </div>
-                                <img src="caso2O-desp.jpg" class="img-bottom" alt="Después">
+                            </div>
+                            
+                            <!-- Caso 2 -->
+                            <div class="caso-ojo" data-caso="2" style="display:none;">
+                                <div class="comparador comparador-modal">
+                                    <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso4">
+                                        <img src="rubiaA.JPG" class="img-top" alt="antes">
+                                        <div class="img-slider" id="slider-ojo-caso4">
+                                            <span class="flechas">⇆</span>
+                                        </div>
+                                        <img src="rubiaD.jpg" class="img-bottom" alt="después">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Caso 3 -->
+                            <div class="caso-ojo" data-caso="3" style="display:none;">
+                                <div class="comparador comparador-modal">
+                                    <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso1">
+                                        <img src="caso1O-antes.jpg" class="img-top" alt="antes">
+                                        <div class="img-slider" id="slider-ojo-caso1">
+                                            <span class="flechas">⇆</span>
+                                        </div>
+                                        <img src="caso1O-desp.jpg" class="img-bottom" alt="Después">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Caso 4 -->
+                            <div class="caso-ojo" data-caso="4" style="display:none;">
+                                <div class="comparador comparador-modal">
+                                    <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso3">
+                                        <img src="caso3O-antes.png" class="img-top" alt="Antes">
+                                        <div class="img-slider" id="slider-ojo-caso3">
+                                            <span class="flechas">⇆</span>
+                                        </div>
+                                        <img src="caso3O-desp.png" class="img-bottom" alt="Después">
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Caso 5 -->
+                            <div class="caso-ojo" data-caso="5" style="display:none;">
+                                <div class="comparador comparador-modal">
+                                    <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso5">
+                                        <img src="rojoA.jpg" class="img-top" alt="Después">
+                                        <div class="img-slider" id="slider-ojo-caso5">
+                                            <span class="flechas">⇆</span>
+                                        </div>
+                                        <img src="rojoD.JPG" class="img-bottom" alt="Antes">
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                         <!-- 4 -->
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 2</p>
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso4">
-                                <img src="rubiaA.JPG" class="img-top" alt="antes">
-                                <div class="img-slider" id="slider-ojo-caso4">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="rubiaD.jpg" class="img-bottom" alt="después">
-                            </div>
+                        
+                        <!-- Flechas de navegación abajo -->
+                        <div style="display:flex; gap:1.5rem; justify-content:center; align-items:center;">
+                            <button onclick="navegarCasoOjo(-1)" class="flecha-nav" style="background:rgba(120, 156, 226, 0.8); color:white; border:none; border-radius:50%; width:40px; height:40px; font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: all 0.3s;">‹</button>
+                            <button onclick="navegarCasoOjo(1)" class="flecha-nav" style="background:rgba(120, 156, 226, 0.8); color:white; border:none; border-radius:50%; width:40px; height:40px; font-size:1.3rem; cursor:pointer; display:flex; align-items:center; justify-content:center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); transition: all 0.3s;">›</button>
                         </div>
-
-                        <!--  1 Un comparador por fila, tamaño grande y alargado -->
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 3</p>
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso1">
-                                <img src="caso1O-antes.jpg" class="img-top" alt="antes">
-                                <div class="img-slider" id="slider-ojo-caso1">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="caso1O-desp.jpg" class="img-bottom" alt="Después">
-                            </div>
-                        </div>
-                        <!-- Repite para los otros casos -->
-                       
-                        <!-- 3 -->
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 4</p>
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso3">
-                                <img src="caso3O-antes.png" class="img-top" alt="Antes">
-                                <div class="img-slider" id="slider-ojo-caso3">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="caso3O-desp.png" class="img-bottom" alt="Después">
-                            </div>
-                        </div>
-                       
-
-                        <!-- 5 -->
-                        <p style="font-size: 0.9rem; color: #789ce2; margin-bottom: 0.5rem; font-weight: 600; text-align: left; width: 100%; max-width: 600px;">Caso 5</p>
-                        <div class="comparador comparador-modal">
-                            <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso5">
-                                <img src="rojoA.jpg" class="img-top" alt="Después">
-                                <div class="img-slider" id="slider-ojo-caso5">
-                                    <span class="flechas">⇆</span>
-                                </div>
-                                <img src="rojoD.JPG" class="img-bottom" alt="Antes">
-                            </div>
-                        </div>
-
-                       
                     </div>
                 </div>
             </div>
@@ -851,12 +898,39 @@ sin perder precisión ni calidad.</p>
 
 
         <script>
+            let casoActualOjo = 1;
+            const totalCasosOjo = 5;
+            
             document.getElementById('btn-otros-casos-ojo').onclick = function () {
+                casoActualOjo = 1;
                 document.getElementById('modal-otros-casos-ojo').style.display = 'flex';
-                for (let i = 1; i <= 7; i++) {
-                    activarComparador(`wrapper-ojo-caso${i}`, `slider-ojo-caso${i}`);
-                }
+                mostrarCasoOjo(1);
+                // Activar comparadores para todos los casos
+                activarComparador('wrapper-ojo-caso2', 'slider-ojo-caso2');
+                activarComparador('wrapper-ojo-caso4', 'slider-ojo-caso4');
+                activarComparador('wrapper-ojo-caso1', 'slider-ojo-caso1');
+                activarComparador('wrapper-ojo-caso3', 'slider-ojo-caso3');
+                activarComparador('wrapper-ojo-caso5', 'slider-ojo-caso5');
             };
+            
+            function navegarCasoOjo(direccion) {
+                casoActualOjo += direccion;
+                if (casoActualOjo < 1) casoActualOjo = totalCasosOjo;
+                if (casoActualOjo > totalCasosOjo) casoActualOjo = 1;
+                mostrarCasoOjo(casoActualOjo);
+            }
+            
+            function mostrarCasoOjo(numeroCaso) {
+                const casos = document.querySelectorAll('.caso-ojo');
+                casos.forEach(caso => {
+                    caso.style.display = 'none';
+                });
+                const casoActivo = document.querySelector(`.caso-ojo[data-caso="${numeroCaso}"]`);
+                if (casoActivo) {
+                    casoActivo.style.display = 'block';
+                }
+                document.getElementById('indicador-caso-ojo').textContent = `Caso ${numeroCaso}`;
+            }
         </script>
         </section>
 
