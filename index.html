@@ -39,10 +39,15 @@
                     onclick="mostrarSeccion('protesis-oculares'); return false;">Prótesis oculares</a>
                 <a href="#" data-seccion="odontologia"
                     onclick="mostrarSeccion('odontologia'); return false;">Odontología</a>
-                <a href="#" data-seccion="testimonios"
-                    onclick="mostrarSeccion('testimonios'); return false;">Testimonios</a>
+                <div class="menu-item-con-submenu">
+                    <a href="#" data-seccion="testimonios">Testimonios</a>
+                    <div class="submenu">
+                        <a href="#" onclick="mostrarSeccion('testimonios-odontologia'); return false;">Testimonios Odontología</a>
+                        <a href="#" onclick="mostrarSeccion('testimonios-protesis'); return false;">Testimonios Prótesis Ocular</a>
+                        <a href="#" onclick="mostrarSeccion('testimonios-oftalmologos'); return false;">Oftalmólogos que nos recomiendan</a>
+                    </div>
+                </div>
                 <a href="#" data-seccion="equipo" onclick="mostrarSeccion('equipo'); return false;">Equipo</a>
-                <a href="#" data-seccion="nosotros" onclick="mostrarSeccion('nosotros'); return false;">Nosotros</a>
                 <a href="#" data-seccion="contacto" onclick="mostrarSeccion('contacto'); return false;">Contacto</a>
             </nav>
             <!-- Menú móvil abajo del logo -->
@@ -51,11 +56,6 @@
                     style="background: none; margin-left: 29px; padding: 0; display: flex; align-items: center; cursor: pointer;">
                     <span id="menu-mobile-label" class="menu-mobile-label">
                         Inicio
-                        <svg id="menu-mobile-arrow" width="22" height="22" viewBox="0 0 22 22" fill="none"
-                            style="margin-left:8px;transition:transform 0.3s;">
-                            <polyline points="8,10 11,13 14,10" fill="none" stroke="#789ce2" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
                     </span>
                 </button>
                 <div id="menu-mobile-dropdown" style="display:none;">
@@ -66,13 +66,10 @@
                         oculares</a>
                     <a href="#"
                         onclick="mostrarSeccion('odontologia'); setMenuLabel('Odontología'); cerrarMenuMobile()">Odontología</a>
+                    <a href="#" onclick="mostrarSeccion('testimonios-protesis'); setMenuLabel('Testimonios'); cerrarMenuMobile()">Testimonios</a>
                     <a href="#" onclick="mostrarSeccion('equipo'); setMenuLabel('Equipo'); cerrarMenuMobile()">Equipo</a>
                     <a href="#"
-                        onclick="mostrarSeccion('nosotros'); setMenuLabel('Nosotros'); cerrarMenuMobile()">Nosotros</a>
-                    <a href="#"
                         onclick="mostrarSeccion('contacto'); setMenuLabel('Contacto'); cerrarMenuMobile()">Contacto</a>
-                    <a href="#"
-                        onclick="mostrarSeccion('testimonios'); setMenuLabel('Testimonios'); cerrarMenuMobile()">Testimonios</a>
                 </div>
             </div>
         </header>
@@ -159,7 +156,7 @@
             <div id="info" class="subseccion"
                 style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Rehabilitación integral estética</h3>
-                <p>Se trabaja de forma <strong>integral</strong></p>
+                <p>Se trabaja de forma <strong>integral.</strong></p>
                 <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
                 <div class="contenido-colapsable" style="display:none;">
                     <p>
@@ -317,10 +314,10 @@ naturales, armónicos y personalizados.</p>
                                     <div class="caso">
                                         <div class="foto-antes-despues">
                                             <div class="foto-antes">
-                                                <img src="barbaA.jpeg" alt="Antes caso 2">
+                                                <img src="portesisDenA.jpg" alt="Antes caso 2">
                                             </div>
                                             <div class="foto-despues">
-                                                <img src="barbaD.jpeg" alt="Después caso 2">
+                                                <img src="portesisDenD.jpg" alt="Después caso 2" style="object-fit: cover; object-position: 50% 40%;">
                                             </div>
                                         </div>
                                     </div>
@@ -333,10 +330,10 @@ naturales, armónicos y personalizados.</p>
                                     <div class="caso">
                                         <div class="foto-antes-despues">
                                             <div class="foto-antes">
-                                                <img src="dienteRotoA.jpeg" alt="Antes caso 3">
+                                                <img src="kariA.jpeg" alt="Antes caso 3">
                                             </div>
                                             <div class="foto-despues">
-                                                <img src="dienteRotoD.jpeg" alt="Después caso 3">
+                                                <img src="kariD.jpeg" alt="Después caso 3">
                                             </div>
                                         </div>
                                     </div>
@@ -349,10 +346,10 @@ naturales, armónicos y personalizados.</p>
                                     <div class="caso">
                                         <div class="foto-antes-despues">
                                             <div class="foto-antes">
-                                                <img src="sinDienteAntes.jpeg" alt="Antes caso 4">
+                                                <img src="HeiA.jpg" alt="Antes caso 4">
                                             </div>
                                             <div class="foto-despues">
-                                                <img src="sinDienteDesp.jpeg" alt="Después caso 4" style="object-position: bottom 350%;">
+                                                <img src="HeiD.jpg" alt="Después caso 4">
                                             </div>
                                         </div>
                                     </div>
@@ -365,10 +362,10 @@ naturales, armónicos y personalizados.</p>
                                     <div class="caso">
                                         <div class="foto-antes-despues">
                                             <div class="foto-antes">
-                                                <img src="babaA.jpg" alt="Antes caso 5">
+                                                <img src="cartelA.jpg" alt="Antes caso 5">
                                             </div>
                                             <div class="foto-despues">
-                                                <img src="babaD.jpg" alt="Después caso 5">
+                                                <img src="cartelD.jpg" alt="Después caso 5">
                                             </div>
                                         </div>
                                     </div>
@@ -381,10 +378,10 @@ naturales, armónicos y personalizados.</p>
                                     <div class="caso">
                                         <div class="foto-antes-despues">
                                             <div class="foto-antes">
-                                                <img src="yoA.PNG" alt="Antes caso 6">
+                                                <img src="camiA.jpeg" alt="Antes caso 6">
                                             </div>
                                             <div class="foto-despues">
-                                                <img src="yoD.jpeg" alt="Después caso 6">
+                                                <img src="camiD.jpeg" alt="Después caso 6">
                                             </div>
                                         </div>
                                     </div>
@@ -447,37 +444,36 @@ naturales, armónicos y personalizados.</p>
 
                 <div class="persona">
                     <div class="foto-container">
+                        <img src="maica.jpg" alt="Asistente Maica" class="foto-equipo" />
+                    </div>
+                    <h4 style="color: #555;">Maika Cuestas</h4>
+                    <p style="color: #555;">Asistente e higienista dental.<br>
+                    Estudiante avanzada en Odontología.<br><br>
+                    "En RIE encontré un espacio, no solo para crecer como profesional, si no también como persona."</p>
+                </div>
+
+
+                <div class="persona">
+                    <div class="foto-container">
                         <img src="celia.png" alt="Dra. Celia Luksenburg" class="foto-equipo" />
-                        <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irACelia()">Ver más info
+                        <a href="#" class="overlay-info" onclick="abrirModalCelia(); return false;">Ver más info
                             de la
                             Dra. Celia</a>
                     </div>
-                    <h4>Dra. Celia Luksenburg</h4>
-                    <p>Especialista en rehabilitación estética</p>
+                    <h4 style="color: #555;">Dra. Celia Luksenburg</h4>
+                    <p style="color: #555;">Dra. en Odontología.<br>
+                    Clínica y docente.<br><br>
+                    "El placer de hacer las cosas bien, ese es mi lema"</p>
                 </div>
 
 
                 <div class="persona">
                     <div class="foto-container">
-                        <img src="thelma.png" alt="Dra. Thelma Grunfeld" class="foto-equipo" />
-                        <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irAThelma()">Ver más info
-                            de
-                            la Dra. Thelma</a>
+                        <img src="paolo.jpg" alt="Dr. Paolo Curcio" class="foto-equipo" />
                     </div>
-                    <h4>Dra. Thelma Grunfeld</h4>
-                    <p>Ortodoncista especializada en tratamientos avanzados</p>
-                </div>
-
-
-                <div class="persona">
-                    <div class="foto-container">
-                        <img src="maica.jpg" alt="Asistente Maica" class="foto-equipo" />
-                        <a href="#" class="overlay-info" onclick="mostrarSeccion('nosotros'); irAMaica()">Ver más info
-                            de la
-                            Dra. Maika</a>
-                    </div>
-                    <h4>Maika</h4>
-                    <p>Asistente técnica en procedimientos odontológicos</p>
+                    <h4 style="color: #555;">Dr. Paolo Curcio</h4>
+                    <p style="color: #555;">Médico cirujano en Oftalmología<br>
+                    Jefe del servicio de oftalmología en el SMI.</p>
                 </div>
 
 
@@ -503,19 +499,19 @@ naturales, armónicos y personalizados.</p>
                 style="margin-top: 3rem; padding: 2rem; background-color: #ffffff; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Dra. Celia Luksenburg</h3>
                 <p style="font-weight: bold; font-size: 1.2rem; color: #333;">Trayectoria</p>
-                <p style="line-height: 1.7;">Desde un principio tuvo muy clara su vocación. En 1992 ingresó en la Facultad
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">Desde un principio tuvo muy clara su vocación. En 1992 ingresó en la Facultad
                     de Odontología de la UDELAR, la cual disfrutó profundamente. Desde que se recibió y hasta el día de hoy,
                     nunca perdió el contacto con la misma.<br>
                     En 1993 ingresó al taller de pintura de Fernando López Lage, pudiendo aunar de esta forma sus dos
                     pasiones: la <strong>odontología</strong> y el <strong>arte</strong>.</p>
 
 
-                <p style="line-height: 1.7;">En cuanto al arte, realizó varias exposiciones, intervino en concursos, sacó el
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">En cuanto al arte, realizó varias exposiciones, intervino en concursos, sacó el
                     primer premio en el concurso del SMU, recibió varias menciones especiales y fue seleccionada para una
                     Bienal en Buenos Aires.</p>
 
 
-                <p style="line-height: 1.7;">En un momento, decidió dejar de crear en un solo plano y comenzar a crear en
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">En un momento, decidió dejar de crear en un solo plano y comenzar a crear en
                     tres dimensiones. Trabajó con maniquíes, los pintaba y los exponía; otros los daba vuelta y con
                     plastilina les creaba una nueva cara. Hasta que llegó un día clave en su carrera profesional. En una
                     conferencia de la Dra. Isabel Jankielewicz sobre <strong>Prótesis Buco Maxilo Facial</strong>, se sintió
@@ -524,13 +520,13 @@ naturales, armónicos y personalizados.</p>
                     camino. Era la tercera dimensión que ella estaba buscando.</p>
 
 
-                <p style="line-height: 1.7;">A partir de 2005 comenzó a ampliar conocimientos en el Servicio de Prótesis
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">A partir de 2005 comenzó a ampliar conocimientos en el Servicio de Prótesis
                     Buco Maxilo Facial de la Facultad de Odontología de la Universidad de la República, atendiendo pacientes
                     mutilados faciales. Tarea que ha desarrollado ininterrumpidamente hasta hoy, con el mismo entusiasmo de
                     siempre.</p>
 
 
-                <p style="line-height: 1.7;">Nunca se detiene, tanto en Odontología tradicional como en Prótesis Buco Maxilo
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">Nunca se detiene, tanto en Odontología tradicional como en Prótesis Buco Maxilo
                     Facial, por lo que continuamente asiste a distintos cursos, jornadas y congresos.</p>
 
 
@@ -663,7 +659,7 @@ naturales, armónicos y personalizados.</p>
             <div id="elaboracion" class="subseccion"
                 style="margin-top: 2rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Elaboración a medida</h3>
-                <p>Cada prótesis es única</p>
+                <p>Cada prótesis es única.</p>
                 <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
                 <div class="contenido-colapsable" style="display:none;">
            <p>
@@ -671,7 +667,7 @@ naturales, armónicos y personalizados.</p>
     partir de la impresión de la cavidad anoftálmica.</p>
     <p>A partir de allí, se realiza la selección del <strong>diámetro del
     iris y de la pupila.</strong> Luego, el iris es pintado a mano,
-    logrando un <strong>color </strong> exclusivo que imita al ojo homologo.</p>
+    logrando un <strong>color </strong> exclusivo que imita al ojo homólogo.</p>
 
     <p>Finalmente se trabaja la <strong>esclera</strong> (la parte blanca del
     ojo), que no es verdaderamente blanca, sino que
@@ -688,7 +684,7 @@ naturales, armónicos y personalizados.</p>
                 style="margin-top: 2.5rem; background-color: #ffffff; padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
                 <h3 style="color: #789ce2; font-size: 1.5rem; margin-bottom: 0.5rem;">Tratamiento – Etapas</h3>
                 <p>El primer paso es la toma de impresión de la cavidad ocular para definir la forma exacta de la
-                    prótesis</p>
+                    prótesis.</p>
                 <button class="btn-ver-mas" onclick="toggleColapsable(this)">Ver más</button>
                 <div class="contenido-colapsable" style="display:none;">
                     <br>
@@ -730,7 +726,7 @@ sin perder precisión ni calidad.</p>
                     <div class="img-slider" id="slider-ojo">
                         <span class="flechas">⇆</span>
                     </div>
-                    <img src="ojo.antes.jpg" class="img-bottom" alt="Antes">
+                    <img src="ojoo.antes.jpg" class="img-bottom" alt="Antes">
                 </div>
             </div>
             <!-- Botón para ver otros casos -->
@@ -771,7 +767,7 @@ sin perder precisión ni calidad.</p>
                             <div class="caso-ojo" data-caso="2" style="display:none;">
                                 <div class="comparador comparador-modal">
                                     <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso4">
-                                        <img src="rubiaA.JPG" class="img-top" alt="antes">
+                                        <img src="rubiaaA.JPG" class="img-top" alt="antes">
                                         <div class="img-slider" id="slider-ojo-caso4">
                                             <span class="flechas">⇆</span>
                                         </div>
@@ -810,11 +806,11 @@ sin perder precisión ni calidad.</p>
                             <div class="caso-ojo" data-caso="5" style="display:none;">
                                 <div class="comparador comparador-modal">
                                     <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso5">
-                                        <img src="rojoA.jpg" class="img-top" alt="Después">
+                                        <img src="ladyA.jpeg" class="img-top" alt="Antes" style="object-position: 180%;">
                                         <div class="img-slider" id="slider-ojo-caso5">
                                             <span class="flechas">⇆</span>
                                         </div>
-                                        <img src="rojoD.JPG" class="img-bottom" alt="Antes">
+                                        <img src="ladyD.jpeg" class="img-bottom" alt="Después">
                                     </div>
                                 </div>
                             </div>
@@ -830,13 +826,52 @@ sin perder precisión ni calidad.</p>
             </div>
         </section>
 
-        <!-- Testimonios -->
-
-        <section id="testimonios" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+        <!-- Testimonios Odontología -->
+        <section id="testimonios-odontologia" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
             <h2 class="section-title"
-                style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem;">
+                style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; margin-bottom: 1rem;">
                 Testimonios
             </h2>
+            
+            <!-- Selector desplegable sutil -->
+            <div class="selector-testimonios-mobile" style="margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 0.2rem; position: relative;">
+                    <span style="padding: 0.5rem 0.3rem; border-bottom: 2px solid #5a6e8c; color: #5a6e8c; font-size: 1rem; font-weight: 500;">Testimonios de Odontología</span>
+                    <span onclick="toggleMenuTestimonios(1)" style="color: #5a6e8c; font-size: 0.8rem; cursor: pointer; padding: 0.5rem;">▼</span>
+                    <div id="menu-testimonios-1" class="menu-desplegable-testimonios" style="display: none;">
+                        <a href="#" onclick="mostrarSeccion('testimonios-odontologia'); ocultarMenuTestimonios(); return false;">Testimonios de Odontología</a>
+                        <a href="#" onclick="mostrarSeccion('testimonios-protesis'); ocultarMenuTestimonios(); return false;">Testimonios de Prótesis Ocular</a>
+                        <a href="#" onclick="mostrarSeccion('testimonios-oftalmologos'); ocultarMenuTestimonios(); return false;">Oftalmólogos que nos recomiendan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonios-videos" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+                <!-- Aquí irán los videos de testimonios de odontología -->
+                <p style="text-align: center; width: 100%; color: #555; padding: 2rem;">
+                    Próximamente agregarás los videos de testimonios de odontología
+                </p>
+            </div>
+        </section>
+
+        <!-- Testimonios Prótesis Ocular -->
+        <section id="testimonios-protesis" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+            <h2 class="section-title"
+                style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                Testimonios
+            </h2>
+            
+            <!-- Selector desplegable sutil -->
+            <div class="selector-testimonios-mobile" style="margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 0.2rem; position: relative;">
+                    <span style="padding: 0.5rem 0.3rem; border-bottom: 2px solid #5a6e8c; color: #5a6e8c; font-size: 1rem; font-weight: 500;">Testimonios de Prótesis Ocular</span>
+                    <span onclick="toggleMenuTestimonios(2)" style="color: #5a6e8c; font-size: 0.8rem; cursor: pointer; padding: 0.5rem;">▼</span>
+                    <div id="menu-testimonios-2" class="menu-desplegable-testimonios" style="display: none;">
+                        <a href="#" onclick="mostrarSeccion('testimonios-odontologia'); ocultarMenuTestimonios(); return false;">Testimonios de Odontología</a>
+                        <a href="#" onclick="mostrarSeccion('testimonios-protesis'); ocultarMenuTestimonios(); return false;">Testimonios de Prótesis Ocular</a>
+                        <a href="#" onclick="mostrarSeccion('testimonios-oftalmologos'); ocultarMenuTestimonios(); return false;">Oftalmólogos que nos recomiendan</a>
+                    </div>
+                </div>
+            </div>
             <div class="testimonios-videos" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
                
                 <div class="video-testimonio" style="max-width: 400px; position: relative;">
@@ -878,7 +913,6 @@ sin perder precisión ni calidad.</p>
                     </div>
                     <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
                 </div>
-                <!-- Agregá más videos si querés -->
 
                 <div class="video-testimonio" style="max-width: 400px; position: relative;">
                     <div class="video-cover" onclick="playTestimonio(this)">
@@ -892,6 +926,73 @@ sin perder precisión ni calidad.</p>
                         </div>
                     </div>
                     <p style="margin-top: 0.5rem; color: #555;">Paciente de prótesis ocular</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios Oftalmólogos -->
+        <section id="testimonios-oftalmologos" class="contenido oculto" style="padding: 2rem; background-color: #f9f9fb;">
+            <h2 class="section-title"
+                style="font-size: 2rem; color: #789ce2; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                Testimonios
+            </h2>
+            
+            <!-- Selector desplegable sutil -->
+            <div class="selector-testimonios-mobile" style="margin-bottom: 2rem;">
+                <div style="display: flex; justify-content: center; align-items: center; gap: 0.2rem; position: relative;">
+                    <span style="padding: 0.5rem 0.3rem; border-bottom: 2px solid #5a6e8c; color: #5a6e8c; font-size: 1rem; font-weight: 500;">Oftalmólogos que nos recomiendan</span>
+                    <span onclick="toggleMenuTestimonios(3)" style="color: #5a6e8c; font-size: 0.8rem; cursor: pointer; padding: 0.5rem;">▼</span>
+                    <div id="menu-testimonios-3" class="menu-desplegable-testimonios" style="display: none;">
+                        <a href="#" onclick="mostrarSeccion('testimonios-odontologia'); ocultarMenuTestimonios(); return false;">Testimonios de Odontología</a>
+                        <a href="#" onclick="mostrarSeccion('testimonios-protesis'); ocultarMenuTestimonios(); return false;">Testimonios de Prótesis Ocular</a>
+                        <a href="#" onclick="mostrarSeccion('testimonios-oftalmologos'); ocultarMenuTestimonios(); return false;">Oftalmólogos que nos recomiendan</a>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonios-videos" style="display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center;">
+                <!-- Video 1 -->
+                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                    <div class="video-cover-youtube" data-youtube-id="61_i-5NPPKM" onclick="playYoutubeTestimonio(this)">
+                        <img src="https://i.ytimg.com/vi/61_i-5NPPKM/hqdefault.jpg" alt="Video oftalmólogo">
+                        <div class="play-btn">
+                            <svg width="70" height="70" viewBox="0 0 70 70">
+                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                    stroke-width="2" />
+                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p style="margin-top: 0.5rem; color: #555;">Oftalmólogo recomienda RIE</p>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                    <div class="video-cover-youtube" data-youtube-id="N-9RWixttaQ" onclick="playYoutubeTestimonio(this)">
+                        <img src="https://i.ytimg.com/vi/N-9RWixttaQ/hqdefault.jpg" alt="Video oftalmólogo">
+                        <div class="play-btn">
+                            <svg width="70" height="70" viewBox="0 0 70 70">
+                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                    stroke-width="2" />
+                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p style="margin-top: 0.5rem; color: #555;">Oftalmólogo recomienda RIE</p>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                    <div class="video-cover-youtube" data-youtube-id="d1jgG3OfB9E" onclick="playYoutubeTestimonio(this)">
+                        <img src="https://i.ytimg.com/vi/d1jgG3OfB9E/hqdefault.jpg" alt="Video oftalmólogo">
+                        <div class="play-btn">
+                            <svg width="70" height="70" viewBox="0 0 70 70">
+                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                    stroke-width="2" />
+                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                            </svg>
+                        </div>
+                    </div>
+                    <p style="margin-top: 0.5rem; color: #555;">Oftalmólogo recomienda RIE</p>
                 </div>
             </div>
         </section>
@@ -1070,6 +1171,59 @@ sin perder precisión ni calidad.</p>
             function capitalizeFirstLetter(str) {
                 return str.charAt(0).toUpperCase() + str.slice(1);
             }
+
+            // Función para el toggle del submenú de testimonios
+            function toggleSubmenu(event) {
+                event.preventDefault();
+                const menuItem = event.target.closest('.menu-item-con-submenu');
+                if (menuItem) {
+                    menuItem.classList.toggle('submenu-active');
+                }
+            }
+
+            // Función para toggle del menú desplegable de testimonios en móvil
+            function toggleMenuTestimonios(id) {
+                const menu = document.getElementById('menu-testimonios-' + id);
+                // Cerrar todos los otros menús primero
+                document.querySelectorAll('.menu-desplegable-testimonios').forEach(m => {
+                    if (m !== menu) m.style.display = 'none';
+                });
+                // Toggle del menú actual
+                if (menu.style.display === 'none' || menu.style.display === '') {
+                    menu.style.display = 'block';
+                } else {
+                    menu.style.display = 'none';
+                }
+            }
+
+            // Función para ocultar todos los menús de testimonios
+            function ocultarMenuTestimonios() {
+                document.querySelectorAll('.menu-desplegable-testimonios').forEach(m => {
+                    m.style.display = 'none';
+                });
+            }
+
+            // Función para el toggle del submenú móvil
+            function toggleSubmenuMobile(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                const container = event.target.closest('.testimonios-mobile-container');
+                if (container) {
+                    const submenu = container.querySelector('.submenu-mobile');
+                    if (submenu) {
+                        const isVisible = submenu.style.display === 'block';
+                        submenu.style.display = isVisible ? 'none' : 'block';
+                    }
+                }
+            }
+
+            // Cerrar el submenú si se hace clic fuera de él
+            document.addEventListener('click', function(event) {
+                const menuItem = document.querySelector('.menu-item-con-submenu');
+                if (menuItem && !menuItem.contains(event.target)) {
+                    menuItem.classList.remove('submenu-active');
+                }
+            });
 
 
             function scrollAjustadoA(idElemento) {
@@ -1311,6 +1465,16 @@ sin perder precisión ni calidad.</p>
                 video.play();
             }
 
+            function playYoutubeTestimonio(cover) {
+                const youtubeId = cover.getAttribute('data-youtube-id');
+                if (!youtubeId) {
+                    return;
+                }
+                
+                // Abrir video en nueva pestaña
+                window.open(`https://www.youtube.com/watch?v=${youtubeId}`, '_blank');
+            }
+
 
             document.querySelectorAll('.video-fondo').forEach(video => {
                 video.addEventListener('pause', function () {
@@ -1422,7 +1586,128 @@ sin perder precisión ni calidad.</p>
                     if (prev) prev.style.display = "inline-block";
                 }
             }
+
+            // Funciones para abrir modales de equipo
+            function abrirModalCelia() {
+                document.getElementById('modal-celia').style.display = 'flex';
+            }
+            function abrirModalThelma() {
+                document.getElementById('modal-thelma').style.display = 'flex';
+            }
+            function abrirModalMaica() {
+                document.getElementById('modal-maica').style.display = 'flex';
+            }
+            function cerrarModal(modalId) {
+                document.getElementById(modalId).style.display = 'none';
+            }
         </script>
+
+        <!-- Modal Celia -->
+        <div id="modal-celia" onclick="if(event.target === this) cerrarModal('modal-celia')"
+            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center; overflow:auto;">
+            <div style="background:white; padding:2.5rem; border-radius:10px; width:90vw; max-width:800px; max-height:90vh; overflow:auto; position:relative;">
+                <button onclick="cerrarModal('modal-celia')"
+                    style="position:absolute; top:15px; right:20px; background:none; border:none; font-size:2rem; cursor:pointer; color:#789ce2;">×</button>
+                
+                <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Dra. Celia Luksenburg</h3>
+                <p style="font-weight: bold; font-size: 1.2rem; color: #333;">Trayectoria</p>
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">Desde un principio tuvo muy clara su vocación. En 1992 ingresó en la Facultad
+                    de Odontología de la UDELAR, la cual disfrutó profundamente. Desde que se recibió y hasta el día de hoy,
+                    nunca perdió el contacto con la misma.<br>
+                    En 1993 ingresó al taller de pintura de Fernando López Lage, pudiendo aunar de esta forma sus dos
+                    pasiones: la <strong>odontología</strong> y el <strong>arte</strong>.</p>
+
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">En cuanto al arte, realizó varias exposiciones, intervino en concursos, sacó el
+                    primer premio en el concurso del SMU, recibió varias menciones especiales y fue seleccionada para una
+                    Bienal en Buenos Aires.</p>
+
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">En un momento, decidió dejar de crear en un solo plano y comenzar a crear en
+                    tres dimensiones. Trabajó con maniquíes, los pintaba y los exponía; otros los daba vuelta y con
+                    plastilina les creaba una nueva cara. Hasta que llegó un día clave en su carrera profesional. En una
+                    conferencia de la Dra. Isabel Jankielewicz sobre <strong>Prótesis Buco Maxilo Facial</strong>, se sintió
+                    totalmente identificada. Al finalizar, la Dra. Isabel dijo: "esta disciplina está basada en tres
+                    pilares: <strong>AMOR, ARTE Y CIENCIA</strong>". Fue en aquel momento que descubrió que ese era su
+                    camino. Era la tercera dimensión que ella estaba buscando.</p>
+
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">A partir de 2005 comenzó a ampliar conocimientos en el Servicio de Prótesis
+                    Buco Maxilo Facial de la Facultad de Odontología de la Universidad de la República, atendiendo pacientes
+                    mutilados faciales. Tarea que ha desarrollado ininterrumpidamente hasta hoy, con el mismo entusiasmo de
+                    siempre.</p>
+
+                <p style="line-height: 1.7; font-family: 'Noteworthy', 'Comic Sans MS', cursive;">Nunca se detiene, tanto en Odontología tradicional como en Prótesis Buco Maxilo
+                    Facial, por lo que continuamente asiste a distintos cursos, jornadas y congresos.</p>
+
+                <p style="font-weight: bold; font-size: 1.2rem; color: #333; margin-top: 2rem;">Cursos, Jornadas, Congresos,
+                    Conferencias y Presentaciones</p>
+                <ul style="line-height: 1.7; padding-left: 1.2rem;">
+                    <li>2005 - Curso de Implantes Osteointegrados (Escuela de Graduados UDELAR)</li>
+                    <li>2006 - Curso de Cirugía para el Odontólogo General (Universidad Católica)</li>
+                    <li>2007 - Jornadas de Prótesis Buco Maxilo Facial e Implantes Intra y Extraorales</li>
+                    <li>2008 - Presentación: "Prótesis Buco Maxilo Facial, Calidad de Vida" (SMI)</li>
+                    <li>2011 - Presentación: "Prótesis Ocular… Un Caso Conmovedor" (SMI)</li>
+                    <li>2013 - Congreso Latinoamericano (La Habana) — Se integra a la Sociedad Latinoamericana de PBMF</li>
+                    <li>2014 - Conferencista y póster: Técnicas de Impresión Alternativas (Córdoba)</li>
+                    <li>2015 - Curso de Prótesis Dentales Implanto Soportadas</li>
+                    <li>2015 - Anaplastology Association Conference (Río de Janeiro)</li>
+                    <li>2016 - Congreso de Rehabilitación de la Cara (Santiago de Chile)</li>
+                    <li>2016 - Curso de Estética y Oclusión (Argentina)</li>
+                    <li>2016 - Presentación: "Prótesis Ocular… ¿Tarea del Odontólogo?"</li>
+                    <li>2017 - Curso de Estética y Carillas Dentales</li>
+                    <li>2017 - Aprobado Grado Dos en PBMF, UDELAR</li>
+                    <li>2019 - Gana cargo de Grado Dos en PBMF, UDELAR</li>
+                    <li>2019 - Presentación de protocolo en S.U.I.O sobre higiene de prótesis ocular</li>
+                </ul>
+
+                <p style="margin-top: 2rem; line-height: 1.7;"><strong>"Hoy</strong>, sigo haciendo lo que amo. Me gusta la
+                    transformación, la creación. En Odontología, más que nada en el área de Rehabilitación Estética, y en
+                    Prótesis Buco Maxilo Facial, especialmente en Prótesis Oculares. Es allí donde puedo volcar y
+                    desarrollar toda mi parte artística, sin nunca dejar de lado los otros dos pilares: la
+                    <strong>CIENCIA</strong> y el <strong>AMOR</strong>. Por esto y más, siempre estoy y estaré muy
+                    agradecida."
+                </p>
+            </div>
+        </div>
+
+        <!-- Modal Thelma -->
+        <div id="modal-thelma" onclick="if(event.target === this) cerrarModal('modal-thelma')"
+            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center; overflow:auto;">
+            <div style="background:white; padding:2.5rem; border-radius:10px; width:90vw; max-width:800px; max-height:90vh; overflow:auto; position:relative;">
+                <button onclick="cerrarModal('modal-thelma')"
+                    style="position:absolute; top:15px; right:20px; background:none; border:none; font-size:2rem; cursor:pointer; color:#789ce2;">×</button>
+                
+                <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Dra. Thelma Grunfeld</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    La Dra. Thelma Grunfeld es ortodoncista especializada en tratamientos avanzados, con una mirada
+                    estética, funcional y personalizada.
+                    Con años de experiencia y formación continua, trabaja con un enfoque integral que permite transformar
+                    sonrisas respetando la armonía facial.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    Su trato cercano y compromiso con cada paciente hacen de ella una profesional destacada en el área de
+                    ortodoncia y estética dental.
+                </p>
+            </div>
+        </div>
+
+        <!-- Modal Maica -->
+        <div id="modal-maica" onclick="if(event.target === this) cerrarModal('modal-maica')"
+            style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.7); z-index:9999; align-items:center; justify-content:center; overflow:auto;">
+            <div style="background:white; padding:2.5rem; border-radius:10px; width:90vw; max-width:800px; max-height:90vh; overflow:auto; position:relative;">
+                <button onclick="cerrarModal('modal-maica')"
+                    style="position:absolute; top:15px; right:20px; background:none; border:none; font-size:2rem; cursor:pointer; color:#789ce2;">×</button>
+                
+                <h3 style="color: #789ce2; font-size: 1.7rem; margin-bottom: 1rem;">Maica</h3>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    Maica es la asistente técnica del equipo, apasionada por la atención personalizada y los detalles que
+                    marcan la diferencia.
+                    Su calidez humana y precisión profesional son clave para brindar una experiencia cómoda, eficiente y
+                    confiable en cada tratamiento.
+                </p>
+                <p style="font-size: 1.1rem; line-height: 1.6;">
+                    Es parte esencial de RIE, acompañando a los pacientes en cada paso con dedicación y empatía.
+                </p>
+            </div>
+        </div>
 
     </body>
 
