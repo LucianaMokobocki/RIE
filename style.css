@@ -1400,6 +1400,7 @@ footer .info {
   width: 100%;
   height: 100%;
   object-fit: cover;          /* llena todo el espacio, hace zoom si es necesario */
+  border-radius: 14px;
 }
 
 /* Ajuste específico para la foto del caso 4 después - baja la imagen */
@@ -1475,3 +1476,19 @@ footer .info {
   transform: scale(0.95);
 }
 
+/* Caso 6 y 8 horizontal - formato panorámico */
+.caso-8-horizontal .foto-antes img,
+.caso-8-horizontal .foto-despues img {
+  width: 550px !important;
+  height: 240px !important;
+  object-fit: cover !important;
+  border-radius: 16px !important;
+}
+
+@media (max-width: 700px) {
+  .caso-8-horizontal .foto-antes img,
+  .caso-8-horizontal .foto-despues img {
+    width: 85vw !important;
+    height: 160px !important;
+  }
+}
