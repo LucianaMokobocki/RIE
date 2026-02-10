@@ -26,8 +26,7 @@
                     <a href="https://wa.me/59891664488" target="_blank">
                         <img src="TEL.png" alt="WhatsApp" style="width: 45px; height: 45px; margin-left: 15px;">
                     </a>
-                    <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" id="email-link-header"
-                        class="contacto-link">
+                    <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" id="email-header" class="contacto-link">
                         <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
                     </a>
                 </div>
@@ -586,7 +585,7 @@ naturales, armónicos y personalizados.</p>
             <h4> Mail</h4>
 
 
-            <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" id="email-link-contacto"
+            <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" id="email-contacto"
                 style="color: #7c5c9c;  text-decoration: underline;" class="contacto-link">
                 consultoriodentalrie@gmail.com
             </a>
@@ -1339,23 +1338,21 @@ sin perder precisión ni calidad.</p>
 
                 animarInicio(); // ✅ Esto hace que se ejecute apenas entrás
                 
-                // Configurar enlaces de email según el dispositivo
-                const esMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
-                const emailLinkHeader = document.getElementById('email-link-header');
-                const emailLinkContacto = document.getElementById('email-link-contacto');
-                
-                if (esMovil) {
-                    // En móvil, usar mailto:
-                    if (emailLinkHeader) {
-                        emailLinkHeader.href = 'mailto:consultoriodentalrie@gmail.com';
-                        emailLinkHeader.removeAttribute('target');
+                // Detectar móvil y cambiar enlaces de email a mailto:
+                const esMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                if (esMobile) {
+                    const emailHeader = document.getElementById('email-header');
+                    const emailContacto = document.getElementById('email-contacto');
+                    
+                    if (emailHeader) {
+                        emailHeader.href = 'mailto:consultoriodentalrie@gmail.com';
+                        emailHeader.removeAttribute('target');
                     }
-                    if (emailLinkContacto) {
-                        emailLinkContacto.href = 'mailto:consultoriodentalrie@gmail.com';
-                        emailLinkContacto.removeAttribute('target');
+                    if (emailContacto) {
+                        emailContacto.href = 'mailto:consultoriodentalrie@gmail.com';
+                        emailContacto.removeAttribute('target');
                     }
                 }
-                // En computadora ya tiene Gmail web por defecto
             });
         </script>
 
