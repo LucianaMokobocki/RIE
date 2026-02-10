@@ -26,12 +26,8 @@
                     <a href="https://wa.me/59891664488" target="_blank">
                         <img src="TEL.png" alt="WhatsApp" style="width: 45px; height: 45px; margin-left: 15px;">
                     </a>
-                    <!-- Email para MÓVIL -->
-                    <a href="mailto:consultoriodentalrie@gmail.com" class="contacto-link email-mobile" style="display: none;">
-                        <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
-                    </a>
-                    <!-- Email para COMPUTADORA -->
-                    <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" class="contacto-link email-desktop">
+                    <!-- Email solo visible en COMPUTADORA -->
+                    <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" class="contacto-link email-solo-desktop">
                         <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
                     </a>
                 </div>
@@ -589,14 +585,9 @@ naturales, armónicos y personalizados.</p>
         <section id="contacto" class="contenido oculto">
             <h4> Mail</h4>
 
-            <!-- Email para MÓVIL -->
-            <a href="mailto:consultoriodentalrie@gmail.com"
-                style="color: #7c5c9c; text-decoration: underline; display: none;" class="contacto-link email-mobile">
-                consultoriodentalrie@gmail.com
-            </a>
-            <!-- Email para COMPUTADORA -->
+            <!-- Email solo visible en COMPUTADORA -->
             <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank"
-                style="color: #7c5c9c; text-decoration: underline;" class="contacto-link email-desktop">
+                style="color: #7c5c9c; text-decoration: underline;" class="contacto-link email-solo-desktop">
                 consultoriodentalrie@gmail.com
             </a>
             <br>
@@ -1351,33 +1342,23 @@ sin perder precisión ni calidad.</p>
                 // Detectar móvil y mostrar el enlace correspondiente
                 const esMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
                 
-                // Obtener todos los enlaces de email
-                const emailsMobile = document.querySelectorAll('.email-mobile');
-                const emailsDesktop = document.querySelectorAll('.email-desktop');
+                // Detectar móvil y ocultar email (solo visible en desktop)
+                const esMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                
+                // Obtener enlaces de email solo-desktop
+                const emailsSoloDesktop = document.querySelectorAll('.email-solo-desktop');
                 
                 console.log('¿Es móvil?', esMobile);
-                console.log('Enlaces móvil encontrados:', emailsMobile.length);
-                console.log('Enlaces desktop encontrados:', emailsDesktop.length);
+                console.log('Enlaces email-solo-desktop encontrados:', emailsSoloDesktop.length);
                 
                 if (esMobile) {
-                    // Mostrar enlaces móvil (mailto:), ocultar desktop (Gmail web)
-                    emailsMobile.forEach(el => {
-                        el.style.setProperty('display', 'inline', 'important');
-                        console.log('Mostrando enlace móvil (mailto):', el.href);
-                    });
-                    emailsDesktop.forEach(el => {
+                    // Ocultar email en móvil
+                    emailsSoloDesktop.forEach(el => {
                         el.style.setProperty('display', 'none', 'important');
-                        console.log('Ocultando enlace desktop (Gmail):', el.href);
-                    });
-                } else {
-                    // Mostrar enlaces desktop (Gmail web), ocultar móvil (mailto:)
-                    emailsMobile.forEach(el => {
-                        el.style.setProperty('display', 'none', 'important');
-                    });
-                    emailsDesktop.forEach(el => {
-                        el.style.setProperty('display', 'inline', 'important');
+                        console.log('Ocultando email en móvil:', el.href);
                     });
                 }
+                // En desktop no hace falta hacer nada, ya está visible por defecto
             });
         </script>
 
