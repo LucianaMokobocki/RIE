@@ -26,7 +26,12 @@
                     <a href="https://wa.me/59891664488" target="_blank">
                         <img src="TEL.png" alt="WhatsApp" style="width: 45px; height: 45px; margin-left: 15px;">
                     </a>
-                    <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" id="email-header" class="contacto-link">
+                    <!-- Email para MÓVIL -->
+                    <a href="mailto:consultoriodentalrie@gmail.com" class="contacto-link email-mobile" style="display: none;">
+                        <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
+                    </a>
+                    <!-- Email para COMPUTADORA -->
+                    <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" class="contacto-link email-desktop">
                         <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
                     </a>
                 </div>
@@ -584,9 +589,14 @@ naturales, armónicos y personalizados.</p>
         <section id="contacto" class="contenido oculto">
             <h4> Mail</h4>
 
-
-            <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" id="email-contacto"
-                style="color: #7c5c9c;  text-decoration: underline;" class="contacto-link">
+            <!-- Email para MÓVIL -->
+            <a href="mailto:consultoriodentalrie@gmail.com"
+                style="color: #7c5c9c; text-decoration: underline; display: none;" class="contacto-link email-mobile">
+                consultoriodentalrie@gmail.com
+            </a>
+            <!-- Email para COMPUTADORA -->
+            <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank"
+                style="color: #7c5c9c; text-decoration: underline;" class="contacto-link email-desktop">
                 consultoriodentalrie@gmail.com
             </a>
             <br>
@@ -1338,20 +1348,21 @@ sin perder precisión ni calidad.</p>
 
                 animarInicio(); // ✅ Esto hace que se ejecute apenas entrás
                 
-                // Detectar móvil y cambiar enlaces de email a mailto:
+                // Detectar móvil y mostrar el enlace correspondiente
                 const esMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+                
+                // Obtener todos los enlaces de email
+                const emailsMobile = document.querySelectorAll('.email-mobile');
+                const emailsDesktop = document.querySelectorAll('.email-desktop');
+                
                 if (esMobile) {
-                    const emailHeader = document.getElementById('email-header');
-                    const emailContacto = document.getElementById('email-contacto');
-                    
-                    if (emailHeader) {
-                        emailHeader.href = 'mailto:consultoriodentalrie@gmail.com';
-                        emailHeader.removeAttribute('target');
-                    }
-                    if (emailContacto) {
-                        emailContacto.href = 'mailto:consultoriodentalrie@gmail.com';
-                        emailContacto.removeAttribute('target');
-                    }
+                    // Mostrar enlaces móvil, ocultar desktop
+                    emailsMobile.forEach(el => el.style.display = 'inline');
+                    emailsDesktop.forEach(el => el.style.display = 'none');
+                } else {
+                    // Mostrar enlaces desktop, ocultar móvil
+                    emailsMobile.forEach(el => el.style.display = 'none');
+                    emailsDesktop.forEach(el => el.style.display = 'inline');
                 }
             });
         </script>
