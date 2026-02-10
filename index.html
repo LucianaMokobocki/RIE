@@ -26,7 +26,7 @@
                     <a href="https://wa.me/59891664488" target="_blank">
                         <img src="TEL.png" alt="WhatsApp" style="width: 45px; height: 45px; margin-left: 15px;">
                     </a>
-                    <a href="mailto:consultoriodentalrie@gmail.com"
+                    <a href="mailto:consultoriodentalrie@gmail.com" id="email-link-header"
                         class="contacto-link">
                         <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
                     </a>
@@ -586,7 +586,7 @@ naturales, armónicos y personalizados.</p>
             <h4> Mail</h4>
 
 
-            <a href="mailto:consultoriodentalrie@gmail.com"
+            <a href="mailto:consultoriodentalrie@gmail.com" id="email-link-contacto"
                 style="color: #7c5c9c;  text-decoration: underline;" class="contacto-link">
                 consultoriodentalrie@gmail.com
             </a>
@@ -1338,6 +1338,24 @@ sin perder precisión ni calidad.</p>
 
 
                 animarInicio(); // ✅ Esto hace que se ejecute apenas entrás
+                
+                // Configurar enlaces de email según el dispositivo
+                const esMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent);
+                const emailLinkHeader = document.getElementById('email-link-header');
+                const emailLinkContacto = document.getElementById('email-link-contacto');
+                
+                if (!esMovil) {
+                    // En computadora, usar Gmail web
+                    if (emailLinkHeader) {
+                        emailLinkHeader.href = 'https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com';
+                        emailLinkHeader.target = '_blank';
+                    }
+                    if (emailLinkContacto) {
+                        emailLinkContacto.href = 'https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com';
+                        emailLinkContacto.target = '_blank';
+                    }
+                }
+                // En móvil ya tiene mailto: por defecto
             });
         </script>
 
