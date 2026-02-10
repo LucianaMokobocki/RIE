@@ -137,6 +137,8 @@ nav.menu-desktop a:hover {
   gap: 1.2rem;
   margin-top: 1.2rem;
   margin-bottom: 1.2rem;
+  width: 100%;
+  justify-content: space-around;
 }
 
 /* Menú móvil */
