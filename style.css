@@ -1494,3 +1494,10 @@ footer .info {
     height: 160px !important;
   }
 }
+
+/* Ocultar email en móvil */
+@media (max-width: 900px) {
+  .email-solo-desktop {
+    display: none !important;
+  }
+}
