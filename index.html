@@ -26,7 +26,7 @@
                     <a href="https://wa.me/59891664488" target="_blank">
                         <img src="TEL.png" alt="WhatsApp" style="width: 45px; height: 45px; margin-left: 15px;">
                     </a>
-                    <a href="mailto:consultoriodentalrie@gmail.com" id="email-link-header"
+                    <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" id="email-link-header"
                         class="contacto-link">
                         <img src="MAIL.png" alt="Email" style="width: 45px; height: 45px;">
                     </a>
@@ -586,7 +586,7 @@ naturales, armónicos y personalizados.</p>
             <h4> Mail</h4>
 
 
-            <a href="mailto:consultoriodentalrie@gmail.com" id="email-link-contacto"
+            <a href="https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com" target="_blank" id="email-link-contacto"
                 style="color: #7c5c9c;  text-decoration: underline;" class="contacto-link">
                 consultoriodentalrie@gmail.com
             </a>
@@ -1344,18 +1344,18 @@ sin perder precisión ni calidad.</p>
                 const emailLinkHeader = document.getElementById('email-link-header');
                 const emailLinkContacto = document.getElementById('email-link-contacto');
                 
-                if (!esMovil) {
-                    // En computadora, usar Gmail web
+                if (esMovil) {
+                    // En móvil, usar mailto:
                     if (emailLinkHeader) {
-                        emailLinkHeader.href = 'https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com';
-                        emailLinkHeader.target = '_blank';
+                        emailLinkHeader.href = 'mailto:consultoriodentalrie@gmail.com';
+                        emailLinkHeader.removeAttribute('target');
                     }
                     if (emailLinkContacto) {
-                        emailLinkContacto.href = 'https://mail.google.com/mail/?view=cm&to=consultoriodentalrie@gmail.com';
-                        emailLinkContacto.target = '_blank';
+                        emailLinkContacto.href = 'mailto:consultoriodentalrie@gmail.com';
+                        emailLinkContacto.removeAttribute('target');
                     }
                 }
-                // En móvil ya tiene mailto: por defecto
+                // En computadora ya tiene Gmail web por defecto
             });
         </script>
 
