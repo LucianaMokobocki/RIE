@@ -1355,14 +1355,28 @@ sin perder precisión ni calidad.</p>
                 const emailsMobile = document.querySelectorAll('.email-mobile');
                 const emailsDesktop = document.querySelectorAll('.email-desktop');
                 
+                console.log('¿Es móvil?', esMobile);
+                console.log('Enlaces móvil encontrados:', emailsMobile.length);
+                console.log('Enlaces desktop encontrados:', emailsDesktop.length);
+                
                 if (esMobile) {
-                    // Mostrar enlaces móvil, ocultar desktop
-                    emailsMobile.forEach(el => el.style.display = 'inline');
-                    emailsDesktop.forEach(el => el.style.display = 'none');
+                    // Mostrar enlaces móvil (mailto:), ocultar desktop (Gmail web)
+                    emailsMobile.forEach(el => {
+                        el.style.setProperty('display', 'inline', 'important');
+                        console.log('Mostrando enlace móvil (mailto):', el.href);
+                    });
+                    emailsDesktop.forEach(el => {
+                        el.style.setProperty('display', 'none', 'important');
+                        console.log('Ocultando enlace desktop (Gmail):', el.href);
+                    });
                 } else {
-                    // Mostrar enlaces desktop, ocultar móvil
-                    emailsMobile.forEach(el => el.style.display = 'none');
-                    emailsDesktop.forEach(el => el.style.display = 'inline');
+                    // Mostrar enlaces desktop (Gmail web), ocultar móvil (mailto:)
+                    emailsMobile.forEach(el => {
+                        el.style.setProperty('display', 'none', 'important');
+                    });
+                    emailsDesktop.forEach(el => {
+                        el.style.setProperty('display', 'inline', 'important');
+                    });
                 }
             });
         </script>
