@@ -30,15 +30,21 @@ rie-estatico {
 header {
   background-color: white;
   width: 100%;
-  padding: 20px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  border-bottom: 1px solid #eee;
-  flex-wrap: wrap;
-  position: sticky;
+  display: block;
+}
+
+/* Div con logo e iconos - FIXED */
+header > div:first-child {
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 
 .logo {
@@ -65,7 +71,7 @@ nav a, nav.menu-desktop a {
 .menu-item-con-submenu {
   position: relative;
   display: inline-block;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 .menu-item-con-submenu > a {
@@ -135,10 +141,31 @@ nav.menu-desktop a:hover {
 .menu-desktop {
   display: flex;
   gap: 1.2rem;
-  margin-top: 1.2rem;
-  margin-bottom: 1.2rem;
+  margin-top: 110px;
+  margin-bottom: 0;
   width: 100%;
   justify-content: space-around;
+  padding: 1rem 2rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+  flex-wrap: wrap;
+}
+
+/* Menú de escritorio */
+nav a, nav.menu-desktop a {
+  margin-left: 0;
+  text-decoration: none;
+  color: #99c2f2;
+  font-weight: 600;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 8px 22px;
+  border-radius: 30px;
+  background: transparent;
+  display: inline-block;
+  border: 2px solid #789ce2;
+  box-shadow: none;
 }
 
 /* Menú móvil */
@@ -296,6 +323,16 @@ nav.menu-desktop a:hover {
   }
   .menu-mobile {
     display: flex !important;
+    margin-top: 110px;
+    width: 100%;
+    justify-content: flex-start;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .email-solo-desktop {
+    display: none !important;
   }
 }
 
@@ -441,16 +478,17 @@ nav.menu-desktop a:hover {
 .destacados-inicio {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 3rem;
   flex-wrap: wrap;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
+  margin-bottom: 4rem;
   color: #789ce2;
 }
 .card-icono {
   background: #f5fafa;
   border-radius: 10px;
-  padding: 1.5rem;
-  width: 250px;
+  padding: 2rem;
+  width: 350px;
   text-align: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
@@ -644,7 +682,7 @@ nav.menu-desktop a:hover {
 
 /* ===================== SECCIONES GENERALES ===================== */
 section {
-  padding: 60px 20px;
+  padding: 40px 0;
   width: 100%;
   margin: 0;
 }
@@ -664,10 +702,10 @@ section {
 #nosotros,
 #contacto {
   background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  padding: 20px;
-  margin-bottom: 40px;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 20px 40px;
+  margin-bottom: 0;
   animation: fadeInUp 0.7s ease-in-out;
 }
 .tratamiento h3,
@@ -797,17 +835,17 @@ section {
 /* ===================== FOOTER ===================== */
 footer {
   text-align: center;
-  padding: 30px;
+  padding: 5px 10px;
   background-color: #8ea8de;
   color: #333;
-  font-size: 0.95rem;
+  font-size: 0.65rem;
 }
 footer p {
-  margin: 5px 0;
+  margin: 1px 0;
 }
 footer .info {
-  margin-top: 15px;
-  font-size: 0.9rem;
+  margin-top: 3px;
+  font-size: 0.6rem;
   color: #555;
 }
 
@@ -989,24 +1027,24 @@ footer .info {
 /* ===================== SECCIONES PRINCIPALES ===================== */
 #odontologia, #protesis-oculares, #equipo, #contacto, #nosotros {
   background-color: rgba(250, 249, 249, 0.95);
-  padding: 20px 20px;
-  border-radius: 10px;
-  max-width: 1000px;
-  margin: 40px auto;
-  box-shadow: 0 4px 12px rgba(115, 255, 112, 0.05);
+  padding: 20px 40px;
+  border-radius: 0;
+  max-width: none;
+  margin: 0;
+  box-shadow: none;
   animation: fadeInUp 0.7s ease-in-out;
 }
 
 /* Imagen grande igual en ambas secciones */
 .foto-seccion-grande {
   width: 100%;
-  max-width: 1100px;
+  max-width: none;
   height: 320px;
   object-fit: cover;
   display: block;
-  margin: 30px auto 40px auto;
-  border-radius: 18px;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  margin: 30px 0 40px 0;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 @media (max-width: 700px) {
@@ -1023,11 +1061,11 @@ footer .info {
 /* ===================== PRÓTESIS OCULARES ===================== */
 #protesis-oculares {
   background-color: rgba(255, 255, 255, 0.95);
-  padding: 40px 20px;
-  border-radius: 12px;
-  max-width: 1000px;
-  margin: 40px auto;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 40px 40px;
+  border-radius: 0;
+  max-width: none;
+  margin: 0;
+  box-shadow: none;
   animation: fadeInUp 0.7s ease-in-out;
 }
 #protesis-oculares h2 {
