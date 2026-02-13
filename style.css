@@ -8,7 +8,7 @@
 }
 
 body {
-  font-family: 'Inter', Arial, sans-serif;
+  font-family: 'Kohinoor Bangla', 'Inter', Arial, sans-serif;
   color: #333;
   background: #f8faff;
 }
@@ -166,6 +166,7 @@ nav a, nav.menu-desktop a {
   display: inline-block;
   border: 2px solid #789ce2;
   box-shadow: none;
+  text-transform: uppercase;
 }
 
 /* Menú móvil */
