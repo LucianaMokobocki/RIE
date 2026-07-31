@@ -1,6 +1,6 @@
 document.getElementById('btn-otros-casos-ojo').onclick = function () {
     document.getElementById('modal-otros-casos-ojo').style.display = 'flex';
-    for (let i = 1; i <= 6; i++) {
+    for (let i = 1; i <= 8; i++) {
         activarComparador(`wrapper-ojo-caso${i}`, `slider-ojo-caso${i}`);
     }
 };

@@ -805,6 +805,19 @@ sin perder precisión ni calidad.</p>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- Caso 8 -->
+                            <div class="caso-ojo" data-caso="8" style="display:none;">
+                                <div class="comparador comparador-modal">
+                                    <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso8">
+                                        <img src="nuevoAntes.PNG" class="img-top" alt="Paciente 8 - Estado inicial">
+                                        <div class="img-slider" id="slider-ojo-caso8">
+                                            <span class="flechas">⇆</span>
+                                        </div>
+                                        <img src="nuevoDespues.PNG" class="img-bottom" alt="Paciente 8 - Con prótesis ocular">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
                         <!-- Flechas de navegación abajo -->
@@ -964,6 +977,19 @@ sin perder precisión ni calidad.</p>
                         </div>
                     </div>
                 </div>
+
+                <div class="video-testimonio" style="max-width: 400px; position: relative;">
+                    <div class="video-cover" onclick="playTestimonio(this)">
+                        <video class="video-fondo" src="TocaOrejaTestimonio.mp4" preload="metadata" muted playsinline style="object-position: center 30%;"></video>
+                        <div class="play-btn">
+                            <svg width="70" height="70" viewBox="0 0 70 70">
+                                <circle cx="35" cy="35" r="34" fill="#fff" fill-opacity="0.7" stroke="#789ce2"
+                                    stroke-width="2" />
+                                <polygon points="28,22 52,35 28,48" fill="#789ce2" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -1034,7 +1060,7 @@ sin perder precisión ni calidad.</p>
 
         <script>
             let casoActualOjo = 1;
-            const totalCasosOjo = 7;
+            const totalCasosOjo = 8;
             
             document.getElementById('btn-otros-casos-ojo').onclick = function () {
                 casoActualOjo = 1;
@@ -1048,6 +1074,7 @@ sin perder precisión ni calidad.</p>
                 activarComparador('wrapper-ojo-caso5', 'slider-ojo-caso5');
                 activarComparador('wrapper-ojo-caso6', 'slider-ojo-caso6');
                 activarComparador('wrapper-ojo-caso7', 'slider-ojo-caso7');
+                activarComparador('wrapper-ojo-caso8', 'slider-ojo-caso8');
             };
             
             function navegarCasoOjo(direccion) {

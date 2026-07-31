@@ -39,7 +39,7 @@ header > div:first-child {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000;
+  z-index: 9999;
   background-color: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(10px);
   width: 100%;
@@ -91,7 +91,7 @@ nav a, nav.menu-desktop a {
   min-width: 250px;
   margin-top: 0;
   padding-top: 0.5rem;
-  z-index: 1000;
+  z-index: 9999;
   padding: 0.5rem 0;
 }
 
@@ -150,6 +150,8 @@ nav.menu-desktop a:hover {
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(238, 238, 238, 0.3);
   flex-wrap: wrap;
+  position: relative;
+  z-index: 9999;
 }
 
 /* Menú de escritorio */
