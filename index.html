@@ -818,6 +818,18 @@ sin perder precisión ni calidad.</p>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Caso 9 -->
+                            <div class="caso-ojo" data-caso="9" style="display:none;">
+                                <div class="comparador comparador-modal">
+                                    <div class="img-wrapper img-wrapper-modal" id="wrapper-ojo-caso9">
+                                        <img src="reelAntes.jpg" class="img-top" alt="Paciente 9 - Estado inicial">
+                                        <div class="img-slider" id="slider-ojo-caso9">
+                                            <span class="flechas">&harr;</span>
+                                        </div>
+                                        <img src="reelDesp.jpg" class="img-bottom" alt="Paciente 9 - Con prótesis ocular">
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         
                         <!-- Flechas de navegación abajo -->
@@ -1060,7 +1072,7 @@ sin perder precisión ni calidad.</p>
 
         <script>
             let casoActualOjo = 1;
-            const totalCasosOjo = 8;
+            const totalCasosOjo = 9;
             
             document.getElementById('btn-otros-casos-ojo').onclick = function () {
                 casoActualOjo = 1;
@@ -1075,6 +1087,7 @@ sin perder precisión ni calidad.</p>
                 activarComparador('wrapper-ojo-caso6', 'slider-ojo-caso6');
                 activarComparador('wrapper-ojo-caso7', 'slider-ojo-caso7');
                 activarComparador('wrapper-ojo-caso8', 'slider-ojo-caso8');
+                activarComparador('wrapper-ojo-caso9', 'slider-ojo-caso9');
             };
             
             function navegarCasoOjo(direccion) {
